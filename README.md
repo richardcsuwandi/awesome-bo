@@ -8,7 +8,7 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
  - 📚 [Books](#books)
  - 📄 [Papers](#papers)
  - 🎥 [Videos](#software)
- - ✍️ [Blog](#blog)
+ - 📝 [Blog](#blog)
 
 ## 📚 Books
 - [Bayesian Optimization](https://bayesoptbook.com/) by Roman Garnett (2023)
