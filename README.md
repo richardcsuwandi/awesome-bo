@@ -26,5 +26,5 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 - [Bayesian Optimization](https://www.youtube.com/watch?v=C5nqEHpdyoE&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=6) by Matthew W. Hoffman (UAI, 2018)
 - [Bayesian Optimization with scikit-learn](https://www.youtube.com/watch?v=jtRPxRnOXnk&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=8) by Thomas Huijskens (PyData London, 2017)
 
-## ✍️ Blog
+## 📝 Blog
 - [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) (Distill, 2020)
