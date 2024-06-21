@@ -14,8 +14,9 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 - [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) by Quan Nguyen (2023)
 
 ## Papers
-- [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301) (2022)
-- [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) (2018)
+- [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301) (arXiv, 2022)
+- [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) (arXiv, 2018)
+- [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) (IEEE Proceedings, 2016)
 
 ## Videos
 - [Bayesian Optimization](https://www.youtube.com/watch?v=wZODGJzKmD0) by Roman Garnett (Probabilistic Numerics Spring School, 2023)
