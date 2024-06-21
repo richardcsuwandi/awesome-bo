@@ -28,3 +28,4 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 
 ## 📝 Blog
 - [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) (Distill, 2020)
+- [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) (Thomas Huijskens, 2016）
