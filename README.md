@@ -37,6 +37,7 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 - [BoTorch:](https://botorch.org/) A Python library for Bayesian optimization built on top of PyTorch.
 - [MOE:](https://github.com/Yelp/MOE) A Bayesian global optimization engine for large-scale optimization of expensive and noisy black-box functions.
 - [Spearmint:](https://github.com/HIPS/Spearmint) An efficient Bayesian optimization package designed for hyperparameter tuning.
+- [GPyOpt:](https://github.com/SheffieldML/GPyOpt) A Bayesian optimization library that uses Gaussian Processes for optimization tasks. _ ⚠️ Note: This library is no longer maintained._
 - [Hyperopt:](https://hyperopt.github.io/hyperopt/) A Python library for serial and parallel optimization over awkward search spaces.
 - [scikit-optimize:](https://scikit-optimize.github.io/stable/) A simple and efficient library for sequential model-based optimization, built on top of NumPy, SciPy, and scikit-learn.
 - [Dragonfly:](https://github.com/dragonfly/dragonfly) A library for scalable Bayesian optimization with a focus on computationally expensive black-box functions.
