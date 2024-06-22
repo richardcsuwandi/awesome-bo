@@ -48,6 +48,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | Title                                                                                           | Presenter            | Event                             | Year |
 |-------------------------------------------------------------------------------------------------|----------------------|-----------------------------------|------|
 | [Bayesian Optimization](https://www.youtube.com/watch?v=wZODGJzKmD0)                            | Roman Garnett        | Probabilistic Numerics Spring School | 2023 |
+| [A gentle introduction to Bayesian optimization](https://www.youtube.com/watch?v=IVaWl2tL06c)   | Sterling Baird       | Accelerate Conference, University of Toronto | 2023 |
 | [Bayesian Optimization: Fundamentals, Implementation, and Practice](https://youtu.be/ImXOdgEgaTM?si=EsH6FO-Hzw6A3nra) | Quan Nguyen          | PyData Global                     | 2022 |
 | [Bayesian Optimization](https://www.youtube.com/watch?v=c4KKvyWW_Xk)                            | Peter Frazier        | INFORMS                           | 2018 |
 | [Bayesian Optimization](https://www.youtube.com/watch?v=C5nqEHpdyoE&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=6) | Matthew W. Hoffman   | UAI                               | 2018 |
