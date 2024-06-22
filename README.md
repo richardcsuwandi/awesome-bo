@@ -1,8 +1,5 @@
 # Awesome Bayesian Optimization [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-A curated list of awesome Bayesian optimization resources.
-
-## Contributing
-Contributions are welcome! Please feel free to send me [pull requests](https://github.com/richardcsuwandi/awesome-bo/pulls) or email (richardsuwandi@link.cuhk.edu.cn).
+A curated list of awesome Bayesian optimization resources. Maintained by [Richard Cornelius Suwandi](https://richardcsuwandi.github.io/).
 
 ## Table of Contents
 - [Books](#books)
@@ -51,3 +48,7 @@ Contributions are welcome! Please feel free to send me [pull requests](https://g
 | Hyperopt | A Python library for optimization over complex search spaces, both serial and parallel.                                     | 
 | scikit-optimize | A library for sequential model-based optimization, built on top of popular Python scientific libraries. |
 | Dragonfly | A scalable Bayesian optimization library with a focus on computationally expensive black-box functions. |
+
+
+## Contributing
+Contributions are welcome! Please feel free to send me [pull requests](https://github.com/richardcsuwandi/awesome-bo/pulls) or email (richardsuwandi@link.cuhk.edu.cn).
