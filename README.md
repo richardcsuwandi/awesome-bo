@@ -19,6 +19,8 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | Title                                                                                                      | Publication               | Year |
 |------------------------------------------------------------------------------------------------------------|---------------------------|------|
 | [Approximation-Aware Bayesian Optimization](https://arxiv.org/abs/2406.04308) | arXiv | 2024 |
+| [Provably Efficient Bayesian Optimization with Unknown Gaussian Process Hyperparameter Estimation](https://arxiv.org/pdf/2306.06844) | arXiv | 2024 |
+| [An adaptive approach to Bayesian Optimization with switching costs](https://arxiv.org/pdf/2405.08973) | arXiv | 2024 |
 | [Large Language Models to Enhance Bayesian Optimization](https://openreview.net/pdf?id=OOxotBmGol) | ICLR | 2024 |
 | [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) | AISTATS                   | 2023 |
 | [Sparse Bayesian Optimization](https://proceedings.mlr.press/v206/liu23b/liu23b.pdf) | AISTATS | 2023 |
