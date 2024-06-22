@@ -17,6 +17,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                                      | Publication               | Year |
 |------------------------------------------------------------------------------------------------------------|---------------------------|------|
+| [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) | AISTATS                   | 2023 |
 | [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301)                               | arXiv                     | 2022 |
 | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)                                    | arXiv                     | 2018 |
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
