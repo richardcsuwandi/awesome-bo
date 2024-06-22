@@ -18,11 +18,13 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | Title                                                                                                      | Publication               | Year |
 |------------------------------------------------------------------------------------------------------------|---------------------------|------|
 | [Approximation-Aware Bayesian Optimization](https://arxiv.org/abs/2406.04308) | arXiv | 2024 |
-| [Large Language Models to Enhance Bayesian Optimization](https://arxiv.org/abs/2402.03921) | ICLR | 2024 |
+| [Large Language Models to Enhance Bayesian Optimization]([https://arxiv.org/abs/2402.03921](https://openreview.net/pdf?id=OOxotBmGol)) | ICLR | 2024 |
 | [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) | AISTATS                   | 2023 |
 | [The Behavior and Convergence of Local Bayesian Optimization](https://proceedings.neurips.cc/paper_files/paper/2023/file/e8f4eae0a41cab67fdead3aa6b77f083-Paper-Conference.pdf) | NeurIPS | 2023 |
 | [Local Bayesian optimization via maximizing probability of descent](https://proceedings.neurips.cc/paper_files/paper/2022/file/555479a201da27c97aaeed842d16ca49-Paper-Conference.pdf) | NeurIPS | 2022 |
 | [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301)                               | arXiv                     | 2022 |
+| [Few-Shot Bayesian Optimization with Deep Kernel Surrogates](https://openreview.net/pdf?id=bJxgv5C3sYc) | ICLR | 2021 |
+| [Federated Bayesian Optimization via Thompson Sampling](https://proceedings.neurips.cc/paper/2020/file/6dfe08eda761bd321f8a9b239f6f4ec3-Paper.pdf) | NeurIPS | 2020 |
 | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)                                    | arXiv                     | 2018 |
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
 | [Scalable Bayesian Optimization Using Deep Neural Networks](https://proceedings.mlr.press/v37/snoek15)     | ICML | 2015 |
