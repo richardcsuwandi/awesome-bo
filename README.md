@@ -35,6 +35,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Bayesian optimization for automated model selection](https://papers.nips.cc/paper_files/paper/2016/file/3bbfdde8842a5c44a0323518eec97cbe-Paper.pdf) | NeurIPS | 2016 |
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
 | [Scalable Bayesian Optimization Using Deep Neural Networks](https://proceedings.mlr.press/v37/snoek15)     | ICML | 2015 |
+| [Bayesian optimization for learning gaits under uncertainty](https://link.springer.com/article/10.1007/s10472-015-9463-9) | Springer | 2015 |
 | [Bayesian Optimization with Inequality Constraints](https://proceedings.mlr.press/v32/gardner14) | ICML | 2014 |
 | [Practical Bayesian Optimization of Machine Learning Algorithms](https://papers.nips.cc/paper_files/paper/2012/hash/05311655a15b75fab86956663e1819cd-Abstract.html) | NeurIPS | 2012 |
 | [Entropy Search for Information-Efficient Global Optimization](https://jmlr.csail.mit.edu/papers/volume13/hennig12a/hennig12a.pdf) | JMLR | 2021 |
@@ -51,7 +52,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Bayesian Optimization with scikit-learn](https://www.youtube.com/watch?v=jtRPxRnOXnk&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=8) | Thomas Huijskens      | PyData London                     | 2017 |
 
 ## Blogs 📝
-| Title                                                                                       | Authors                        | Platform | Year |
+| Title                                                                                       | Author                         | Platform | Year |
 |---------------------------------------------------------------------------------------------|--------------------------------|----------|------|
 | [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/)          | Apoorv Agnihotri & Nipun Batra | Distill  | 2020 |
 | [Bayesian Optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/)        | Martin Krasser                 | Personal | 2018 |
