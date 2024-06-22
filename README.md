@@ -28,6 +28,6 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 - [Bayesian Optimization with scikit-learn](https://www.youtube.com/watch?v=jtRPxRnOXnk&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=8) by Thomas Huijskens (PyData London, 2017)
 
 ## 📝 Blog
-- [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) by Apporv Agnihotri & Nipun Batra (Distill, 2020)
+- [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) by Apoorv Agnihotri & Nipun Batra (Distill, 2020)
 - [Bayesian Optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/) by Martin Krasser (2018)
 - [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) by Thomas Huijskens (2016）
