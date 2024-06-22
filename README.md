@@ -30,6 +30,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Few-Shot Bayesian Optimization with Deep Kernel Surrogates](https://openreview.net/pdf?id=bJxgv5C3sYc) | ICLR | 2021 |
 | [Federated Bayesian Optimization via Thompson Sampling](https://proceedings.neurips.cc/paper/2020/file/6dfe08eda761bd321f8a9b239f6f4ec3-Paper.pdf) | NeurIPS | 2020 |
 | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)                                    | arXiv                     | 2018 |
+| [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c/wang18c.pdf) | AISTATS | 2018 |
 | [Fast Bayesian Optimization of Machine Learning Hyperparameters on Large Datasets](https://proceedings.mlr.press/v54/klein17a/klein17a.pdf) | AISTATS | 2017 |
 | [Bayesian optimization for automated model selection](https://papers.nips.cc/paper_files/paper/2016/file/3bbfdde8842a5c44a0323518eec97cbe-Paper.pdf) | NeurIPS | 2016 |
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
