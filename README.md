@@ -2,7 +2,7 @@
 A curated list of awesome Bayesian optimization resources.
 
 ## Contributing
-Please feel free to send me [pull requests](https://github.com/richardcsuwandi/awesome-bo/pulls) or email (richardsuwandi@link.cuhk.edu.cn).
+Contributions are welcome! Please feel free to send me [pull requests](https://github.com/richardcsuwandi/awesome-bo/pulls) or email (richardsuwandi@link.cuhk.edu.cn).
 
 ## Table of Contents
 - [Books](#books)
