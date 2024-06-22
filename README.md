@@ -34,7 +34,7 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 - [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) by Thomas Huijskens (2016）
 
 ## 💻 Softwares
-- [BoTorch:](https://botorch.org/): A Python library for Bayesian optimization built on top of PyTorch.
+- [BoTorch:](https://botorch.org/) A Python library for Bayesian optimization built on top of PyTorch.
 - [MOE:](https://github.com/Yelp/MOE) A Bayesian global optimization engine for large-scale optimization of expensive and noisy black-box functions.
 - [Spearmint:](https://github.com/HIPS/Spearmint) An efficient Bayesian optimization package designed for hyperparameter tuning.
 - [Hyperopt:](https://hyperopt.github.io/hyperopt/) A Python library for serial and parallel optimization over awkward search spaces.
