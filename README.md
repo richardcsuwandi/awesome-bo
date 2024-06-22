@@ -7,8 +7,9 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 ## Table of Contents
  - 📚 [Books](#books)
  - 📄 [Papers](#papers)
- - 🎥 [Videos](#software)
- - 📝 [Blog](#blog)
+ - 🎥 [Videos](#videos)
+ - 📝 [Blogs](#blogs)
+ - 💻 [Softwares](#softwares)
 
 ## 📚 Books
 - [Bayesian Optimization](https://bayesoptbook.com/) by Roman Garnett (2023)
@@ -27,7 +28,15 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 - [Bayesian Optimization](https://www.youtube.com/watch?v=C5nqEHpdyoE&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=6) by Matthew W. Hoffman (UAI, 2018)
 - [Bayesian Optimization with scikit-learn](https://www.youtube.com/watch?v=jtRPxRnOXnk&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=8) by Thomas Huijskens (PyData London, 2017)
 
-## 📝 Blog
+## 📝 Blogs
 - [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) by Apoorv Agnihotri & Nipun Batra (Distill, 2020)
 - [Bayesian Optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/) by Martin Krasser (2018)
 - [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) by Thomas Huijskens (2016）
+
+## 💻 Softwares
+- [BoTorch:](https://botorch.org/): A Python library for Bayesian optimization built on top of PyTorch.
+- [MOE:](https://github.com/Yelp/MOE) A Bayesian global optimization engine for large-scale optimization of expensive and noisy black-box functions.
+- [Spearmint:](https://github.com/HIPS/Spearmint) An efficient Bayesian optimization package designed for hyperparameter tuning.
+- [Hyperopt:](https://hyperopt.github.io/hyperopt/) A Python library for serial and parallel optimization over awkward search spaces.
+- [scikit-optimize:](https://scikit-optimize.github.io/stable/) A simple and efficient library for sequential model-based optimization, built on top of NumPy, SciPy, and scikit-learn.
+- [Dragonfly:](https://github.com/dragonfly/dragonfly) A library for scalable Bayesian optimization with a focus on computationally expensive black-box functions.
