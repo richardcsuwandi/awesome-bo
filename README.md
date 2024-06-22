@@ -22,6 +22,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
 | [Bayesian Optimization with Inequality Constraints](https://proceedings.mlr.press/v32/gardner14) | PMLR | 2014 |
 | [Practical Bayesian Optimization of Machine Learning Algorithms](https://papers.nips.cc/paper_files/paper/2012/hash/05311655a15b75fab86956663e1819cd-Abstract.html) | NeurIPS | 2012 |
+| [Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design](https://icml.cc/Conferences/2010/papers/422.pdf) | ICML | 2010 |
 | [Efficient Global Optimization of Expensive Black-Box Functions](https://link.springer.com/article/10.1023/A:1008306431147) | Springer | 1998|
 
 ## Videos 🎥
