@@ -18,7 +18,7 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 | [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) | Quan Nguyen  | 2023 |
 
 ## Papers 📄
-| Title                                                                                                      | Venue                     | Year |
+| Title                                                                                                      | Publication               | Year |
 |------------------------------------------------------------------------------------------------------------|---------------------------|------|
 | [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301)                               | arXiv                     | 2022 |
 | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)                                    | arXiv                     | 2018 |
@@ -47,7 +47,7 @@ Please feel free to send me [pull requests](https://github.com/richardcsuwandi/a
 | [BoTorch](https://botorch.org/)   | A Python library for Bayesian optimization built on top of PyTorch.                                | 
 | [MOE](https://github.com/Yelp/MOE) | A Bayesian global optimization engine for optimizing expensive and noisy black-box functions.     | 
 | [Spearmint](https://github.com/HIPS/Spearmint) | An efficient Bayesian optimization package designed for hyperparameter tuning.        | 
-| GPyOpt | A Bayesian optimization library using Gaussian Processes for optimization tasks. (*No longer maintained ⚠️*)                     |    
+| GPyOpt | A Bayesian optimization library using Gaussian Processes for optimization tasks. (No longer maintained ⚠️)                     |    
 | Hyperopt | A Python library for optimization over complex search spaces, both serial and parallel.                                     | 
 | scikit-optimize | A library for sequential model-based optimization, built on top of popular Python scientific libraries. |
 | Dragonfly | A scalable Bayesian optimization library with a focus on computationally expensive black-box functions. |
