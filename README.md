@@ -44,6 +44,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Entropy Search for Information-Efficient Global Optimization](https://jmlr.csail.mit.edu/papers/volume13/hennig12a/hennig12a.pdf) | JMLR | 2021 |
 | [Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design](https://icml.cc/Conferences/2010/papers/422.pdf) | ICML | 2010 |
 | [Efficient Global Optimization of Expensive Black-Box Functions](https://link.springer.com/article/10.1023/A:1008306431147) | Springer | 1998|
+| [Bayesian approach to global optimization](https://link.springer.com/book/10.1007/978-94-009-0909-0) | Springer | 1989 |
 
 ## Videos 🎥
 | Title                                                                                           | Presenter            | Event                             | Year |
@@ -54,6 +55,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Bayesian Optimization](https://www.youtube.com/watch?v=c4KKvyWW_Xk)                            | Peter Frazier        | INFORMS                           | 2018 |
 | [Bayesian Optimization](https://www.youtube.com/watch?v=C5nqEHpdyoE&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=6) | Matthew W. Hoffman   | UAI                               | 2018 |
 | [Bayesian Optimization with scikit-learn](https://www.youtube.com/watch?v=jtRPxRnOXnk&list=PLwUqqMt5en7e9W1H7t2wbfmyqKpxXu_jG&index=8) | Thomas Huijskens      | PyData London                     | 2017 |
+| [Global Optimization with Gaussian Processes](https://www.youtube.com/watch?v=rG10zqtu8F4) | Javier González | Gaussian Process Summer School | 2015 | 
 
 ## Blogs 📝
 | Title                                                                                       | Author                         | Platform | Year |
