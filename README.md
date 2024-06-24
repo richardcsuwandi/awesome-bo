@@ -31,6 +31,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Accelerating Bayesian Optimization for Biological Sequence Design with Denoising Autoencoders](https://proceedings.mlr.press/v162/stanton22a/stanton22a.pdf) | ICML | 2022 |
 | [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301)                               | arXiv                     | 2022 |
 | [Few-Shot Bayesian Optimization with Deep Kernel Surrogates](https://openreview.net/pdf?id=bJxgv5C3sYc) | ICLR | 2021 |
+| [A survey on high-dimensional Gaussian process modeling with application to Bayesian optimization](https://arxiv.org/abs/2111.05040) | arXiv | 2021 |
 | [Federated Bayesian Optimization via Thompson Sampling](https://proceedings.neurips.cc/paper/2020/file/6dfe08eda761bd321f8a9b239f6f4ec3-Paper.pdf) | NeurIPS | 2020 |
 | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)                                    | arXiv                     | 2018 |
 | [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c/wang18c.pdf) | AISTATS | 2018 |
