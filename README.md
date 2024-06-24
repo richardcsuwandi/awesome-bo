@@ -18,6 +18,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                                      | Publication               | Year |
 |------------------------------------------------------------------------------------------------------------|---------------------------|------|
+| [Preferential Multi-Objective Bayesian Optimization](https://arxiv.org/abs/2406.14699) | arXiv | 2024 |
 | [Approximation-Aware Bayesian Optimization](https://arxiv.org/abs/2406.04308) | arXiv | 2024 |
 | [Provably Efficient Bayesian Optimization with Unknown Gaussian Process Hyperparameter Estimation](https://arxiv.org/pdf/2306.06844) | arXiv | 2024 |
 | [An adaptive approach to Bayesian Optimization with switching costs](https://arxiv.org/pdf/2405.08973) | arXiv | 2024 |
