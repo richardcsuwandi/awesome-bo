@@ -38,6 +38,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c/wang18c.pdf) | AISTATS | 2018 |
 | [Fast Bayesian Optimization of Machine Learning Hyperparameters on Large Datasets](https://proceedings.mlr.press/v54/klein17a/klein17a.pdf) | AISTATS | 2017 |
 | [Bayesian optimization for automated model selection](https://papers.nips.cc/paper_files/paper/2016/file/3bbfdde8842a5c44a0323518eec97cbe-Paper.pdf) | NeurIPS | 2016 |
+| [A General Framework for Constrained Bayesian Optimization using Information-based Search](https://jmlr.org/papers/volume17/15-616/15-616.pdf) | JMLR | 2016 |
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
 | [Scalable Bayesian Optimization Using Deep Neural Networks](https://proceedings.mlr.press/v37/snoek15)     | ICML | 2015 |
 | [Bayesian optimization for learning gaits under uncertainty](https://link.springer.com/article/10.1007/s10472-015-9463-9) | Springer | 2015 |
