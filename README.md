@@ -29,6 +29,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [The Behavior and Convergence of Local Bayesian Optimization](https://proceedings.neurips.cc/paper_files/paper/2023/file/e8f4eae0a41cab67fdead3aa6b77f083-Paper-Conference.pdf) | NeurIPS | 2023 |
 | [Quantum Bayesian Optimization](https://daizhongxiang.github.io/papers/quantum_bo.pdf) | NeurIPS | 2023 |
 | [PFNs4BO: In-Context Learning for Bayesian Optimization](https://proceedings.mlr.press/v202/muller23a/muller23a.pdf) | ICML | 2023 |
+| [Bayesian Optimization with Informative Covariance](https://arxiv.org/abs/2208.02704) | TMLR | 2023 |
 | [Local Bayesian optimization via maximizing probability of descent](https://proceedings.neurips.cc/paper_files/paper/2022/file/555479a201da27c97aaeed842d16ca49-Paper-Conference.pdf) | NeurIPS | 2022 |
 | [Accelerating Bayesian Optimization for Biological Sequence Design with Denoising Autoencoders](https://proceedings.mlr.press/v162/stanton22a/stanton22a.pdf) | ICML | 2022 |
 | [Recent Advances in Bayesian Optimization](https://arxiv.org/abs/2206.03301)                               | arXiv                     | 2022 |
