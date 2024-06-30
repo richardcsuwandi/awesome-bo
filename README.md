@@ -22,6 +22,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Preferential Multi-Objective Bayesian Optimization](https://arxiv.org/abs/2406.14699) | arXiv | 2024 |
 | [Approximation-Aware Bayesian Optimization](https://arxiv.org/abs/2406.04308) | arXiv | 2024 |
 | [Provably Efficient Bayesian Optimization with Unknown Gaussian Process Hyperparameter Estimation](https://arxiv.org/pdf/2306.06844) | arXiv | 2024 |
+| [Bayesian Optimization of Functions over Node Subsets in Graphs](https://arxiv.org/abs/2405.15119) | arXiv | 2024 |
 | [An adaptive approach to Bayesian Optimization with switching costs](https://arxiv.org/pdf/2405.08973) | arXiv | 2024 |
 | [Large Language Models to Enhance Bayesian Optimization](https://openreview.net/pdf?id=OOxotBmGol) | ICLR | 2024 |
 | [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) | ICLR | 2024 |
