@@ -18,6 +18,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [Cost-aware Bayesian optimization via the Pandora's Box Gittins index](https://arxiv.org/abs/2406.20062) | arXiv | 2024 |
 | [FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch](https://arxiv.org/pdf/2406.04824) | arXiv | 2024 |
 | [Preferential Multi-Objective Bayesian Optimization](https://arxiv.org/abs/2406.14699) | arXiv | 2024 |
 | [Approximation-Aware Bayesian Optimization](https://arxiv.org/abs/2406.04308) | arXiv | 2024 |
