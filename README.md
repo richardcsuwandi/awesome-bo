@@ -48,6 +48,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [A General Framework for Constrained Bayesian Optimization using Information-based Search](https://jmlr.org/papers/volume17/15-616/15-616.pdf) | JMLR | 2016 |
 | [GLASSES: Relieving The Myopia Of Bayesian Optimisation](http://proceedings.mlr.press/v51/gonzalez16b.pdf) | AISTATS | 2016 |
 | [Taking the Human Out of the Loop: A Review of Bayesian Optimization](https://ieeexplore.ieee.org/document/7352306/) | IEEE Proceedings         | 2016 |
+| [High Dimensional Bayesian Optimisation and Bandits via Additive Models](http://proceedings.mlr.press/v37/kandasamy15.pdf) | ICML | 2015 |
 | [Scalable Bayesian Optimization Using Deep Neural Networks](https://proceedings.mlr.press/v37/snoek15)     | ICML | 2015 |
 | [Bayesian optimization for learning gaits under uncertainty](https://link.springer.com/article/10.1007/s10472-015-9463-9) | Springer | 2015 |
 | [Bayesian Optimization with Inequality Constraints](https://proceedings.mlr.press/v32/gardner14) | ICML | 2014 |
