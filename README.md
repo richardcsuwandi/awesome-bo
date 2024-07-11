@@ -57,6 +57,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Practical Bayesian Optimization of Machine Learning Algorithms](https://papers.nips.cc/paper_files/paper/2012/hash/05311655a15b75fab86956663e1819cd-Abstract.html) | NeurIPS | 2012 |
 | [Entropy Search for Information-Efficient Global Optimization](https://jmlr.csail.mit.edu/papers/volume13/hennig12a/hennig12a.pdf) | JMLR | 2021 |
 | [Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design](https://icml.cc/Conferences/2010/papers/422.pdf) | ICML | 2010 |
+| [Gaussian Processes for Global Optimization](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=5aef733cdfad14196e49443e974d0dbf49a0dd2e) | LION3 | 2008 |
 | [Efficient Global Optimization of Expensive Black-Box Functions](https://link.springer.com/article/10.1023/A:1008306431147) | Springer | 1998|
 | [Bayesian approach to global optimization](https://link.springer.com/book/10.1007/978-94-009-0909-0) | Springer | 1989 |
 
