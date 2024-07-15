@@ -41,6 +41,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [BoTorch: A framework for efficient Monte-Carlo Bayesian optimization](https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf) | NeurIPS | 2020 |
 | [Federated Bayesian Optimization via Thompson Sampling](https://proceedings.neurips.cc/paper/2020/file/6dfe08eda761bd321f8a9b239f6f4ec3-Paper.pdf) | NeurIPS | 2020 |
 | [Why Non-myopic Bayesian Optimization is Promising and How Far Should We Look-ahead? A Study via Rollout](http://proceedings.mlr.press/v108/yue20b/yue20b.pdf) | AISTATS | 2020 |
+| [Efficient Computation of Expected Hypervolume Improvement Using Box Decomposition Algorithms](https://link.springer.com/article/10.1007/s10898-019-00798-7) | Springer | 2019 |
 | [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811)                                    | arXiv                     | 2018 |
 | [Automating Bayesian optimization with Bayesian optimization](https://proceedings.neurips.cc/paper_files/paper/2018/file/2b64c2f19d868305aa8bbc2d72902cc5-Paper.pdf) | NeurIPS | 2018 |
 | [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c/wang18c.pdf) | AISTATS | 2018 |
