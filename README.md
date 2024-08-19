@@ -18,6 +18,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [Differentiating Policies for Non-Myopic Bayesian Optimization](https://arxiv.org/abs/2408.07812) | arXiv | 2024 |
 | [Pre-trained Gaussian Processes for Bayesian Optimization](https://www.jmlr.org/papers/v25/23-0269.html) | JMLR | 2024 |
 | [Cost-aware Bayesian optimization via the Pandora's Box Gittins index](https://arxiv.org/abs/2406.20062) | arXiv | 2024 |
 | [FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch](https://arxiv.org/pdf/2406.04824) | arXiv | 2024 |
