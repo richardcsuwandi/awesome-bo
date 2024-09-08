@@ -18,6 +18,7 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [Active Learning and Bayesian Optimization: A Unified Perspective to Learn with a Goal](https://link.springer.com/article/10.1007/s11831-024-10064-z) | Springer | 2024 |
 | [Differentiating Policies for Non-Myopic Bayesian Optimization](https://arxiv.org/abs/2408.07812) | arXiv | 2024 |
 | [Pre-trained Gaussian Processes for Bayesian Optimization](https://www.jmlr.org/papers/v25/23-0269.html) | JMLR | 2024 |
 | [Cost-aware Bayesian optimization via the Pandora's Box Gittins index](https://arxiv.org/abs/2406.20062) | arXiv | 2024 |
