@@ -18,6 +18,55 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [A Distributional View of High Dimensional Optimization](http://arxiv.org/abs/2507.16315v1) | arXiv | 2025 |
+| [Adaptive Bayesian Data-Driven Design of Reliable Solder Joints for Micro-electronic Devices](http://arxiv.org/abs/2507.19663v1) | arXiv | 2025 |
+| [Alternative threshold function for Bayesian Optimization of Variational Quantum Circuits](http://arxiv.org/abs/2507.20570v1) | arXiv | 2025 |
+| [Bayesian Neural Network Surrogates for Bayesian Optimization of Carbon Capture and Storage Operations](http://arxiv.org/abs/2507.21803v1) | arXiv | 2025 |
+| [Bayesian optimisation of poloidal field coil positions in tokamaks](http://arxiv.org/abs/2503.17189v3) | arXiv | 2025 |
+| [Bayesian optimization and nonlocal effects method for α decay of superheavy nuclei based on CPPM](http://arxiv.org/abs/2507.19091v1) | arXiv | 2025 |
+| [Bayesian Optimization for Molecules Should Be Pareto-Aware](http://arxiv.org/abs/2507.13704v2) | arXiv | 2025 |
+| [Bayesian Optimization of Robustness Measures under Input Uncertainty: A Randomized Gaussian Process Upper Confidence Bound Approach](http://arxiv.org/abs/2504.03172v2) | arXiv | 2025 |
+| [Bridging Quantum and Classical Computing in Drug Design: Architecture Principles for Improved Molecule Generation](http://arxiv.org/abs/2506.01177v2) | arXiv | 2025 |
+| [Comparison of Optimised Geometric Deep Learning Architectures, over Varying Toxicological Assay Data Environments](http://arxiv.org/abs/2507.17775v1) | arXiv | 2025 |
+| [Device-Free Localization Using Multi-Link MIMO Channels in Distributed Antenna Networks](http://arxiv.org/abs/2505.04085v2) | arXiv | 2025 |
+| [Efficient Visual Appearance Optimization by Learning from Prior Preferences](http://arxiv.org/abs/2507.15355v1) | arXiv | 2025 |
+| [Extended Factorization Machine Annealing for Rapid Discovery of Transparent Conducting Materials](http://arxiv.org/abs/2507.23160v1) | arXiv | 2025 |
+| [Hamiltonian parameter inference from RIXS spectra with active learning](http://arxiv.org/abs/2507.16021v2) | arXiv | 2025 |
+| [High-fidelity electronic structure and properties of InSb: $G_0W_0$ and Bayesian-optimized hybrid functionals and DFT+$U$ approaches](http://arxiv.org/abs/2508.00290v1) | arXiv | 2025 |
+| [Information Preserving Line Search via Bayesian Optimization](http://arxiv.org/abs/2507.15485v1) | SPRINGER | 2025 |
+| [Machine-Learning-Assisted Photonic Device Development: A Multiscale Approach from Theory to Characterization](http://arxiv.org/abs/2506.20056v2) | arXiv | 2025 |
+| [Multi-fidelity Bayesian Data-Driven Design of Energy Absorbing Spinodoid Cellular Structures](http://arxiv.org/abs/2507.22079v1) | arXiv | 2025 |
+| [Navigating chemical design spaces for metal-ion batteries via machine-learning-guided phase-field simulations](http://arxiv.org/abs/2502.08292v4) | arXiv | 2025 |
+| [ULTHO: Ultra-Lightweight yet Efficient Hyperparameter Optimization in Deep Reinforcement Learning](http://arxiv.org/abs/2503.06101v2) | arXiv | 2025 |
+| [Automatic dimensionality reduction of Twin-in-the-Loop Observers](http://arxiv.org/abs/2401.10945v2) | arXiv | 2024 |
+| [BEACON: A Bayesian Optimization Strategy for Novelty Search in Expensive Black-Box Systems](http://arxiv.org/abs/2406.03616v4) | arXiv | 2024 |
+| [Comparative Analysis of search Approaches to Discover Donor Molecules for Organic Solar Cells](http://arxiv.org/abs/2411.01900v3) | arXiv | 2024 |
+| [Density Ratio Estimation-based Bayesian Optimization with Semi-Supervised Learning](http://arxiv.org/abs/2305.15612v5) | ICML | 2023 |
+| [A Learning-Based Framework for Collision-Free Motion Planning](http://arxiv.org/abs/2508.07502v1) | arXiv | 2025 |
+| [Adaptive Learning for IRS-Assisted Wireless Networks: Securing Opportunistic Communications Against Byzantine Eavesdroppers](http://arxiv.org/abs/2508.08206v1) | arXiv | 2025 |
+| [Bayesian Optimization applied for accelerated Virtual Validation of the Autonomous Driving Function](http://arxiv.org/abs/2507.22769v2) | arXiv | 2025 |
+| [Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models](http://arxiv.org/abs/2507.22766v2) | arXiv | 2025 |
+| [Benchmarking Self-Driving Labs](http://arxiv.org/abs/2508.06642v1) | arXiv | 2025 |
+| [BOASF: A Unified Framework for Speeding up Automatic Machine Learning via Adaptive Successive Filtering](http://arxiv.org/abs/2507.20446v2) | arXiv | 2025 |
+| [BOOST: Bayesian Optimization with Optimal Kernel and Acquisition Function Selection Technique](http://arxiv.org/abs/2508.02332v1) | arXiv | 2025 |
+| [Bridging Farm Economics and Landscape Ecology for Global Sustainability through Hierarchical and Bayesian Optimization](http://arxiv.org/abs/2508.06386v1) | arXiv | 2025 |
+| [Characterization and automated optimization of laser-driven proton beams from converging liquid sheet jet targets](http://arxiv.org/abs/2508.06462v1) | arXiv | 2025 |
+| [ChipletPart: Cost-Aware Partitioning for 2.5D Systems](http://arxiv.org/abs/2507.19819v2) | arXiv | 2025 |
+| [Coflex: Enhancing HW-NAS with Sparse Gaussian Processes for Efficient and Scalable DNN Accelerator Design](http://arxiv.org/abs/2507.23437v2) | arXiv | 2025 |
+| [Covering Multiple Objectives with a Small Set of Solutions Using Bayesian Optimization](http://arxiv.org/abs/2501.19342v3) | arXiv | 2025 |
+| [Energy-Efficient Federated Learning for Edge Real-Time Vision via Joint Data, Computation, and Communication Design](http://arxiv.org/abs/2508.01745v1) | arXiv | 2025 |
+| [Evolutionary Generative Optimization: Towards Fully Data-Driven Evolutionary Optimization via Generative Learning](http://arxiv.org/abs/2508.00380v1) | arXiv | 2025 |
+| [Fast and Generalizable parameter-embedded Neural Operators for Lithium-Ion Battery Simulation](http://arxiv.org/abs/2508.08087v1) | arXiv | 2025 |
+| [Flow Battery Manifold Design with Heterogeneous Inputs Through Generative Adversarial Neural Networks](http://arxiv.org/abs/2508.08863v1) | arXiv | 2025 |
+| [ForgeHLS: A Large-Scale, Open-Source Dataset for High-Level Synthesis](http://arxiv.org/abs/2507.03255v3) | arXiv | 2025 |
+| [How to Proactively Monitor Untrusted Communications with Cell-Free Massive MIMO?](http://arxiv.org/abs/2508.03423v2) | arXiv | 2025 |
+| [MOCA-HESP: Meta High-dimensional Bayesian Optimization for Combinatorial and Mixed Spaces via Hyper-ellipsoid Partitioning](http://arxiv.org/abs/2508.06847v1) | arXiv | 2025 |
+| [On Some Tunable Multi-fidelity Bayesian Optimization Frameworks](http://arxiv.org/abs/2508.01013v1) | arXiv | 2025 |
+| [ORFS-agent: Tool-Using Agents for Chip Design Optimization](http://arxiv.org/abs/2506.08332v2) | arXiv | 2025 |
+| [Scalable Neural Network-based Blackbox Optimization](http://arxiv.org/abs/2508.03827v1) | arXiv | 2025 |
+| [The Gittins Index: A Design Principle for Decision-Making Under Uncertainty](http://arxiv.org/abs/2506.10872v3) | arXiv | 2025 |
+| [Towards Scalable Bayesian Optimization via Gradient-Informed Bayesian Neural Networks](http://arxiv.org/abs/2504.10076v2) | arXiv | 2025 |
+| [Multi-Fidelity Reinforcement Learning for Time-Optimal Quadrotor Re-planning](http://arxiv.org/abs/2403.08152v2) | arXiv | 2024 |
 | [Active Learning and Bayesian Optimization: A Unified Perspective to Learn with a Goal](https://link.springer.com/article/10.1007/s11831-024-10064-z) | Springer | 2024 |
 | [Differentiating Policies for Non-Myopic Bayesian Optimization](https://arxiv.org/abs/2408.07812) | arXiv | 2024 |
 | [Pre-trained Gaussian Processes for Bayesian Optimization](https://www.jmlr.org/papers/v25/23-0269.html) | JMLR | 2024 |
