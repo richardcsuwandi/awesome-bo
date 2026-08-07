@@ -15,6 +15,12 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 | [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) | Quan Nguyen  | 2023 |
 | [Bayesian Optimization: Theory and Practice Using Python](https://www.amazon.com/Bayesian-Optimization-Theory-Practice-Python/dp/1484290623) | Peng Liu | 2023 |
 
+## Tutorial Slides 
+| Title                                       | Venue      | Year |
+|---------------------------------------------|-------------|------|
+| [Recent Advances in Bayesian Optimization](https://bayesopt-tutorial.github.io/syllabus/fullslides.pdf) | AAAI | 2023 |
+
+
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
