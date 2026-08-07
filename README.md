@@ -25,6 +25,13 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [Collaborative Spatial Learning with Multi-LLM Agents in Networked Social Experiments](http://arxiv.org/abs/2607.14574v1) | SPRINGER | 2026 |
+| [How Many Initial Points Does Bayesian Optimization Need?](http://arxiv.org/abs/2607.04356v1) | ICML | 2026 |
+| [Maximally Robust Satisficing Bayesian Optimization](http://arxiv.org/abs/2607.13652v1) | UAI | 2026 |
+| [BBOPlace-Bench: Benchmarking Black-Box Optimization for Chip Placement](http://arxiv.org/abs/2510.23472v2) | IEEE | 2025 |
+| [CoT-X: An Adaptive Framework for Cross-Model Chain-of-Thought Transfer and Optimization](http://arxiv.org/abs/2511.05747v4) | KDD | 2025 |
+| [Information-Theoretic Bayesian Optimization for Bilevel Optimization Problems](http://arxiv.org/abs/2509.21725v3) | UAI | 2025 |
+| [Mitigating Phase Errors to Improve Signal Quality in RIS-Assisted Satellite Communications](http://arxiv.org/abs/2308.05452v2) | IEEE | 2023 |
 | [Information Preserving Line Search via Bayesian Optimization](http://arxiv.org/abs/2507.15485v1) | SPRINGER | 2025 |
 | [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) | ICLR | 2024 |
 | [Active Learning and Bayesian Optimization: A Unified Perspective to Learn with a Goal](https://link.springer.com/article/10.1007/s11831-024-10064-z) | Springer | 2024 |
@@ -68,21 +75,21 @@ _Newest unreviewed preprints, capped at 15 most recent. Moves to Papers above on
 
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
-| [A Bayesian-optimization framework coupling a multiphase PDE tumor model to efficiently design combination therapy schedules](http://arxiv.org/abs/2607.20782v1) | arXiv | 2026 |
-| [A Machine-Learning-Based Gas Lift Optimization Workflow for Unconventional Fields](http://arxiv.org/abs/2607.25885v1) | arXiv | 2026 |
-| [Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm](http://arxiv.org/abs/2607.06989v2) | arXiv | 2026 |
-| [Active Learning Guided Design Space Refinement for Scalable Multi-Objective Bayesian Optimization in Materials Discovery](http://arxiv.org/abs/2608.04651v1) | arXiv | 2026 |
-| [Adaptive Sampling for Automated Post-Disaster Rapid Damage Assessment via Level-Set Cost-Aware Bayesian Optimization](http://arxiv.org/abs/2608.02868v1) | arXiv | 2026 |
-| [Agentic Bayesian Optimization through Surrogate-Augmented Autoresearch](http://arxiv.org/abs/2608.00316v1) | arXiv | 2026 |
-| [An Accessible Solution for Deformable Image Registration Compared with Learning-Based Approaches](http://arxiv.org/abs/2608.02248v1) | arXiv | 2026 |
-| [An LLM-Driven Workflow for Automated Process Control Strategy Generation and Tuning from Dynamic Process Models](http://arxiv.org/abs/2607.21292v1) | arXiv | 2026 |
-| [Battery Storage Co-Optimization in Day-Ahead and Real-Time Markets with Bayesian Optimization](http://arxiv.org/abs/2608.00911v1) | arXiv | 2026 |
-| [Bayesian adaptively-weighted ensembles for few-shot abdominal segmentation](http://arxiv.org/abs/2608.05815v1) | arXiv | 2026 |
-| [Bayesian optimization approach for tracking a moving target from far-field data in three dimensions](http://arxiv.org/abs/2607.21135v1) | arXiv | 2026 |
-| [Bayesian Variational Method for Precision Few-Body Calculations](http://arxiv.org/abs/2607.25265v1) | arXiv | 2026 |
-| [BayesSeg: A Bayesian Optimization Framework for State Segmentation of Electricity Consumption Time Series](http://arxiv.org/abs/2608.00513v1) | arXiv | 2026 |
-| [BlurDriving: Investigating How Personalized Blur Techniques Impact Drivers' Performance in Virtual Reality](http://arxiv.org/abs/2607.18628v1) | arXiv | 2026 |
-| [Constraining the lives and times of exoplanets through evolutionary Bayesian retrievals](http://arxiv.org/abs/2607.25845v1) | arXiv | 2026 |
+| [Agentic Calibration of Grey-Box Simulation Models: An LLM-Driven Alternative](http://arxiv.org/abs/2607.18308v1) | arXiv | 2026 |
+| [AutoMatBench: An Automatic Optimization Toolkit for the Acceleration of Material Properties Prediction Benchmarking](http://arxiv.org/abs/2607.11526v1) | arXiv | 2026 |
+| [Bayesian Optimization of Genetic Algorithm Hyperparameters in a Multi-Fidelity Framework for Efficient Lattice Material Design](http://arxiv.org/abs/2607.07289v1) | arXiv | 2026 |
+| [Bgolearn: a Unified Bayesian Optimization Framework for Accelerating Materials Discovery](http://arxiv.org/abs/2601.06820v2) | arXiv | 2026 |
+| [CADENZA: Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing](http://arxiv.org/abs/2606.29151v3) | arXiv | 2026 |
+| [Closed-Loop Knowledge Dynamics: An Operational Framework for Saturation and Escape](http://arxiv.org/abs/2607.14185v1) | arXiv | 2026 |
+| [Constraint-Bound Agnostic Bayesian Optimization: One Model for All Thresholds](http://arxiv.org/abs/2607.23448v1) | arXiv | 2026 |
+| [Cost-Aware Recovery-Pathway Identification and Bayesian Optimization for Autonomous Materials Discovery](http://arxiv.org/abs/2607.23896v1) | arXiv | 2026 |
+| [Cost-Aware Uplink MPQUIC Scheduling via Multi-Objective Bayesian Optimization](http://arxiv.org/abs/2607.18444v1) | arXiv | 2026 |
+| [DASH: Decoupled Adaptive Surrogate - Acquisition Harness for Automated Bayesian Optimization](http://arxiv.org/abs/2608.00641v2) | arXiv | 2026 |
+| [Efficient Heteroscedastic Bayesian Optimization for Risk-Aware AutoRL](http://arxiv.org/abs/2607.26680v1) | arXiv | 2026 |
+| [Energy Efficient Active Stacked Intelligent Metasurfaces](http://arxiv.org/abs/2607.15654v1) | arXiv | 2026 |
+| [Expert-Guided Forecast Editing for Time-Series Foundation Models](http://arxiv.org/abs/2607.19659v1) | arXiv | 2026 |
+| [Exploiting Separability in Multi-Scale Grey-Box Bayesian Optimization](http://arxiv.org/abs/2608.03045v1) | arXiv | 2026 |
+| [Finding Low Star Discrepancy 3D Kronecker Point Sets Using Algorithm Configuration Techniques](http://arxiv.org/abs/2604.00786v2) | arXiv | 2026 |
 
 ## Videos 🎥
 | Title                                                                                           | Presenter            | Event                             | Year |
