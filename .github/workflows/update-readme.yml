@@ -1,0 +1,57 @@
+name: Refresh README
+
+on:
+  schedule:
+    # every Monday at 09:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Update papers (arXiv)
+        run: python3 scripts/update_papers.py || true
+
+      - name: Update software (GitHub)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_software.py || true
+
+      - name: Update books (Google Books)
+        env:
+          GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
+        run: python3 scripts/update_books.py || true
+
+      - name: Update blogs (RSS)
+        run: python3 scripts/update_blogs.py || true
+
+      - name: Update videos (YouTube)
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 scripts/update_videos.py || true
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Refresh README with new resources"
+          title: "Weekly README refresh"
+          body: |
+            Automated refresh of README.md:
+            - New peer-reviewed papers added to Papers
+            - New arXiv preprints added to Recent arXiv Preprints (capped, oldest dropped)
+            - New books, software, blogs, and videos if found
+
+            Please review before merging — this PR is not auto-merged.
+          branch: automation/readme-refresh
+          delete-branch: true
