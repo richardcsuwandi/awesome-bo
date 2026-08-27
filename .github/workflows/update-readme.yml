@@ -45,7 +45,13 @@ jobs:
       #     YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       #   run: python3 scripts/update_videos.py || true
 
+      # Keep creating a PR (do not push straight to main). Auto-merge happens
+      # in the next step. A separate pull_request workflow would not run:
+      # PRs opened with GITHUB_TOKEN do not trigger other workflows, and this
+      # repo has Allow auto-merge disabled so `gh pr merge --auto` cannot be
+      # used without extra secrets/settings.
       - name: Open pull request
+        id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Refresh README with new papers"
@@ -55,6 +61,48 @@ jobs:
             - New peer-reviewed papers added to Papers
             - New arXiv preprints added to Recent arXiv Preprints (capped, oldest dropped)
 
-            Please review before merging — this PR is not auto-merged.
+            This weekly papers refresh is auto-merged when the PR is opened by
+            github-actions[bot] on branch automation/readme-refresh.
           branch: automation/readme-refresh
           delete-branch: true
+
+      # Only this papers refresh is eligible. Do not reuse this step if
+      # software/books/videos updates are re-enabled under a different PR.
+      - name: Auto-merge weekly papers refresh
+        if: github.repository == 'richardcsuwandi/awesome-bo' && steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
+          HEAD_SHA: ${{ steps.cpr.outputs.pull-request-head-sha }}
+        run: |
+          set -euo pipefail
+
+          title="$(gh pr view "$PR_NUMBER" --json title --jq .title)"
+          author="$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --jq .user.login)"
+          head="$(gh pr view "$PR_NUMBER" --json headRefName --jq .headRefName)"
+
+          if [ "$title" != "Weekly README refresh: papers" ] ||
+             [ "$author" != "github-actions[bot]" ] ||
+             [ "$head" != "automation/readme-refresh" ]; then
+            echo "Skipping auto-merge; PR does not match weekly papers refresh."
+            echo "title=$title author=$author head=$head"
+            exit 0
+          fi
+
+          merge_args=(--merge --delete-branch)
+          if [ -n "${HEAD_SHA}" ]; then
+            merge_args+=(--match-head-commit "$HEAD_SHA")
+          fi
+
+          # The PR can take a few seconds to become mergeable after creation.
+          for attempt in 1 2 3 4 5 6; do
+            if gh pr merge "$PR_NUMBER" "${merge_args[@]}"; then
+              echo "Merged #$PR_NUMBER"
+              exit 0
+            fi
+            echo "Merge attempt $attempt failed; waiting..."
+            sleep 10
+          done
+
+          echo "Failed to merge #$PR_NUMBER after retries"
+          exit 1
