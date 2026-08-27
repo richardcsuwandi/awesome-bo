@@ -80,6 +80,7 @@ _Newest unreviewed preprints, capped at 15 most recent. Moves to Papers above on
 
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](http://arxiv.org/abs/2608.25116) | arXiv | 2026 |
 | [A FEM-Based Surrogate Modelling and Optimization Framework for Physics-Constrained Electromagnetic Coil Design](http://arxiv.org/abs/2608.18903v1) | arXiv | 2026 |
 | [A Modular Agentic Framework for Synthetically Constrained Multi-Objective Hit-to-Lead Optimization](http://arxiv.org/abs/2608.11483v1) | arXiv | 2026 |
 | [Active learning molecular beam epitaxy of complex quantum materials](http://arxiv.org/abs/2608.17742v1) | arXiv | 2026 |
