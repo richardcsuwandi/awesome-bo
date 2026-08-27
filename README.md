@@ -25,6 +25,11 @@ A curated repository of awesome Bayesian optimization resources. Maintained by [
 ## Papers 📄
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
+| [Free-Probability Kernels for Zero-Rollout Hyperparameter Selection in Reservoir Computing](http://arxiv.org/abs/2608.20998v1) | IEEE | 2026 |
+| [Reliable Online Resource Allocation for Multi-User Semantic Communications: A Constraint Bayesian Optimization Approach](http://arxiv.org/abs/2604.10931v2) | IEEE | 2026 |
+| [Domain-Aware Probability Sampling for Hybrid Quantum Systems using Bayesian Optimization](http://arxiv.org/abs/2510.00145v5) | IEEE | 2025 |
+| [Optimizing Likelihoods via Mutual Information: Bridging Simulation-Based Inference and Bayesian Optimal Experimental Design](http://arxiv.org/abs/2502.08004v2) | UAI | 2025 |
+| [Automated Computational Energy Minimization of ML Algorithms using Constrained Bayesian Optimization](http://arxiv.org/abs/2407.05788v2) | KDD | 2024 |
 | [Collaborative Spatial Learning with Multi-LLM Agents in Networked Social Experiments](http://arxiv.org/abs/2607.14574v1) | SPRINGER | 2026 |
 | [How Many Initial Points Does Bayesian Optimization Need?](http://arxiv.org/abs/2607.04356v1) | ICML | 2026 |
 | [Maximally Robust Satisficing Bayesian Optimization](http://arxiv.org/abs/2607.13652v1) | UAI | 2026 |
@@ -75,21 +80,21 @@ _Newest unreviewed preprints, capped at 15 most recent. Moves to Papers above on
 
 | Title                                                                                      | Publication               | Year |
 |--------------------------------------------------------------------------------------------|---------------------------|------| 
-| [A Bayesian-optimization framework coupling a multiphase PDE tumor model to efficiently design combination therapy schedules](http://arxiv.org/abs/2607.20782v1) | arXiv | 2026 |
-| [A Machine-Learning-Based Gas Lift Optimization Workflow for Unconventional Fields](http://arxiv.org/abs/2607.25885v1) | arXiv | 2026 |
-| [Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm](http://arxiv.org/abs/2607.06989v2) | arXiv | 2026 |
-| [Active Learning Guided Design Space Refinement for Scalable Multi-Objective Bayesian Optimization in Materials Discovery](http://arxiv.org/abs/2608.04651v1) | arXiv | 2026 |
-| [Adaptive Sampling for Automated Post-Disaster Rapid Damage Assessment via Level-Set Cost-Aware Bayesian Optimization](http://arxiv.org/abs/2608.02868v1) | arXiv | 2026 |
-| [Agentic Bayesian Optimization through Surrogate-Augmented Autoresearch](http://arxiv.org/abs/2608.00316v1) | arXiv | 2026 |
-| [An Accessible Solution for Deformable Image Registration Compared with Learning-Based Approaches](http://arxiv.org/abs/2608.02248v1) | arXiv | 2026 |
-| [An LLM-Driven Workflow for Automated Process Control Strategy Generation and Tuning from Dynamic Process Models](http://arxiv.org/abs/2607.21292v1) | arXiv | 2026 |
-| [Battery Storage Co-Optimization in Day-Ahead and Real-Time Markets with Bayesian Optimization](http://arxiv.org/abs/2608.00911v1) | arXiv | 2026 |
-| [Bayesian adaptively-weighted ensembles for few-shot abdominal segmentation](http://arxiv.org/abs/2608.05815v1) | arXiv | 2026 |
-| [Bayesian optimization approach for tracking a moving target from far-field data in three dimensions](http://arxiv.org/abs/2607.21135v1) | arXiv | 2026 |
-| [Bayesian Variational Method for Precision Few-Body Calculations](http://arxiv.org/abs/2607.25265v1) | arXiv | 2026 |
-| [BayesSeg: A Bayesian Optimization Framework for State Segmentation of Electricity Consumption Time Series](http://arxiv.org/abs/2608.00513v1) | arXiv | 2026 |
-| [BlurDriving: Investigating How Personalized Blur Techniques Impact Drivers' Performance in Virtual Reality](http://arxiv.org/abs/2607.18628v1) | arXiv | 2026 |
-| [Combining Quasiparticle Self-Consistent $GW$ and Machine-Learned DFT+$U$ to Assess Half-Metallicity in Co- and Ni-Based Heuslers](http://arxiv.org/abs/2602.20621v2) | arXiv | 2026 |
+| [A FEM-Based Surrogate Modelling and Optimization Framework for Physics-Constrained Electromagnetic Coil Design](http://arxiv.org/abs/2608.18903v1) | arXiv | 2026 |
+| [A Modular Agentic Framework for Synthetically Constrained Multi-Objective Hit-to-Lead Optimization](http://arxiv.org/abs/2608.11483v1) | arXiv | 2026 |
+| [Active learning molecular beam epitaxy of complex quantum materials](http://arxiv.org/abs/2608.17742v1) | arXiv | 2026 |
+| [Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization](http://arxiv.org/abs/2608.07859v1) | arXiv | 2026 |
+| [Automatic Termination Strategy of Inelastic Neutron-scattering Measurement Using Bayesian Optimization for Bin-width Selection](http://arxiv.org/abs/2603.16946v2) | arXiv | 2026 |
+| [Bayesian optimization and topographic exploration of drag-reducing dimples for aerodynamic surfaces](http://arxiv.org/abs/2608.12826v1) | arXiv | 2026 |
+| [Bayesian Optimization for Practical H2 Sensors: Inverse Design of Pd-based Plasmonic Metasurfaces](http://arxiv.org/abs/2608.18333v1) | arXiv | 2026 |
+| [Bayesian Optimization of Crossbar-Based Compute-In-Memory System Design for Efficient DNN Inference](http://arxiv.org/abs/2605.08461v2) | arXiv | 2026 |
+| [Bayesian Optimization of Molybdenum-99 Production by Laser Wakefield Acceleration Using Coupled PIC and Monte Carlo Simulations](http://arxiv.org/abs/2608.17119v1) | arXiv | 2026 |
+| [Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence](http://arxiv.org/abs/2608.12290v1) | arXiv | 2026 |
+| [BOCoDe: Engineering-Centered Benchmarking for Bayesian Optimization](http://arxiv.org/abs/2608.15073v1) | arXiv | 2026 |
+| [Building atomistic models of heterointerfaces with optimal transport](http://arxiv.org/abs/2608.19933v1) | arXiv | 2026 |
+| [Can Bayesian Optimization Efficiently Find a Strong Single Expert in Neural Thickets?](http://arxiv.org/abs/2608.10867v1) | arXiv | 2026 |
+| [Constraining the lives and times of exoplanets through evolutionary Bayesian retrievals](http://arxiv.org/abs/2607.25845v1) | arXiv | 2026 |
+| [Constraint-Bound Agnostic Bayesian Optimization: One Model for All Thresholds](http://arxiv.org/abs/2607.23448v1) | arXiv | 2026 |
 
 ## Videos 🎥
 | Title                                                                                           | Presenter            | Event                             | Year |
