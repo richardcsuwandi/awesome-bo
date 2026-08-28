@@ -8,7 +8,7 @@
 
 A curated list of Bayesian optimization resources, maintained by [Richard Cornelius Suwandi](https://richardcsuwandi.github.io).
 
-Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.io/awesome-bo/).
+Web version: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.io/awesome-bo/).
 
 ## Contents
 
@@ -135,6 +135,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ### Acquisition Functions
 
+- [Information-Theoretic Bayesian Optimization for Bilevel Optimization Problems](https://proceedings.mlr.press/v337/kanayama26a.html) - Kanayama, Ito, Tamura, and Karasuyama, UAI 2026. Information gain on both levels of a nested black-box problem.
 - [FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch](https://proceedings.mlr.press/v267/aglietti25a.html) - Aglietti et al., ICML 2025. LLM search over acquisition functions written as code.
 - [Unexpected Improvements to Expected Improvement for Bayesian Optimization](https://proceedings.neurips.cc/paper_files/paper/2023/hash/419f72cbd568ad62183f8132a3605a2a-Abstract-Conference.html) - Ament, Daulton, Eriksson, Balandat, and Bakshy, NeurIPS 2023. LogEI, a numerically stable EI.
 - [Joint Entropy Search for Maximally-Informed Bayesian Optimization](https://proceedings.neurips.cc/paper/2022/hash/4b03821747e89ce803b2dac590f6a39b-Abstract-Conference.html) - Hvarfner, Hutter, and Nardi, NeurIPS 2022. Information gain on the joint optimum and optimal value.
@@ -169,6 +170,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ### Constrained and Safe
 
+- [Maximally Robust Satisficing Bayesian Optimization](https://proceedings.mlr.press/v337/kinnunen26a.html) - Kinnunen, Mikkola, Niskanen, and Klami, UAI 2026. Satisficing solutions that stay good under large input perturbations.
 - [Scalable Constrained Bayesian Optimization](https://proceedings.mlr.press/v130/eriksson21a.html) - Eriksson and Poloczek, AISTATS 2021. SCBO: TuRBO with constraints.
 - [A General Framework for Constrained Bayesian Optimization using Information-based Search](https://jmlr.org/papers/v17/15-616.html) - Hernández-Lobato et al., JMLR 2016. PESC.
 - [Safe Exploration for Optimization with Gaussian Processes](https://proceedings.mlr.press/v37/sui15.html) - Sui, Gotovos, Burdick, and Krause, ICML 2015. SafeOpt.
@@ -284,12 +286,10 @@ Pointer papers and domain lists. New application papers that only use BO should 
 Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
 
 - [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2608.25116) - 2026. High-dimensional BO with gradient refinement.
-- [Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization](https://arxiv.org/abs/2608.07859) - 2026. Preferential BO via condition-number shaping.
 - [BOCoDe: Engineering-Centered Benchmarking for Bayesian Optimization](https://arxiv.org/abs/2608.15073) - 2026. Engineering BO benchmark.
+- [Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization](https://arxiv.org/abs/2608.07859) - 2026. Preferential BO via condition-number shaping.
 - [Constraint-Bound Agnostic Bayesian Optimization: One Model for All Thresholds](https://arxiv.org/abs/2607.23448) - 2026. One constrained-BO model across thresholds.
-- [Maximally Robust Satisficing Bayesian Optimization](https://arxiv.org/abs/2607.13652) - 2026. Satisficing under robustness requirements.
 - [How Many Initial Points Does Bayesian Optimization Need?](https://arxiv.org/abs/2607.04356) - 2026. Design of the initial design.
-- [Information-Theoretic Bayesian Optimization for Bilevel Optimization Problems](https://arxiv.org/abs/2509.21725) - 2025. Information-theoretic BO for bilevel problems.
 
 ## Contributing
 
