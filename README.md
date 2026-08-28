@@ -111,6 +111,8 @@ _Newest unreviewed preprints, capped at 15 most recent. Moves to Papers above on
 ## Blogs 📝
 | Title                                                                                       | Author                         | Platform | Year |
 |---------------------------------------------------------------------------------------------|--------------------------------|----------|------|
+| [PlugBO: A Modular Framework for Agentic Bayesian Optimization](https://richardcsuwandi.github.io/blog/2026/plug-bo/) | Richard Cornelius Suwandi | 2026 |
+| [A Unified View of Bayesian Optimization and Active Learning](https://richardcsuwandi.github.io/blog/2024/learn-with-a-goal/) | Richard Cornelius Suwandi | 2024 |
 | [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/)          | Apoorv Agnihotri & Nipun Batra | Distill  | 2020 |
 | [Bayesian Optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/)        | Martin Krasser                 | Personal | 2018 |
 | [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) | Thomas Huijskens              | Personal | 2016 |
@@ -130,6 +132,8 @@ _Newest unreviewed preprints, capped at 15 most recent. Moves to Papers above on
 | [Hyperopt](http://hyperopt.github.io/hyperopt/) | A Python library for optimization over complex search spaces, both serial and parallel.                                     | 
 | [scikit-optimize](https://scikit-optimize.github.io/) | A library for sequential model-based optimization, built on top of popular Python scientific libraries. |
 | [Dragonfly](https://github.com/dragonfly/dragonfly) | A scalable Bayesian optimization library with a focus on computationally expensive black-box functions. |
+| [CAKE](https://github.com/richardcsuwandi/cake) | LLM-driven framework to adaptively evolve Gaussian process kernels in Bayesian optimization |
+| [PlugBO](https://github.com/richardcsuwandi/plugbo) | A modular framework for agentic Bayesian optimization |
 
 
 ## Contributing
