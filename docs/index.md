@@ -24,7 +24,7 @@ learning resources.
 - [Getting started](getting-started.md)
 - [Books](books.md)
 - [Software](software.md) and [Unmaintained](unmaintained.md)
-- [Papers](papers.md), including [Surrogate Design](papers.md#surrogate-design) and [LLMs and BO](papers.md#llms-and-bo)
+- [Papers](papers.md)
 - [Benchmarks](benchmarks.md)
 - [Applications](applications.md)
 - [Community](community.md)
