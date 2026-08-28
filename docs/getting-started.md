@@ -9,7 +9,7 @@ New to Bayesian optimization? A tutorial, then a book, then a library.
 
 Skip the GP book if Distill already made sense.
 
-Then a book: [Garnett](books.md) for theory, or [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) for a Python walkthrough.
+Then a book: [Garnett](https://bayesoptbook.com/) for theory, or [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) for a Python walkthrough.
 
 Then a library. [Ax](https://ax.dev/) and [Vizier](https://github.com/google/vizier) are services: you declare the search space and the metric, and they run the loop. Start with Ax unless you already use Google's stack.
 
