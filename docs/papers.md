@@ -2,7 +2,7 @@
 
 Canonical method papers, grouped by problem setting. Each section is a short reading list, not an archive.
 
-## Surveys and tutorials
+## Surveys and Tutorials
 
 - [Taking the Human Out of the Loop](https://ieeexplore.ieee.org/document/7352306/) - Shahriari et al., Proceedings of the IEEE, 2016. The standard survey of methods and applications.
 - [A Tutorial on Bayesian Optimization of Expensive Cost Functions](https://arxiv.org/abs/1012.2599) - Brochu, Cora, and de Freitas, 2010. Early tutorial that still reads well.
@@ -18,7 +18,17 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [Scalable Bayesian Optimization Using Deep Neural Networks](https://proceedings.mlr.press/v37/snoek15.html) - Snoek et al., ICML 2015. DNGO: neural-net surrogates when GPs get expensive.
 - [BoTorch: A Framework for Efficient Monte-Carlo Bayesian Optimization](https://proceedings.neurips.cc/paper/2020/hash/f5b1b89d98b7286673128a5fb112cb9a-Abstract.html) - Balandat et al., NeurIPS 2020. The library paper behind most current PyTorch BO.
 
-## Acquisition functions
+## Surrogate Design
+
+Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
+
+- [Input Warping for Bayesian Optimization of Non-Stationary Functions](https://proceedings.mlr.press/v32/snoek14.html) - Snoek, Swersky, Zemel, and Adams, ICML 2014. Learn a warping so a stationary kernel fits better.
+- [Bayesian Optimization with Robust Bayesian Neural Networks](https://papers.nips.cc/paper/2016/hash/a96d3afec184766bfeca7a9f989fc7e7-Abstract.html) - Springenberg, Klein, Falkner, and Hutter, NeurIPS 2016. BOHAMIANN: MCMC Bayesian neural nets as surrogates.
+- [Bayesian Optimization with Informative Covariance](https://arxiv.org/abs/2208.02704) - Tighineanu et al., TMLR 2023. Encode known structure in the kernel.
+- [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) - Li, Rudner, and Wilson, ICLR 2024. When BNNs help as BO surrogates, and when they do not.
+- [Adaptive Kernel Design for Bayesian Optimization Is a Piece of CAKE with LLMs](https://proceedings.neurips.cc/paper_files/paper/2025/hash/c03a2610bca2712b984b331fd4f7bb6f-Abstract-Conference.html) - Suwandi et al., NeurIPS 2025. LLM-driven evolution of GP kernels during BO.
+
+## Acquisition Functions
 
 - [Entropy Search for Information-Efficient Global Optimization](https://jmlr.org/papers/v13/hennig12a.html) - Hennig and Schuler, JMLR 2012. Select queries that reduce entropy of the argmax.
 - [Predictive Entropy Search for Efficient Global Optimization of Black-box Functions](https://proceedings.neurips.cc/paper/2014/hash/6488484c982e9af5c35689523ba1abfe-Abstract.html) - Hernández-Lobato, Hoffman, and Ghahramani, NeurIPS 2014. Tractable information-theoretic acquisition.
@@ -30,7 +40,7 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [GLASSES: Relieving The Myopia Of Bayesian Optimisation](https://proceedings.mlr.press/v51/gonzalez16b.html) - González, Osborne, and Lawrence, AISTATS 2016. Non-myopic planning.
 - [Why Non-myopic Bayesian Optimization is Promising and How Far Should We Look-ahead?](https://proceedings.mlr.press/v108/yue20b.html) - Yue and Kontar, AISTATS 2020. How much lookahead actually helps.
 
-## High-dimensional
+## High-Dimensional
 
 - [High Dimensional Bayesian Optimisation and Bandits via Additive Models](https://proceedings.mlr.press/v37/kandasamy15.html) - Kandasamy, Schneider, and Póczos, ICML 2015. Additive GP structure.
 - [Bayesian Optimization in a Billion Dimensions via Random Embeddings](https://arxiv.org/abs/1301.1942) - Wang et al., JAIR 2016. REMBO: optimize in a random low-dimensional subspace.
@@ -44,7 +54,7 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [The Behavior and Convergence of Local Bayesian Optimization](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e8f4eae0a41cab67fdead3aa6b77f083-Abstract-Conference.html) - Wu, Kim, Garnett, and Gardner, NeurIPS 2023. When local BO converges, and when it does not.
 - [Sparse Bayesian Optimization](https://proceedings.mlr.press/v206/liu23b.html) - Liu et al., AISTATS 2023. Sparsity in the input for high-d problems.
 
-## Constrained and safe
+## Constrained and Safe
 
 - [Bayesian Optimization with Inequality Constraints](https://proceedings.mlr.press/v32/gardner14.html) - Gardner, Kusner, Xu, Weinberger, and Cunningham, ICML 2014. Constrained EI.
 - [Bayesian Optimization with Unknown Constraints](https://arxiv.org/abs/1403.5607) - Gelbart, Snoek, and Adams, UAI 2014. Constraints that are themselves expensive black boxes.
@@ -52,14 +62,14 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [Safe Exploration for Optimization with Gaussian Processes](https://proceedings.mlr.press/v37/sui15.html) - Sui, Gotovos, Burdick, and Krause, ICML 2015. SafeOpt.
 - [Scalable Constrained Bayesian Optimization](https://proceedings.mlr.press/v139/eriksson21a.html) - Eriksson and Poloczek, ICML 2021. SCBO: TuRBO with constraints.
 
-## Multi-objective
+## Multi-Objective
 
 - [ParEGO: A Hybrid Algorithm with On-line Landscape Approximation for Expensive Multiobjective Optimization Problems](https://ieeexplore.ieee.org/document/1583627) - Knowles, IEEE TEVC 2006. Scalarization plus EGO.
 - [Efficient Computation of Expected Hypervolume Improvement Using Box Decomposition Algorithms](https://link.springer.com/article/10.1007/s10898-019-00798-7) - Yang, Emmerich, Deutz, and Bäck, JOGO 2019. Fast EHVI.
 - [Differentiable Expected Hypervolume Improvement](https://proceedings.neurips.cc/paper/2020/hash/60cb558c40e4f18479664069d9642d5a-Abstract.html) - Daulton, Balandat, and Bakshy, NeurIPS 2020. qEHVI for parallel MOBO.
 - [Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement](https://proceedings.mlr.press/v139/daulton21a.html) - Daulton, Balandat, and Bakshy, ICML 2021. NEHVI under noise.
 
-## Multi-fidelity, multi-task, and transfer
+## Multi-Fidelity, Multi-Task, and Transfer
 
 - [Multi-Task Bayesian Optimization](https://proceedings.neurips.cc/paper/2013/hash/f33ba15effa5c10e873bf3842afb46a6-Abstract.html) - Swersky, Snoek, and Adams, NeurIPS 2013. Share data across related tasks.
 - [Gaussian Process Bandit Optimisation with Multi-fidelity Evaluations](https://proceedings.mlr.press/v48/kandasamy16.html) - Kandasamy et al., ICML 2016. MF-GP-UCB.
@@ -68,12 +78,12 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [Pre-trained Gaussian Processes for Bayesian Optimization](https://www.jmlr.org/papers/v25/23-0269.html) - Wang et al., JMLR 2024. HyperBO: transfer a GP prior from related tasks.
 - [Few-Shot Bayesian Optimization with Deep Kernel Surrogates](https://openreview.net/forum?id=bJxgv5C3sYc) - Wistuba and Grabocka, ICLR 2021. Deep kernels for few-shot HPO.
 
-## Batch and parallel
+## Batch and Parallel
 
 - [Batch Bayesian Optimization via Local Penalization](https://proceedings.mlr.press/v51/gonzalez16a.html) - González, Dai, Hennig, and Lawrence, AISTATS 2016. Penalize around pending points.
 - [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c.html) - Wang, Gehring, Kohli, and Jegelka, AISTATS 2018. Ensemble batch BO in high-d.
 
-## Discrete and mixed spaces
+## Discrete and Mixed Spaces
 
 - [Bayesian Optimization of Combinatorial Structures](https://proceedings.mlr.press/v80/baptista18a.html) - Baptista and Poloczek, ICML 2018. BOCS.
 - [Combinatorial Bayesian Optimization using the Graph Cartesian Product](https://arxiv.org/abs/1902.00448) - Oh, Gavves, and Welling, NeurIPS 2019. COMBO.
@@ -81,14 +91,12 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [Think Global and Act Local](https://proceedings.mlr.press/v139/wan21b.html) - Wan, Nguyen, Ha, Ru, and Osborne, ICML 2021. High-dimensional categorical and mixed spaces.
 - [Bounce: Reliable High-Dimensional Bayesian Optimization for Combinatorial and Mixed Spaces](https://proceedings.mlr.press/v202/papenmeier23a.html) - Papenmeier, Nardi, and Poloczek, ICML 2023. Nested embeddings plus trust regions.
 
-## Preferential feedback
+## Preferential Feedback
 
 - [Preferential Bayesian Optimization](https://proceedings.mlr.press/v70/gonzalez17a.html) - González, Dai, Damianou, and Lawrence, ICML 2017. Optimize from pairwise comparisons rather than numeric scores.
 
-## Meta-learning and LLMs
+## Meta-Learning and LLMs
 
 - [PFNs4BO: In-Context Learning for Bayesian Optimization](https://proceedings.mlr.press/v202/muller23a.html) - Müller, Feurer, Hollmann, and Hutter, ICML 2023. Prior-fitted networks as BO surrogates.
 - [Large Language Models to Enhance Bayesian Optimization](https://openreview.net/forum?id=OOxotBmGol) - Liu, Astorga, Seedat, and van der Schaar, ICLR 2024. LLAMBO.
-- [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) - Li, Rudner, and Wilson, ICLR 2024. When BNNs help as BO surrogates, and when they do not.
 - [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) - Stanton, Maddox, and Wilson, AISTATS 2023. Distribution-free uncertainty in the loop.
-- [Bayesian Optimization with Informative Covariance](https://arxiv.org/abs/2208.02704) - Tighineanu et al., TMLR 2023. Encode known structure in the kernel.

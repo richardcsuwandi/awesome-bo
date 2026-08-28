@@ -6,7 +6,7 @@
   </a>
 </p>
 
-Bayesian optimization of expensive black-box functions.
+A curated list of resources for Bayesian optimization, maintained by [Richard Cornelius Suwandi](https://richardcsuwandi.github.io).
 
 Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.io/awesome-bo/).
 
@@ -18,6 +18,7 @@ Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.i
 - [Papers](#papers)
   - [Surveys and Tutorials](#surveys-and-tutorials)
   - [Foundations](#foundations)
+  - [Surrogate Design](#surrogate-design)
   - [Acquisition Functions](#acquisition-functions)
   - [High-Dimensional](#high-dimensional)
   - [Constrained and Safe](#constrained-and-safe)
@@ -44,6 +45,7 @@ Then read Garnett's book (under Books) and install Ax or BoTorch (under Software
 
 ## Books
 
+- [Bayesian Decision-making Algorithms](https://bayesianalgorithms.com/) - Alexander Terenin, 2026. Working draft on Bayesian decision making algorithms, including decision-making under uncertainty and explore-exploit tradeoffs.
 - [Bayesian Optimization](https://bayesoptbook.com/) - Roman Garnett, 2023. Theory-first textbook with a free HTML edition.
 - [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) - Quan Nguyen, 2023. Practitioner book with Python examples.
 - [Bayesian Optimization: Theory and Practice Using Python](https://link.springer.com/book/10.1007/978-1-4842-9063-7) - Peng Liu, 2023. Walkthrough of implementing BO in Python.
@@ -100,6 +102,16 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 - [Practical Bayesian Optimization of Machine Learning Algorithms](https://papers.nips.cc/paper/2012/hash/05311655a15b75fab86956663e1819cd-Abstract.html) - Snoek, Larochelle, and Adams, NeurIPS 2012. MCMC GPs and EI for hyperparameter tuning.
 - [Scalable Bayesian Optimization Using Deep Neural Networks](https://proceedings.mlr.press/v37/snoek15.html) - Snoek et al., ICML 2015. DNGO: neural-net surrogates when GPs get expensive.
 - [BoTorch: A Framework for Efficient Monte-Carlo Bayesian Optimization](https://proceedings.neurips.cc/paper/2020/hash/f5b1b89d98b7286673128a5fb112cb9a-Abstract.html) - Balandat et al., NeurIPS 2020. The library paper behind most current PyTorch BO.
+
+### Surrogate Design
+
+Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
+
+- [Input Warping for Bayesian Optimization of Non-Stationary Functions](https://proceedings.mlr.press/v32/snoek14.html) - Snoek, Swersky, Zemel, and Adams, ICML 2014. Learn a warping so a stationary kernel fits better.
+- [Bayesian Optimization with Robust Bayesian Neural Networks](https://papers.nips.cc/paper/2016/hash/a96d3afec184766bfeca7a9f989fc7e7-Abstract.html) - Springenberg, Klein, Falkner, and Hutter, NeurIPS 2016. BOHAMIANN: MCMC Bayesian neural nets as surrogates.
+- [Bayesian Optimization with Informative Covariance](https://arxiv.org/abs/2208.02704) - Tighineanu et al., TMLR 2023. Encode known structure in the kernel.
+- [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) - Li, Rudner, and Wilson, ICLR 2024. When BNNs help as BO surrogates, and when they do not.
+- [Adaptive Kernel Design for Bayesian Optimization Is a Piece of CAKE with LLMs](https://proceedings.neurips.cc/paper_files/paper/2025/hash/c03a2610bca2712b984b331fd4f7bb6f-Abstract-Conference.html) - Suwandi et al., NeurIPS 2025. LLM-driven evolution of GP kernels during BO.
 
 ### Acquisition Functions
 
@@ -172,9 +184,7 @@ Canonical method papers, grouped by problem setting. Each section is a short rea
 
 - [PFNs4BO: In-Context Learning for Bayesian Optimization](https://proceedings.mlr.press/v202/muller23a.html) - Müller, Feurer, Hollmann, and Hutter, ICML 2023. Prior-fitted networks as BO surrogates.
 - [Large Language Models to Enhance Bayesian Optimization](https://openreview.net/forum?id=OOxotBmGol) - Liu, Astorga, Seedat, and van der Schaar, ICLR 2024. LLAMBO.
-- [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) - Li, Rudner, and Wilson, ICLR 2024. When BNNs help as BO surrogates, and when they do not.
 - [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) - Stanton, Maddox, and Wilson, AISTATS 2023. Distribution-free uncertainty in the loop.
-- [Bayesian Optimization with Informative Covariance](https://arxiv.org/abs/2208.02704) - Tighineanu et al., TMLR 2023. Encode known structure in the kernel.
 
 ## Benchmarks
 
@@ -221,7 +231,7 @@ Pointer papers and domain lists. New application papers that only use BO should 
 
 ## Recent Preprints
 
-Unreviewed method papers (Bayesian optimization is the contribution). Capped at 15, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
+Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
 
 - [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2608.25116) - 2026. High-dimensional BO with gradient refinement.
 - [Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization](https://arxiv.org/abs/2608.07859) - 2026. Preferential BO via condition-number shaping.

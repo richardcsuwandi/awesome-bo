@@ -34,6 +34,7 @@ jobs:
             Review before merging:
             - Drop application papers even if the title matches
             - Keep method / benchmark papers
-            - After acceptance, move an entry into the matching Papers section
+            - After acceptance, move the entry in README.md into Papers,
+              then run python scripts/sync_docs.py
           branch: automation/readme-refresh
           delete-branch: true

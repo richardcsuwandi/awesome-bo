@@ -28,10 +28,11 @@ This is a curated list, not an archive. A keyword match on "Bayesian optimizatio
 4. Prefer a stable landing page (proceedings, OpenReview, arXiv abs, project site) over a raw PDF when both exist.
 5. Do not duplicate a URL that is already in the README.
 6. One pull request per addition, unless you are doing a small batch of clearly related items.
+7. Run `python scripts/sync_docs.py` so the docs site matches the README.
 
 ## Weekly arXiv pull requests
 
-`scripts/update_papers.py` may open a PR that only touches **Recent Preprints**. Review it:
+`scripts/update_papers.py` may open a PR that only adds **Recent Preprints** in `README.md`, then runs `scripts/sync_docs.py`. Review it:
 
 - Drop application papers even if the title contains "Bayesian optimization".
 - Keep method papers. After acceptance, move them into the matching Papers subsection and remove them from Recent Preprints.
@@ -43,7 +44,13 @@ Open an issue if a link is dead, a year/venue is wrong, a package is unmaintaine
 
 ## Docs site
 
-The MkDocs site lives in `docs/`. If you add an entry, update both `README.md` and the matching page under `docs/` in the same pull request.
+The MkDocs site lives in `docs/`. Edit `README.md`, then run:
+
+```bash
+python scripts/sync_docs.py
+```
+
+That copies list sections into the matching docs pages. Do not edit `docs/books.md`, `docs/papers.md`, and similar by hand; they will be overwritten. The software comparison table in `docs/software.md` is kept. `docs/index.md` and `unmaintained.md` are not generated.
 
 ```bash
 pip install -r requirements-docs.txt

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Propose new method preprints for the Recent Preprints section.
+"""Propose new method preprints for Recent Preprints.
 
 This script never writes to the curated Papers sections. It only prepends
-title-matching arXiv entries to Recent Preprints (capped), for a human to
-review in the weekly pull request.
+title-matching arXiv entries to README.md, then runs scripts/sync_docs.py
+so docs/preprints.md matches. Humans still review the weekly pull request.
 
 Usage:
   python scripts/update_papers.py [--readme PATH] [--max-results N] [--arxiv-cap N] [--dry-run]
@@ -15,6 +15,7 @@ import argparse
 import datetime as dt
 import html
 import re
+import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -34,7 +35,7 @@ TITLE_KEYWORDS = (
     "bayes-opt",
 )
 
-DEFAULT_ARXIV_CAP = 15
+DEFAULT_ARXIV_CAP = 20
 
 LIST_ITEM_RE = re.compile(
     r"^- \[(?P<title>[^\]]+)\]\((?P<url>[^)]+)\) - (?P<rest>.+)$"
@@ -121,11 +122,10 @@ def write_readme(path: Path, lines: List[str]) -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def find_preprints_section(lines: List[str]) -> Tuple[int, int]:
-    heading = "## Recent Preprints"
+def find_preprints_section(lines: List[str], heading: str = "## Recent Preprints") -> Tuple[int, int]:
     start = next((i for i, line in enumerate(lines) if line.strip() == heading), -1)
     if start == -1:
-        raise RuntimeError(f"could not find '{heading}' in README.md")
+        raise RuntimeError(f"could not find '{heading}'")
     end = len(lines)
     for i in range(start + 1, len(lines)):
         if lines[i].startswith("## "):
@@ -160,47 +160,54 @@ def update_readme(readme_path: Path, papers: List[Paper], arxiv_cap: int, dry_ru
     start, end = find_preprints_section(lines)
     already = existing_titles(lines)
     new_papers = [p for p in papers if p.title.casefold() not in already]
-    if not new_papers:
-        return 0
-
-    new_items = [make_item(p) for p in new_papers]
     old_items = parse_preprint_items(lines, start, end)
-    combined = (new_items + old_items)[:arxiv_cap]
+    new_items = [make_item(p) for p in new_papers]
+    combined = (new_items + old_items)[:arxiv_cap] if new_items else old_items[:arxiv_cap]
 
-    intro: List[str] = []
-    for i in range(start + 1, end):
-        stripped = lines[i].strip()
-        if stripped.startswith("- ["):
-            break
-        intro.append(lines[i])
+    if new_items:
+        intro: List[str] = []
+        for i in range(start + 1, end):
+            stripped = lines[i].strip()
+            if stripped.startswith("- ["):
+                break
+            intro.append(lines[i])
 
-    rebuilt = [lines[start], *intro]
-    if rebuilt[-1].strip() != "":
+        rebuilt = [lines[start], *intro]
+        if rebuilt[-1].strip() != "":
+            rebuilt.append("")
+        rebuilt.extend(combined)
         rebuilt.append("")
-    rebuilt.extend(combined)
-    rebuilt.append("")
 
-    # Keep a single blank line before the next heading.
-    tail = lines[end:]
-    if tail and tail[0] != "":
-        rebuilt.append("")
-    updated = lines[:start] + rebuilt + tail
-    if not dry_run:
-        write_readme(readme_path, updated)
+        # Keep a single blank line before the next heading.
+        tail = lines[end:]
+        if tail and tail[0] != "":
+            rebuilt.append("")
+        updated = lines[:start] + rebuilt + tail
+        if not dry_run:
+            write_readme(readme_path, updated)
     return len(new_items)
 
 
 def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Propose Recent Preprints from arXiv (title match only)")
+    root = Path(__file__).resolve().parents[1]
     parser.add_argument(
         "--readme",
         type=Path,
-        default=Path(__file__).resolve().parents[1] / "README.md",
+        default=root / "README.md",
     )
     parser.add_argument("--max-results", type=int, default=100)
     parser.add_argument("--arxiv-cap", type=int, default=DEFAULT_ARXIV_CAP)
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
+
+
+def sync_docs(readme: Path, dry_run: bool) -> int:
+    script = Path(__file__).resolve().parent / "sync_docs.py"
+    cmd = [sys.executable, str(script), "--readme", str(readme)]
+    if dry_run:
+        return 0
+    return int(subprocess.run(cmd, check=False).returncode)
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
@@ -216,7 +223,9 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         return 3
     added = update_readme(args.readme, papers, arxiv_cap=args.arxiv_cap, dry_run=args.dry_run)
     print(f"{'dry-run: ' if args.dry_run else ''}proposed {added} preprint(s)")
-    return 0
+    if args.dry_run:
+        return 0
+    return sync_docs(args.readme, dry_run=False)
 
 
 if __name__ == "__main__":
