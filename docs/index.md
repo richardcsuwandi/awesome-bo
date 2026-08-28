@@ -15,7 +15,7 @@ learning resources.
 1. [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) (Distill, 2020)
 2. [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) (Frazier, 2018)
 3. [Recent Advances in Bayesian Optimization](https://bayesopt-tutorial.github.io/) (AAAI 2023)
-4. [Garnett's textbook](books.md) or [Terenin's working draft](books.md), then [Ax](https://ax.dev/) or [BoTorch](https://botorch.org/)
+4. [Garnett's textbook](books.md), then [BoTorch](https://botorch.org/)
 
 [Hennig, Osborne, and Kersting](books.md) is the book if you want BO as a numerical method rather than as AutoML.
 
