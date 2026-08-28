@@ -162,20 +162,22 @@ def rewrite_preprints_intro(intro: str) -> str:
 def render_getting_started(block: Block) -> str:
     return page(
         "# Getting started",
-        "New to Bayesian optimization? Read these in order, then pick a library.",
+        "New to Bayesian optimization? A tutorial, then a book, then a library.",
         bullets(block.items),
-        "Then read [Garnett's book](books.md) for theory, or "
+        "Skip the GP book if Distill already made sense.",
+        "Then a book: [Garnett](books.md) for theory, or "
         "[Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) "
         "for a Python walkthrough.",
-        "Pick a library. [Ax](https://ax.dev/) is the service: you declare the search "
-        "space and the metric, and Ax chooses the next experiment, fits the model, "
-        "and runs the loop. [BoTorch](https://botorch.org/) is the PyTorch library "
-        "Ax is built on. You write that loop yourself: fit a GPyTorch model, define "
-        "an acquisition, optimize it. Use Ax if you want to run an experiment. Use "
-        "BoTorch if you are implementing a method, or changing the surrogate or the "
-        "acquisition. [Vizier](https://github.com/google/vizier) is the other "
-        "service-style option. All three are listed under [Software](software.md).",
-        "For lectures, see [Community](community.md).",
+        "Then a library. [Ax](https://ax.dev/) and "
+        "[Vizier](https://github.com/google/vizier) are services: you declare "
+        "the search space and the metric, and they run the loop. Start with Ax "
+        "unless you already use Google's stack.",
+        "[BoTorch](https://botorch.org/) is the PyTorch toolkit under Ax. You "
+        "write that loop yourself: fit a GPyTorch model, define an acquisition, "
+        "optimize it. Use BoTorch when you are implementing a method, or changing "
+        "the surrogate or the acquisition.",
+        "Other libraries are under [Software](software.md). Lectures are under "
+        "[Community](community.md).",
     )
 
 
