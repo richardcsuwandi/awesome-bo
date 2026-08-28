@@ -1,6 +1,6 @@
 # Recent preprints
 
-Recent preprints found on arXiv. After peer review, please open a PR to move an entry into the matching [Papers](papers.md) section. 
+Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching [Papers](papers.md) section. Application papers are dropped on sight.
 
 - [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2608.25116) - 2026. High-dimensional BO with gradient refinement.
 - [Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization](https://arxiv.org/abs/2608.07859) - 2026. Preferential BO via condition-number shaping.

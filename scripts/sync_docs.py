@@ -162,22 +162,18 @@ def rewrite_preprints_intro(intro: str) -> str:
 def render_getting_started(block: Block) -> str:
     return page(
         "# Getting started",
-        "New to Bayesian optimization? A tutorial, then a book, then a library.",
+        block.intro,
         bullets(block.items),
-        "Skip the GP book if Distill already made sense.",
-        "Then a book: [Garnett](books.md) for theory, or "
-        "[Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) "
-        "for a Python walkthrough.",
-        "Then a library. [Ax](https://ax.dev/) and "
-        "[Vizier](https://github.com/google/vizier) are services: you declare "
-        "the search space and the metric, and they run the loop. Start with Ax "
-        "unless you already use Google's stack.",
-        "[BoTorch](https://botorch.org/) is the PyTorch toolkit under Ax. You "
-        "write that loop yourself: fit a GPyTorch model, define an acquisition, "
-        "optimize it. Use BoTorch when you are implementing a method, or changing "
-        "the surrogate or the acquisition.",
-        "Other libraries are under [Software](software.md). Lectures are under "
+        "More surveys and tutorials are under "
+        "[Papers](papers.md#surveys-and-tutorials). Lectures are under "
         "[Community](community.md).",
+        "Then a book: [Garnett](https://bayesoptbook.com/) for theory, or "
+        "[Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) "
+        "for a Python walkthrough. The rest are under [Books](books.md).",
+        "Then a library. [Ax](https://ax.dev/) is a service: you declare "
+        "the search space and the metric, and it runs the loop. "
+        "[BoTorch](https://botorch.org/) is a toolkit: you write that loop "
+        "yourself. Other libraries are under [Software](software.md).",
     )
 
 

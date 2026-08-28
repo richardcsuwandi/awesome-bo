@@ -65,7 +65,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 - [Local Bayesian Optimization via Maximizing Probability of Descent](https://proceedings.neurips.cc/paper_files/paper/2022/hash/555479a201da27c97aaeed842d16ca49-Abstract-Conference.html) - Nguyen, Wu, Gardner, and Garnett, NeurIPS 2022. Local BO by following estimated descent.
 - [High-dimensional Bayesian Optimization with Sparse Axis-Aligned Subspaces](https://proceedings.mlr.press/v161/eriksson21a.html) - Eriksson and Jankowiak, UAI 2021. SAASBO: sparsity-inducing priors on lengthscales.
 - [Re-Examining Linear Embeddings for High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2001.11659) - Letham, Calandra, Rai, and Bakshy, NeurIPS 2020. ALEBO.
-- [A Framework for Bayesian Optimization in Embedded Subspaces](https://proceedings.mlr.press/v89/nayebi19a.html) - Nayebi, Munteanu, and Ihler, AISTATS 2019. HeSBO, hashing into a low-d embedding.
+- [A Framework for Bayesian Optimization in Embedded Subspaces](https://proceedings.mlr.press/v97/nayebi19a.html) - Nayebi, Munteanu, and Poloczek, ICML 2019. HeSBO, hashing into a low-d embedding.
 - [Scalable Global Optimization via Local Bayesian Optimization](https://proceedings.neurips.cc/paper/2019/hash/6c990b7aca7bc7058f5e98ea909e924b-Abstract.html) - Eriksson, Pearce, Gardner, Turner, and Poloczek, NeurIPS 2019. TuRBO: trust-region local BO.
 - [Optimization, Fast and Slow](https://proceedings.mlr.press/v80/mcleod18a.html) - McLeod, Roberts, and Osborne, ICML 2018. Switch between local search and BO.
 - [Discovering and Exploiting Additive Structure for Bayesian Optimization](https://proceedings.mlr.press/v54/gardner17a.html) - Gardner, Guo, Weinberger, Garnett, and Grosse, AISTATS 2017. Learn which additive decomposition to use.
@@ -74,8 +74,8 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ## Constrained and Safe
 
-- [Scalable Constrained Bayesian Optimization](https://proceedings.mlr.press/v139/eriksson21a.html) - Eriksson and Poloczek, ICML 2021. SCBO: TuRBO with constraints.
-- [A General Framework for Constrained Bayesian Optimization using Information-based Search](https://jmlr.org/papers/volume17/15-616/15-616.html) - Hernández-Lobato et al., JMLR 2016. PESC.
+- [Scalable Constrained Bayesian Optimization](https://proceedings.mlr.press/v130/eriksson21a.html) - Eriksson and Poloczek, AISTATS 2021. SCBO: TuRBO with constraints.
+- [A General Framework for Constrained Bayesian Optimization using Information-based Search](https://jmlr.org/papers/v17/15-616.html) - Hernández-Lobato et al., JMLR 2016. PESC.
 - [Safe Exploration for Optimization with Gaussian Processes](https://proceedings.mlr.press/v37/sui15.html) - Sui, Gotovos, Burdick, and Krause, ICML 2015. SafeOpt.
 - [Bayesian Optimization with Inequality Constraints](https://proceedings.mlr.press/v32/gardner14.html) - Gardner, Kusner, Xu, Weinberger, and Cunningham, ICML 2014. Constrained EI.
 - [Bayesian Optimization with Unknown Constraints](https://arxiv.org/abs/1403.5607) - Gelbart, Snoek, and Adams, UAI 2014. Constraints that are themselves expensive black boxes.
@@ -83,7 +83,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 ## Multi-Objective
 
 - [Multi-Objective Bayesian Optimization over High-Dimensional Search Spaces](https://proceedings.mlr.press/v180/daulton22a.html) - Daulton, Eriksson, Balandat, and Bakshy, UAI 2022. MORBO: local trust regions for high-d multi-objective BO.
-- [Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement](https://proceedings.mlr.press/v139/daulton21a.html) - Daulton, Balandat, and Bakshy, ICML 2021. NEHVI under noise.
+- [Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement](https://proceedings.neurips.cc/paper/2021/hash/11704817e347269b7254e744b5e22dac-Abstract.html) - Daulton, Balandat, and Bakshy, NeurIPS 2021. NEHVI under noise.
 - [Differentiable Expected Hypervolume Improvement](https://proceedings.neurips.cc/paper/2020/hash/60cb558c40e4f18479664069d9642d5a-Abstract.html) - Daulton, Balandat, and Bakshy, NeurIPS 2020. qEHVI for parallel MOBO.
 - [Efficient Computation of Expected Hypervolume Improvement Using Box Decomposition Algorithms](https://link.springer.com/article/10.1007/s10898-019-00798-7) - Yang, Emmerich, Deutz, and Bäck, JOGO 2019. Fast EHVI.
 - [Predictive Entropy Search for Multi-objective Bayesian Optimization](https://proceedings.mlr.press/v48/hernandez-lobatoa16.html) - Hernández-Lobato, Hernández-Lobato, Shah, and Adams, ICML 2016. PESMO: information gain on the Pareto set.
@@ -104,7 +104,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ## Batch and Parallel
 
-- [GIBBON: General-purpose Information-Based Bayesian Optimisation](https://proceedings.mlr.press/v139/moss21a.html) - Moss, Leslie, Gonzalez, Rayson, and Gal, ICML 2021. Cheap batch information-theoretic acquisition.
+- [GIBBON: General-purpose Information-Based Bayesian Optimisation](https://www.jmlr.org/papers/v22/21-0120.html) - Moss, Leslie, Gonzalez, and Rayson, JMLR 2021. Cheap batch information-theoretic acquisition.
 - [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c.html) - Wang, Gehring, Kohli, and Jegelka, AISTATS 2018. Ensemble batch BO in high-d.
 - [Batch Bayesian Optimization via Local Penalization](https://proceedings.mlr.press/v51/gonzalez16a.html) - González, Dai, Hennig, and Lawrence, AISTATS 2016. Penalize around pending points.
 - [Batched Gaussian Process Bandit Optimization via Determinantal Point Processes](https://papers.nips.cc/paper/2016/hash/a1d7311f2a312426d710e1c617fcbc8c-Abstract.html) - Kathuria, Deshpande, and Kohli, NeurIPS 2016. Diverse batches via DPPs.
@@ -114,7 +114,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ## Discrete and Mixed Spaces
 
-- [Bounce: Reliable High-Dimensional Bayesian Optimization for Combinatorial and Mixed Spaces](https://proceedings.mlr.press/v202/papenmeier23a.html) - Papenmeier, Nardi, and Poloczek, ICML 2023. Nested embeddings plus trust regions.
+- [Bounce: Reliable High-Dimensional Bayesian Optimization for Combinatorial and Mixed Spaces](https://proceedings.neurips.cc/paper_files/paper/2023/hash/05d2175de7ee637588d1b5ced8b15b32-Abstract-Conference.html) - Papenmeier, Nardi, and Poloczek, NeurIPS 2023. Nested embeddings plus trust regions.
 - [Think Global and Act Local](https://proceedings.mlr.press/v139/wan21b.html) - Wan, Nguyen, Ha, Ru, and Osborne, ICML 2021. High-dimensional categorical and mixed spaces.
 - [Bayesian Optimisation over Multiple Continuous and Categorical Inputs](https://proceedings.mlr.press/v119/ru20a.html) - Ru, Alvi, Nguyen, Osborne, and Roberts, ICML 2020. CoCaBO.
 - [Combinatorial Bayesian Optimization using the Graph Cartesian Product](https://arxiv.org/abs/1902.00448) - Oh, Gavves, and Welling, NeurIPS 2019. COMBO.
