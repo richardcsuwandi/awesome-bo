@@ -11,6 +11,7 @@ The table covers every actively maintained library listed here, not a shortlist.
 | [BoTorch](https://botorch.org/) | PyTorch / GPyTorch | Yes | Yes | Yes | Research toolkit. You write the loop. |
 | [Trieste](https://github.com/secondmind-labs/trieste) | TensorFlow / GPflow | Yes | Yes | Yes | Modular ask-tell API. |
 | [BoFire](https://github.com/experimental-design/bofire) | BoTorch | Yes | Yes | Yes | Industrial DOE and chemistry. |
+| [BayBE](https://github.com/emdgroup/baybe) | BoTorch / GPyTorch | Yes | Yes | Yes | Bayesian DoE with chemical encodings and transfer learning. |
 | [HEBO](https://github.com/huawei-noah/HEBO) | GPyTorch / others | Yes | Yes | Yes | Strong AutoML competition record. |
 | [SMAC3](https://github.com/automl/SMAC3) | RF / GP | Yes | Limited | Yes | Algorithm configuration and HPO. |
 | [OpenBox](https://github.com/PKU-DAIR/open-box) | GP / TPE / RF | Yes | Yes | Yes | General black-box system. |
@@ -30,6 +31,7 @@ The table covers every actively maintained library listed here, not a shortlist.
 - [BoTorch](https://botorch.org/) - Modular Monte Carlo BO library built on PyTorch and GPyTorch.
 - [Trieste](https://github.com/secondmind-labs/trieste) - TensorFlow/GPflow toolbox for batch, constrained, multi-fidelity, and multi-objective BO.
 - [BoFire](https://github.com/experimental-design/bofire) - Experimental design and BO for mixed spaces, used in chemical and pharmaceutical settings.
+- [BayBE](https://github.com/emdgroup/baybe) - Bayesian DoE with chemical encodings and transfer learning.
 - [HEBO](https://github.com/huawei-noah/HEBO) - Heteroscedastic evolutionary BO from Huawei Noah's Ark Lab.
 - [SMAC3](https://github.com/automl/SMAC3) - Sequential model-based algorithm configuration, using random forests or GPs.
 - [OpenBox](https://github.com/PKU-DAIR/open-box) - Black-box optimization system with transfer, multi-fidelity, and distributed runs.
