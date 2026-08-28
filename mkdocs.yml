@@ -1,0 +1,83 @@
+site_name: Awesome BO
+site_description: Bayesian optimization of expensive black-box functions.
+site_url: https://richardcsuwandi.github.io/awesome-bo/
+repo_name: richardcsuwandi/awesome-bo
+repo_url: https://github.com/richardcsuwandi/awesome-bo
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2026 Richard Cornelius Suwandi
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Books: books.md
+  - Software:
+      - Active libraries: software.md
+      - Unmaintained: unmaintained.md
+  - Papers: papers.md
+  - Benchmarks: benchmarks.md
+  - Applications: applications.md
+  - Community: community.md
+  - Recent preprints: preprints.md
+  - Contributing: contributing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/richardcsuwandi/awesome-bo
+    - icon: fontawesome/solid/globe
+      link: https://richardcsuwandi.github.io

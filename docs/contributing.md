@@ -1,8 +1,10 @@
-# Contribution Guidelines
+# Contributing
 
-This project follows the [Contributor Covenant](code-of-conduct.md). By taking part, you agree to that code of conduct.
+This project follows the [Contributor Covenant](https://github.com/richardcsuwandi/awesome-bo/blob/main/code-of-conduct.md). By taking part, you agree to that code of conduct.
 
 This is a curated list, not an archive. A keyword match on "Bayesian optimization" is not enough.
+
+The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is what `awesome-lint` checks. If you add an entry, update **both** `README.md` and the matching page under `docs/` in the same pull request.
 
 ## What belongs here
 
@@ -10,9 +12,9 @@ This is a curated list, not an archive. A keyword match on "Bayesian optimizatio
 
 **No:** application papers that run BoTorch / Ax / Optuna on a domain problem (materials, communications, robotics, drugs, and so on) unless the paper's contribution is a BO method. Those belong in a domain list, such as the [materials list](https://github.com/materials-data-facility/awesome-bayesian-optimization).
 
-**Software** must be maintained (recent commits or releases), documented, and actually used for BO. Unmaintained tools go in [unmaintained.md](unmaintained.md). Related HPO tools that are not GP-BO (TPE, Hyperband-only, and similar) go under Related HPO tools, and the description must say so.
+**Software** must be maintained (recent commits or releases), documented, and actually used for BO. Unmaintained tools go under [Unmaintained](unmaintained.md). Related HPO tools that are not GP-BO (TPE, Hyperband-only, and similar) go under Related HPO tools, and the description must say so.
 
-**Preprints** in Recent Preprints must have Bayesian optimization / BayesOpt *in the title*, and BO must be the contribution. The weekly bot only proposes title matches. Humans still merge.
+**Preprints** must have Bayesian optimization / BayesOpt *in the title*, and BO must be the contribution. The weekly bot only proposes title matches. Humans still merge.
 
 ## How to add something
 
@@ -37,15 +39,15 @@ This is a curated list, not an archive. A keyword match on "Bayesian optimizatio
 - Keep method papers. After acceptance, move them into the matching Papers subsection and remove them from Recent Preprints.
 - Never merge a PR that writes into the curated Papers sections automatically.
 
-## Reporting a problem
-
-Open an issue if a link is dead, a year/venue is wrong, a package is unmaintained, or an entry is off-topic. PRs that just fix that are welcome.
-
 ## Docs site
-
-The MkDocs site lives in `docs/`. If you add an entry, update both `README.md` and the matching page under `docs/` in the same pull request.
 
 ```bash
 pip install -r requirements-docs.txt
 mkdocs serve
 ```
+
+The site deploys to GitHub Pages on every push that touches `docs/` or `mkdocs.yml`.
+
+## Reporting a problem
+
+Open an issue if a link is dead, a year/venue is wrong, a package is unmaintained, or an entry is off-topic. PRs that just fix that are welcome.
