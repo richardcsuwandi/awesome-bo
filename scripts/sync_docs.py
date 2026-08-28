@@ -173,7 +173,8 @@ def render_getting_started(block: Block) -> str:
         "Ax is built on. You write that loop yourself: fit a GPyTorch model, define "
         "an acquisition, optimize it. Use Ax if you want to run an experiment. Use "
         "BoTorch if you are implementing a method, or changing the surrogate or the "
-        "acquisition. Both are listed under [Software](software.md).",
+        "acquisition. [Vizier](https://github.com/google/vizier) is the other "
+        "service-style option. All three are listed under [Software](software.md).",
         "For lectures, see [Community](community.md).",
     )
 

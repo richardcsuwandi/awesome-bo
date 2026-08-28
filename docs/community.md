@@ -22,7 +22,7 @@ Workshops, schools, lectures, and write-ups.
 
 ## Blogs
 
-- [A Unified View of Bayesian Optimization and Active Learning](https://richardcsuwandi.github.io/blog/2024/learn-with-a-goal/) - Richard Cornelius Suwandi, 2024.
 - [PlugBO: A Modular Framework for Agentic Bayesian Optimization](https://richardcsuwandi.github.io/blog/2026/plug-bo/) - Richard Cornelius Suwandi, 2026.
+- [A Unified View of Bayesian Optimization and Active Learning](https://richardcsuwandi.github.io/blog/2024/learn-with-a-goal/) - Richard Cornelius Suwandi, 2024.
 - [Bayesian Optimization](https://krasserm.github.io/2018/03/21/bayesian-optimization/) - Martin Krasser, 2018. From-scratch GP and EI derivation.
 - [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) - Thomas Huijskens, 2016.

@@ -7,6 +7,7 @@ The table covers every actively maintained library listed here, not a shortlist.
 | Library | Stack | Constraints | Multi-obj | Mixed / batch | Notes |
 | --- | --- | --- | --- | --- | --- |
 | [Ax](https://ax.dev/) | BoTorch / GPyTorch | Yes | Yes | Yes | Service layer for experiments. |
+| [Vizier](https://github.com/google/vizier) | GP / others | Yes | Yes | Yes | Google's service-style BO. |
 | [BoTorch](https://botorch.org/) | PyTorch / GPyTorch | Yes | Yes | Yes | Research toolkit. You write the loop. |
 | [Trieste](https://github.com/secondmind-labs/trieste) | TensorFlow / GPflow | Yes | Yes | Yes | Modular ask-tell API. |
 | [BoFire](https://github.com/experimental-design/bofire) | BoTorch | Yes | Yes | Yes | Industrial DOE and chemistry. |
@@ -25,6 +26,7 @@ The table covers every actively maintained library listed here, not a shortlist.
 ## Active libraries
 
 - [Ax](https://ax.dev/) - Adaptive experimentation platform on top of BoTorch, with constraints, multi-objective, and mixed spaces.
+- [Vizier](https://github.com/google/vizier) - Google's service-style black-box optimization, now open source.
 - [BoTorch](https://botorch.org/) - Modular Monte Carlo BO library built on PyTorch and GPyTorch.
 - [Trieste](https://github.com/secondmind-labs/trieste) - TensorFlow/GPflow toolbox for batch, constrained, multi-fidelity, and multi-objective BO.
 - [BoFire](https://github.com/experimental-design/bofire) - Experimental design and BO for mixed spaces, used in chemical and pharmaceutical settings.

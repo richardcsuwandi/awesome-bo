@@ -39,12 +39,13 @@ Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.i
 ## Getting Started
 
 - [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) - Interactive Distill article on GPs, acquisition functions, and the BO loop (Agnihotri and Batra, 2020).
+- [Gaussian Processes for Machine Learning](https://gaussianprocess.org/gpml/) - Rasmussen and Williams, 2006. The GP textbook. Read this if Distill's GP section was not enough.
 - [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) - Frazier, 2018. The standard short tutorial, including noisy EI, batch, multi-fidelity, and constraints.
 - [Recent Advances in Bayesian Optimization](https://bayesopt-tutorial.github.io/) - AAAI 2023 tutorial (slides and syllabus) covering high-dimensional, discrete, and causal BO.
 
 Then read Garnett's book for theory, or Bayesian Optimization in Action for a Python walkthrough (under Books).
 
-Pick a library. Ax is the service: you declare the search space and the metric, and Ax chooses the next experiment, fits the model, and runs the loop. BoTorch is the PyTorch library Ax is built on. You write that loop yourself: fit a GPyTorch model, define an acquisition, optimize it. Use Ax if you want to run an experiment. Use BoTorch if you are implementing a method, or changing the surrogate or the acquisition. Both are listed under Software.
+Pick a library. Ax is the service: you declare the search space and the metric, and Ax chooses the next experiment, fits the model, and runs the loop. BoTorch is the PyTorch library Ax is built on. You write that loop yourself: fit a GPyTorch model, define an acquisition, optimize it. Use Ax if you want to run an experiment. Use BoTorch if you are implementing a method, or changing the surrogate or the acquisition. Vizier is the other service-style option. All three are listed under Software.
 
 ## Books
 
@@ -60,6 +61,7 @@ Pick a library. Ax is the service: you declare the search space and the metric, 
 Actively maintained libraries. Archived and maintenance-only packages are listed in [unmaintained.md](unmaintained.md).
 
 - [Ax](https://ax.dev/) - Adaptive experimentation platform on top of BoTorch, with constraints, multi-objective, and mixed spaces.
+- [Vizier](https://github.com/google/vizier) - Google's service-style black-box optimization, now open source.
 - [BoTorch](https://botorch.org/) - Modular Monte Carlo BO library built on PyTorch and GPyTorch.
 - [Trieste](https://github.com/secondmind-labs/trieste) - TensorFlow/GPflow toolbox for batch, constrained, multi-fidelity, and multi-objective BO.
 - [BoFire](https://github.com/experimental-design/bofire) - Experimental design and BO for mixed spaces, used in chemical and pharmaceutical settings.
@@ -117,6 +119,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 - [Adaptive Kernel Design for Bayesian Optimization Is a Piece of CAKE with LLMs](https://proceedings.neurips.cc/paper_files/paper/2025/hash/c03a2610bca2712b984b331fd4f7bb6f-Abstract-Conference.html) - Suwandi et al., NeurIPS 2025. LLM-driven evolution of GP kernels during BO.
 - [A Study of Bayesian Neural Network Surrogates for Bayesian Optimization](https://openreview.net/forum?id=SA19ijj44B) - Li, Rudner, and Wilson, ICLR 2024. When BNNs help as BO surrogates, and when they do not.
+- [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) - Stanton, Maddox, and Wilson, AISTATS 2023. Distribution-free uncertainty in the loop.
 - [Bayesian Optimization with Informative Covariance](https://arxiv.org/abs/2208.02704) - Tighineanu et al., TMLR 2023. Encode known structure in the kernel.
 - [Kernel Identification Through Transformers](https://proceedings.neurips.cc/paper/2021/hash/56c3b2c6ea3a83aaeeff35eeb45d700d-Abstract.html) - Simpson et al., NeurIPS 2021. KITT: recommend a kernel from data in one forward pass.
 - [Differentiable Compositional Kernel Learning for Gaussian Processes](https://proceedings.mlr.press/v80/sun18d.html) - Sun et al., ICML 2018. Neural kernel networks.
@@ -130,6 +133,8 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 - [FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch](https://proceedings.mlr.press/v267/aglietti25a.html) - Aglietti et al., ICML 2025. LLM search over acquisition functions written as code.
 - [Unexpected Improvements to Expected Improvement for Bayesian Optimization](https://arxiv.org/abs/2310.20708) - Ament et al., NeurIPS 2023. LogEI, a numerically stable EI.
+- [Joint Entropy Search for Maximally-Informed Bayesian Optimization](https://proceedings.neurips.cc/paper/2022/hash/4b03821747e89ce803b2dac590f6a39b-Abstract-Conference.html) - Hvarfner, Hutter, and Nardi, NeurIPS 2022. Information gain on the joint optimum and optimal value.
+- [πBO: Augmenting Acquisition Functions with User Beliefs for Bayesian Optimization](https://openreview.net/forum?id=FegbkY6WDg) - Hvarfner, Stoll, Souza, Lindauer, Hutter, and Nardi, ICLR 2022. Weight the acquisition by a user prior over the optimum.
 - [Why Non-myopic Bayesian Optimization is Promising and How Far Should We Look-ahead?](https://proceedings.mlr.press/v108/yue20b.html) - Yue and Kontar, AISTATS 2020. How much lookahead actually helps.
 - [Maximizing Acquisition Functions for Bayesian Optimization](https://arxiv.org/abs/1805.10122) - Wilson, Hutter, and Deisenroth, NeurIPS 2018. Monte Carlo acquisition via autodiff.
 - [Parallelised Bayesian Optimisation via Thompson Sampling](https://proceedings.mlr.press/v84/kandasamy18a.html) - Kandasamy et al., AISTATS 2018. TS as a simple batch acquisition.
@@ -168,6 +173,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ### Multi-Objective
 
+- [Multi-Objective Bayesian Optimization over High-Dimensional Search Spaces](https://proceedings.mlr.press/v180/daulton22a.html) - Daulton, Eriksson, Balandat, and Bakshy, UAI 2022. MORBO: local trust regions for high-d multi-objective BO.
 - [Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement](https://proceedings.mlr.press/v139/daulton21a.html) - Daulton, Balandat, and Bakshy, ICML 2021. NEHVI under noise.
 - [Differentiable Expected Hypervolume Improvement](https://proceedings.neurips.cc/paper/2020/hash/60cb558c40e4f18479664069d9642d5a-Abstract.html) - Daulton, Balandat, and Bakshy, NeurIPS 2020. qEHVI for parallel MOBO.
 - [Efficient Computation of Expected Hypervolume Improvement Using Box Decomposition Algorithms](https://link.springer.com/article/10.1007/s10898-019-00798-7) - Yang, Emmerich, Deutz, and Bäck, JOGO 2019. Fast EHVI.
@@ -183,6 +189,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 - [Fast Bayesian Optimization of Machine Learning Hyperparameters on Large Datasets](https://proceedings.mlr.press/v54/klein17a.html) - Klein, Falkner, Bartels, Hennig, and Hutter, AISTATS 2017. FABOLAS.
 - [Multi-fidelity Bayesian Optimisation with Continuous Approximations](https://proceedings.mlr.press/v70/kandasamy17a.html) - Kandasamy, Dasarathy, Schneider, and Póczos, ICML 2017. Continuous fidelity rather than a discrete ladder.
 - [Gaussian Process Bandit Optimisation with Multi-fidelity Evaluations](https://proceedings.mlr.press/v48/kandasamy16.html) - Kandasamy et al., ICML 2016. MF-GP-UCB.
+- [Freeze-Thaw Bayesian Optimization](https://arxiv.org/abs/1406.3896) - Swersky, Snoek, and Adams, 2014. Pause and resume training runs using a GP over learning curves.
 - [Multi-Task Bayesian Optimization](https://proceedings.neurips.cc/paper/2013/hash/f33ba15effa5c10e873bf3842afb46a6-Abstract.html) - Swersky, Snoek, and Adams, NeurIPS 2013. Share data across related tasks.
 - [Global Optimization of Stochastic Black-Box Systems via Sequential Kriging Meta-Models](https://link.springer.com/article/10.1007/s10898-005-2454-3) - Huang, Allen, Notz, and Zeng, JOGO 2006. Early multi-fidelity EGO.
 
@@ -212,7 +219,6 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ### Meta-Learning
 
-- [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) - Stanton, Maddox, and Wilson, AISTATS 2023. Distribution-free uncertainty in the loop.
 - [PFNs4BO: In-Context Learning for Bayesian Optimization](https://proceedings.mlr.press/v202/muller23a.html) - Müller, Feurer, Hollmann, and Hutter, ICML 2023. Prior-fitted networks as BO surrogates.
 - [Initializing Bayesian Hyperparameter Optimization via Meta-Learning](https://ojs.aaai.org/index.php/AAAI/article/view/9354) - Feurer, Springenberg, and Hutter, AAAI 2015. Warm-start the BO prior from related tasks.
 
@@ -264,8 +270,8 @@ Pointer papers and domain lists. New application papers that only use BO should 
 
 ## Blogs
 
-- [A Unified View of Bayesian Optimization and Active Learning](https://richardcsuwandi.github.io/blog/2024/learn-with-a-goal/) - Richard Cornelius Suwandi, 2024.
 - [PlugBO: A Modular Framework for Agentic Bayesian Optimization](https://richardcsuwandi.github.io/blog/2026/plug-bo/) - Richard Cornelius Suwandi, 2026.
+- [A Unified View of Bayesian Optimization and Active Learning](https://richardcsuwandi.github.io/blog/2024/learn-with-a-goal/) - Richard Cornelius Suwandi, 2024.
 - [Bayesian Optimization](https://krasserm.github.io/2018/03/21/bayesian-optimization/) - Martin Krasser, 2018. From-scratch GP and EI derivation.
 - [Bayesian Optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/) - Thomas Huijskens, 2016.
 
