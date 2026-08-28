@@ -6,7 +6,7 @@
   </a>
 </p>
 
-A curated list of resources for Bayesian optimization, maintained by [Richard Cornelius Suwandi](https://richardcsuwandi.github.io).
+A curated list of Bayesian optimization resources, maintained by [Richard Cornelius Suwandi](https://richardcsuwandi.github.io).
 
 Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.io/awesome-bo/).
 

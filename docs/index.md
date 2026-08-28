@@ -8,14 +8,7 @@
 [:material-book-open-variant: Getting started](getting-started.md){ .md-button .md-button--primary }
 
 A curated list of Bayesian optimization books, papers, software, and
-learning resources. Method papers and maintained libraries only.
-Application papers that merely call a BO library belong in a domain list,
-not here.
-
-!!! note
-    The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme)
-    is the canonical awesome-list file (and what `awesome-lint` checks).
-    This site is the same content, split for reading.
+learning resources.
 
 ## Start here
 
