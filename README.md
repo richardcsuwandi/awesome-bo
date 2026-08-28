@@ -41,7 +41,7 @@ Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.i
 - [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) - Frazier, 2018. The standard short tutorial, including noisy EI, batch, multi-fidelity, and constraints.
 - [Recent Advances in Bayesian Optimization](https://bayesopt-tutorial.github.io/) - AAAI 2023 tutorial (slides and syllabus) covering high-dimensional, discrete, and causal BO.
 
-Then read Garnett's book (under Books) and install Ax or BoTorch (under Software).
+Then read Garnett's book or Terenin's draft (under Books) and install Ax or BoTorch (under Software).
 
 ## Books
 
@@ -191,6 +191,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 - [Batch Bayesian Optimization via Local Penalization](https://proceedings.mlr.press/v51/gonzalez16a.html) - González, Dai, Hennig, and Lawrence, AISTATS 2016. Penalize around pending points.
 - [Batched Large-scale Bayesian Optimization in High-dimensional Spaces](https://proceedings.mlr.press/v84/wang18c.html) - Wang, Gehring, Kohli, and Jegelka, AISTATS 2018. Ensemble batch BO in high-d.
 - [GIBBON: General-purpose Information-Based Bayesian Optimisation](https://proceedings.mlr.press/v139/moss21a.html) - Moss, Leslie, Gonzalez, Rayson, and Gal, ICML 2021. Cheap batch information-theoretic acquisition.
+- [Batched Gaussian Process Bandit Optimization via Determinantal Point Processes](https://papers.nips.cc/paper/2016/hash/a1d7311f2a312426d710e1c617fcbc8c-Abstract.html) - Kathuria, Deshpande, and Kohli, NeurIPS 2016. Diverse batches via DPPs.
 
 ### Discrete and Mixed Spaces
 
@@ -203,6 +204,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 ### Preferential Feedback
 
 - [Preferential Bayesian Optimization](https://proceedings.mlr.press/v70/gonzalez17a.html) - González, Dai, Damianou, and Lawrence, ICML 2017. Optimize from pairwise comparisons rather than numeric scores.
+- [Preference Exploration for Efficient Bayesian Optimization with Multiple Outcomes](https://proceedings.mlr.press/v151/jerry-lin22a.html) - Lin, Astudillo, Frazier, and Bakshy, AISTATS 2022. Learn a utility from pairwise comparisons, then optimize it.
 - [qEUBO: A Decision-Theoretic Acquisition Function for Preferential Bayesian Optimization](https://proceedings.mlr.press/v206/astudillo23a.html) - Astudillo, Lin, Bakshy, and Frazier, AISTATS 2023. Expected utility of the best option.
 
 ### Meta-Learning and LLMs

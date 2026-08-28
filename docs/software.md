@@ -2,6 +2,8 @@
 
 Actively maintained libraries. Archived and maintenance-only packages are listed under [Unmaintained](unmaintained.md).
 
+The table covers every actively maintained library listed here, not a shortlist.
+
 | Library | Stack | Constraints | Multi-obj | Mixed / batch | Notes |
 | --- | --- | --- | --- | --- | --- |
 | [Ax](https://ax.dev/) | BoTorch / GPyTorch | Yes | Yes | Yes | Service layer for experiments. |
@@ -12,6 +14,13 @@ Actively maintained libraries. Archived and maintenance-only packages are listed
 | [SMAC3](https://github.com/automl/SMAC3) | RF / GP | Yes | Limited | Yes | Algorithm configuration and HPO. |
 | [OpenBox](https://github.com/PKU-DAIR/open-box) | GP / TPE / RF | Yes | Yes | Yes | General black-box system. |
 | [Dragonfly](https://github.com/dragonfly/dragonfly) | GP | Yes | Yes | Yes | Parallel and high-dimensional BO. |
+| [BayesianOptimization](https://github.com/bayesian-optimization/BayesianOptimization) | scikit-learn | Limited | No | Limited | Small EI-style loop. |
+| [emukit](https://github.com/EmuKit/emukit) | GPy | Yes | Limited | Yes | Multi-fidelity emulation. |
+| [NUBO](https://github.com/mikediessner/nubo) | PyTorch | Limited | No | Limited | Compact scientist-facing API. |
+| [Syne Tune](https://github.com/awslabs/syne-tune) | various | Yes | Yes | Yes | AWS HPO with BO and multi-fidelity. |
+| [HyperMapper](https://github.com/luinardi/hypermapper) | RF / GP | Yes | Yes | Yes | Systems autotuning. |
+| [CAKE](https://github.com/richardcsuwandi/cake) | BoTorch | Limited | Limited | Limited | LLM-evolved GP kernels. |
+| [PlugBO](https://github.com/richardcsuwandi/plugbo) | BoTorch | Yes | Limited | Yes | Agentic plugin loop. |
 
 ## Active libraries
 

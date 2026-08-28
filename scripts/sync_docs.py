@@ -164,9 +164,10 @@ def render_getting_started(block: Block) -> str:
         "# Getting started",
         "New to Bayesian optimization? Read these in order, then pick a library.",
         bullets(block.items),
-        "Then read [Garnett's book](books.md) and install [Ax](https://ax.dev/) or "
-        "[BoTorch](https://botorch.org/). Ax if you want a service-style API. "
-        "BoTorch if you want to write the loop yourself on PyTorch.",
+        "Then read [Garnett's book](books.md) or [Terenin's draft](books.md) and "
+        "install [Ax](https://ax.dev/) or [BoTorch](https://botorch.org/). Ax if "
+        "you want a service-style API. BoTorch if you want to write the loop "
+        "yourself on PyTorch.",
         "For lectures, see [Community](community.md).",
     )
 
@@ -179,6 +180,8 @@ def render_software(block: Block, existing: str) -> str:
     parts: List[str] = [
         "# Software",
         rewrite_software_intro(block.intro),
+        "The table covers every actively maintained library listed here, "
+        "not a shortlist.",
     ]
     table = extract_table(existing)
     if table:
