@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Email the maintainer
+    url: mailto:richardsuwandi@link.cuhk.edu.cn
+    about: Use this if you prefer not to file a GitHub issue.

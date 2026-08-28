@@ -1,0 +1,34 @@
+name: Suggest a resource
+description: Propose a book, video, blog, course, workshop, or other resource
+title: "[Resource] "
+labels: ["resource"]
+body:
+  - type: markdown
+    attributes:
+      value: Read [contributing.md](https://github.com/richardcsuwandi/awesome-bo/blob/main/contributing.md) first.
+  - type: input
+    id: url
+    attributes:
+      label: URL
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Getting Started
+        - Books
+        - Community
+        - Videos
+        - Blogs
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs
+      description: One or two sentences on who it is for.
+    validations:
+      required: true

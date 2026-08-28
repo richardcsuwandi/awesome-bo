@@ -1,0 +1,14 @@
+## What are you adding?
+
+- [ ] Paper (method, survey, tutorial, or benchmark)
+- [ ] Software
+- [ ] Other resource (book, video, blog, course)
+
+## Checklist
+
+- [ ] I read [contributing.md](contributing.md)
+- [ ] The entry is in the right section
+- [ ] Format is `- [Name](url) - Description.`
+- [ ] Description starts with an uppercase letter and ends with a period
+- [ ] This is not an application paper that only *uses* Bayesian optimization
+- [ ] The URL is not already in the README

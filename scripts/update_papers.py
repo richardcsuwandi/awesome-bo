@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
-"""
-script to update the papers section in the awesome-bo README using the arxiv api.
+"""Propose new method preprints for the Recent Preprints section.
 
-usage:
+This script never writes to the curated Papers sections. It only prepends
+title-matching arXiv entries to Recent Preprints (capped), for a human to
+review in the weekly pull request.
+
+Usage:
   python scripts/update_papers.py [--readme PATH] [--max-results N] [--arxiv-cap N] [--dry-run]
-
-notes:
-  - uses only the python standard library.
-  - filters for papers likely about bayesian optimization via keywords.
-  - deduplicates by title against what's already in the README (both sections).
-  - peer-reviewed papers (venue detected from journal_ref/comment) go into the
-    '## Papers' table; everything else lands in '## Recent arXiv Preprints',
-    which is capped at --arxiv-cap entries (oldest preprints are dropped once
-    the cap is exceeded) so the README doesn't get flooded with unreviewed work.
 """
 
 from __future__ import annotations
@@ -32,72 +26,45 @@ import xml.etree.ElementTree as ET
 
 ARXIV_API_URL = "http://export.arxiv.org/api/query"
 
-# keywords to determine whether an arxiv entry is about bayesian optimization
-KEYWORDS = (
+# Title must contain one of these. Abstract-only mentions are not enough.
+TITLE_KEYWORDS = (
     "bayesian optimization",
     "bayesian optimisation",
-    "bayes opt",
-    "bayes-opt",
     "bayesopt",
-    "bo for",
-)
-
-# known venues to detect from journal_ref or comment
-KNOWN_VENUES = (
-    "icml",
-    "iclr",
-    "neurips",
-    "nips",
-    "aistats",
-    "uai",
-    "kdd",
-    "aaai",
-    "jmlr",
-    "tmlr",
-    "springer",
-    "ieee",
+    "bayes-opt",
 )
 
 DEFAULT_ARXIV_CAP = 15
+
+LIST_ITEM_RE = re.compile(
+    r"^- \[(?P<title>[^\]]+)\]\((?P<url>[^)]+)\) - (?P<rest>.+)$"
+)
 
 
 @dataclass
 class Paper:
     title: str
     url: str
-    venue: str
     year: int
-
-    @property
-    def is_peer_reviewed(self) -> bool:
-        return self.venue.strip().lower() != "arxiv"
 
 
 def build_arxiv_query(max_results: int) -> str:
-    """build a query url for arxiv api."""
     terms = [
-        'all:"bayesian optimization"',
         'ti:"bayesian optimization"',
-        'all:"bayesian optimisation"',
         'ti:"bayesian optimisation"',
-        'all:"bayesopt"',
         'ti:"bayesopt"',
     ]
     search_query = quote(" OR ".join(terms))
-    url = (
+    return (
         f"{ARXIV_API_URL}?search_query={search_query}"
         f"&start=0&max_results={max_results}&sortBy=lastUpdatedDate&sortOrder=descending"
     )
-    return url
 
 
 def fetch_arxiv_feed(max_results: int) -> ET.Element:
-    """fetch arxiv atom feed and return root element."""
-    url = build_arxiv_query(max_results=max_results)
-    with urlopen(url) as resp:
+    with urlopen(build_arxiv_query(max_results)) as resp:
         data = resp.read()
-    root = ET.fromstring(data)
-    return root
+    return ET.fromstring(data)
 
 
 def extract_text(elem: Optional[ET.Element]) -> str:
@@ -108,75 +75,42 @@ def normalize_space(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def looks_like_bo(title: str, summary: str) -> bool:
-    """check if the entry looks like bayesian optimization by keywords."""
+def title_is_bo(title: str) -> bool:
     t = title.lower()
-    s = summary.lower()
-    for kw in KEYWORDS:
-        if kw in t or kw in s:
-            return True
-    return False
+    return any(kw in t for kw in TITLE_KEYWORDS)
 
 
-def infer_venue(journal_ref: str, comment: str) -> str:
-    """infer a simple venue string from journal_ref or comment fields."""
-    text = f"{journal_ref} {comment}".lower()
-    for venue in KNOWN_VENUES:
-        if venue in text:
-            if venue == "nips":
-                return "NeurIPS"
-            if venue == "ieee":
-                return "IEEE"
-            return venue.upper()
-    # default to arxiv if nothing else found
-    return "arXiv"
-
-
-def safe_year(published: str, journal_ref: str) -> int:
-    """extract year from published date or journal_ref."""
-    # try published timestamp first (e.g., 2024-08-14T17:14:01Z)
-    try:
-        year = dt.datetime.fromisoformat(published.replace("Z", "+00:00")).year
-        return year
-    except Exception:
-        pass
-    # fallback: regex search in journal_ref
-    m = re.search(r"(19|20)\d{2}", journal_ref)
+def canonical_arxiv_url(entry_id: str) -> str:
+    # http://arxiv.org/abs/2608.25116v1 -> https://arxiv.org/abs/2608.25116
+    m = re.search(r"arxiv\.org/abs/(\d+\.\d+)", entry_id)
     if m:
-        return int(m.group(0))
-    # final fallback: current year
-    return dt.datetime.utcnow().year
+        return f"https://arxiv.org/abs/{m.group(1)}"
+    return entry_id.replace("http://", "https://")
+
+
+def parse_year(published: str) -> int:
+    try:
+        return dt.datetime.fromisoformat(published.replace("Z", "+00:00")).year
+    except Exception:
+        return dt.datetime.now(dt.timezone.utc).year
 
 
 def parse_arxiv_entries(feed_root: ET.Element) -> List[Paper]:
-    """parse arxiv atom xml into paper objects, filtered for bo."""
-    ns = {
-        "atom": "http://www.w3.org/2005/Atom",
-        "arxiv": "http://arxiv.org/schemas/atom",
-    }
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
     papers: List[Paper] = []
+    seen = set()
     for entry in feed_root.findall("atom:entry", ns):
         title = normalize_space(html.unescape(extract_text(entry.find("atom:title", ns))))
-        url = extract_text(entry.find("atom:id", ns))
-        summary = normalize_space(extract_text(entry.find("atom:summary", ns)))
-        if not looks_like_bo(title, summary):
+        if not title_is_bo(title):
             continue
-        journal_ref = extract_text(entry.find("arxiv:journal_ref", ns))
-        comment = extract_text(entry.find("arxiv:comment", ns))
-        published = extract_text(entry.find("atom:published", ns))
-        venue = infer_venue(journal_ref, comment)
-        year = safe_year(published, journal_ref)
-        papers.append(Paper(title=title, url=url, venue=venue, year=year))
-    # deduplicate by normalized title
-    seen = set()
-    unique: List[Paper] = []
-    for p in papers:
-        key = p.title.casefold()
+        key = title.casefold()
         if key in seen:
             continue
         seen.add(key)
-        unique.append(p)
-    return unique
+        url = canonical_arxiv_url(extract_text(entry.find("atom:id", ns)))
+        published = extract_text(entry.find("atom:published", ns))
+        papers.append(Paper(title=title, url=url, year=parse_year(published)))
+    return papers
 
 
 def read_readme(path: Path) -> List[str]:
@@ -187,161 +121,101 @@ def write_readme(path: Path, lines: List[str]) -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def find_table_section(lines: List[str], heading_prefix: str) -> Tuple[int, int]:
-    """return (start_index_of_rows, end_index_exclusive) for a '## ' table section.
-
-    the start index points to the line right after the table header separator.
-    the end index points to the line of the next '## ' heading or eof.
-    """
-    heading_idx = -1
-    for i, line in enumerate(lines):
-        if line.strip().lower().startswith(heading_prefix.lower()):
-            heading_idx = i
+def find_preprints_section(lines: List[str]) -> Tuple[int, int]:
+    heading = "## Recent Preprints"
+    start = next((i for i, line in enumerate(lines) if line.strip() == heading), -1)
+    if start == -1:
+        raise RuntimeError(f"could not find '{heading}' in README.md")
+    end = len(lines)
+    for i in range(start + 1, len(lines)):
+        if lines[i].startswith("## "):
+            end = i
             break
-    if heading_idx == -1:
-        raise RuntimeError(f"could not find '{heading_prefix}' section in README.md")
-
-    sep_idx = -1
-    for i in range(heading_idx + 1, min(heading_idx + 20, len(lines))):
-        if re.match(r"^\|\s*-{3,}\s*\|", lines[i]):
-            sep_idx = i
-            break
-    if sep_idx == -1:
-        raise RuntimeError(f"could not find table header separator for '{heading_prefix}' in README.md")
-
-    end_idx = len(lines)
-    for i in range(sep_idx + 1, len(lines)):
-        if lines[i].startswith("## ") and i > sep_idx + 1:
-            end_idx = i
-            break
-
-    return sep_idx + 1, end_idx
+    return start, end
 
 
-def extract_existing_titles(lines: List[str], start: int, end: int) -> set:
-    """extract existing paper titles from the markdown table rows."""
+def existing_titles(lines: List[str]) -> set:
     titles = set()
-    row_re = re.compile(r"^\|\s*\[(?P<title>[^\]]+)\]\([^)]+\)\s*\|", re.IGNORECASE)
-    for i in range(start, end):
-        m = row_re.match(lines[i].strip())
+    for line in lines:
+        m = re.match(r"^- \[([^\]]+)\]\(", line.strip())
         if m:
-            titles.add(m.group("title").casefold())
+            titles.add(m.group(1).casefold())
     return titles
 
 
-def parse_table_rows(lines: List[str], start: int, end: int) -> List[Tuple[str, str, str, int]]:
-    """parse existing markdown table rows into (title, url, venue, year) tuples."""
-    row_re = re.compile(
-        r"^\|\s*\[(?P<title>[^\]]+)\]\((?P<url>[^)]+)\)\s*\|\s*(?P<venue>[^|]+?)\s*\|\s*(?P<year>\d{4})\s*\|"
-    )
-    rows = []
-    for i in range(start, end):
-        line = lines[i].strip()
-        if not line:
-            continue
-        m = row_re.match(line)
-        if m:
-            rows.append((m.group("title"), m.group("url"), m.group("venue"), int(m.group("year"))))
-    return rows
+def parse_preprint_items(lines: List[str], start: int, end: int) -> List[str]:
+    items = []
+    for line in lines[start:end]:
+        if LIST_ITEM_RE.match(line.strip()):
+            items.append(line.rstrip())
+    return items
 
 
-def make_table_row(paper: Paper) -> str:
-    return f"| [{paper.title}]({paper.url}) | {paper.venue} | {paper.year} |"
+def make_item(paper: Paper) -> str:
+    return f"- [{paper.title}]({paper.url}) - {paper.year}."
 
 
-def update_readme_with_papers(
-    readme_path: Path, papers: List[Paper], arxiv_cap: int, dry_run: bool
-) -> Tuple[int, int]:
-    """update README with new papers.
-
-    returns (peer_reviewed_added, arxiv_added).
-    """
+def update_readme(readme_path: Path, papers: List[Paper], arxiv_cap: int, dry_run: bool) -> int:
     lines = read_readme(readme_path)
+    start, end = find_preprints_section(lines)
+    already = existing_titles(lines)
+    new_papers = [p for p in papers if p.title.casefold() not in already]
+    if not new_papers:
+        return 0
 
-    papers_start, papers_end = find_table_section(lines, "## papers")
-    arxiv_start, arxiv_end = find_table_section(lines, "## recent arxiv preprints")
+    new_items = [make_item(p) for p in new_papers]
+    old_items = parse_preprint_items(lines, start, end)
+    combined = (new_items + old_items)[:arxiv_cap]
 
-    existing_titles = extract_existing_titles(lines, papers_start, papers_end)
-    existing_titles |= extract_existing_titles(lines, arxiv_start, arxiv_end)
+    intro: List[str] = []
+    for i in range(start + 1, end):
+        stripped = lines[i].strip()
+        if stripped.startswith("- ["):
+            break
+        intro.append(lines[i])
 
-    candidates = [p for p in papers if p.title.casefold() not in existing_titles]
-    peer_candidates = sorted(
-        (p for p in candidates if p.is_peer_reviewed), key=lambda p: (-p.year, p.title.lower())
-    )
-    arxiv_candidates = sorted(
-        (p for p in candidates if not p.is_peer_reviewed), key=lambda p: (-p.year, p.title.lower())
-    )
+    rebuilt = [lines[start], *intro]
+    if rebuilt[-1].strip() != "":
+        rebuilt.append("")
+    rebuilt.extend(combined)
+    rebuilt.append("")
 
-    peer_rows = [make_table_row(p) for p in peer_candidates]
-
-    # rebuild arxiv preprints section: new entries on top, capped, oldest dropped
-    existing_arxiv_rows = parse_table_rows(lines, arxiv_start, arxiv_end)
-    new_arxiv_rows = [(p.title, p.url, p.venue, p.year) for p in arxiv_candidates]
-    combined_arxiv_rows = (new_arxiv_rows + existing_arxiv_rows)[:arxiv_cap]
-    arxiv_lines = [f"| [{t}]({u}) | {v} | {y} |" for (t, u, v, y) in combined_arxiv_rows]
-
-    updated_lines = list(lines)
-    # replace arxiv section first (higher index) so papers_start/end stay valid
-    updated_lines[arxiv_start:arxiv_end] = arxiv_lines + [""]
-    updated_lines[papers_start:papers_end] = peer_rows + updated_lines[papers_start:papers_end]
-
-    if (peer_rows or new_arxiv_rows) and not dry_run:
-        write_readme(readme_path, updated_lines)
-
-    return len(peer_rows), len(new_arxiv_rows)
+    # Keep a single blank line before the next heading.
+    tail = lines[end:]
+    if tail and tail[0] != "":
+        rebuilt.append("")
+    updated = lines[:start] + rebuilt + tail
+    if not dry_run:
+        write_readme(readme_path, updated)
+    return len(new_items)
 
 
 def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="update README papers from arxiv")
+    parser = argparse.ArgumentParser(description="Propose Recent Preprints from arXiv (title match only)")
     parser.add_argument(
         "--readme",
         type=Path,
         default=Path(__file__).resolve().parents[1] / "README.md",
-        help="path to README.md (default: repo root README.md)",
     )
-    parser.add_argument(
-        "--max-results",
-        type=int,
-        default=100,
-        help="max results to fetch from arxiv (default: 100)",
-    )
-    parser.add_argument(
-        "--arxiv-cap",
-        type=int,
-        default=DEFAULT_ARXIV_CAP,
-        help=f"max entries to keep in the Recent arXiv Preprints section (default: {DEFAULT_ARXIV_CAP})",
-    )
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="do not write file, just report what would change",
-    )
+    parser.add_argument("--max-results", type=int, default=100)
+    parser.add_argument("--arxiv-cap", type=int, default=DEFAULT_ARXIV_CAP)
+    parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
     args = parse_args(argv)
-    readme_path: Path = args.readme
-    if not readme_path.exists():
-        print(f"readme not found at: {readme_path}")
+    if not args.readme.exists():
+        print(f"readme not found at: {args.readme}")
         return 2
-
     try:
         feed = fetch_arxiv_feed(max_results=args.max_results)
         papers = parse_arxiv_entries(feed)
     except Exception as exc:
         print(f"failed to fetch or parse arxiv feed: {exc}")
         return 3
-
-    peer_added, arxiv_added = update_readme_with_papers(
-        readme_path, papers, arxiv_cap=args.arxiv_cap, dry_run=args.dry_run
-    )
-    if peer_added or arxiv_added:
-        print(f"added {peer_added} peer-reviewed paper(s) and {arxiv_added} arXiv preprint(s)")
-    else:
-        print("no new papers found to add")
-    if args.dry_run:
-        print("dry-run mode: no changes written")
+    added = update_readme(args.readme, papers, arxiv_cap=args.arxiv_cap, dry_run=args.dry_run)
+    print(f"{'dry-run: ' if args.dry_run else ''}proposed {added} preprint(s)")
     return 0
 
 

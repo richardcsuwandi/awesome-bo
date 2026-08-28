@@ -1,0 +1,35 @@
+name: Suggest software
+description: Propose a Bayesian optimization library or tool
+title: "[Software] "
+labels: ["software"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [contributing.md](https://github.com/richardcsuwandi/awesome-bo/blob/main/contributing.md) first.
+        The project should be maintained and documented. Unmaintained tools go in `unmaintained.md`.
+  - type: input
+    id: url
+    attributes:
+      label: Repository or docs URL
+      placeholder: https://github.com/...
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Software (active)
+        - Related HPO tools
+        - Domain-specific
+        - Unmaintained
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs
+      description: What is it for, what stack, and who should pick it over Ax/BoTorch/Trieste?
+    validations:
+      required: true

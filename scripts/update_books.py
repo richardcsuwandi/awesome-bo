@@ -150,16 +150,11 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
-    args = parse_args(argv)
-    api_key = os.getenv("GOOGLE_BOOKS_API_KEY")
-    try:
-        items = fetch_google_books(args.max_results, api_key)
-    except Exception as exc:
-        print(f"failed to fetch from google books: {exc}")
-        return 2
-    added = update_books(args.readme, items, max_new=args.max_new, dry_run=args.dry_run)
-    print(("dry-run: " if args.dry_run else "") + f"added {added} book(s)")
-    return 0
+    print(
+        "update_books.py is disabled. Books are curated by hand "
+        "(see contributing.md). Use scripts/update_papers.py for preprints."
+    )
+    return 1
 
 
 if __name__ == "__main__":

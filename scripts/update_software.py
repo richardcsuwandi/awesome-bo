@@ -139,16 +139,11 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
-    args = parse_args(argv)
-    token = os.getenv("GITHUB_TOKEN")
-    try:
-        repos = fetch_github_repos(args.per_page, token)
-    except Exception as exc:
-        print(f"failed to fetch from github: {exc}")
-        return 2
-    added = update_software(args.readme, repos, min_stars=args.min_stars, max_new=args.max_new, dry_run=args.dry_run)
-    print(("dry-run: " if args.dry_run else "") + f"added {added} software repo(s)")
-    return 0
+    print(
+        "update_software.py is disabled. Software is curated by hand "
+        "(see contributing.md). Use scripts/update_papers.py for preprints."
+    )
+    return 1
 
 
 if __name__ == "__main__":

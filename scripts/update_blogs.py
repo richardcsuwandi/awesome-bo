@@ -176,15 +176,11 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
-    args = parse_args(argv)
-    feeds: List[str]
-    if args.feeds and args.feeds.exists():
-        feeds = [line.strip() for line in args.feeds.read_text(encoding="utf-8").splitlines() if line.strip()]
-    else:
-        feeds = DEFAULT_FEEDS
-    added = update_blogs(args.readme, feeds, dry_run=args.dry_run)
-    print(("dry-run: " if args.dry_run else "") + f"added {added} blog post(s)")
-    return 0
+    print(
+        "update_blogs.py is disabled. Blogs are curated by hand "
+        "(see contributing.md). Use scripts/update_papers.py for preprints."
+    )
+    return 1
 
 
 if __name__ == "__main__":

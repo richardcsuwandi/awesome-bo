@@ -156,19 +156,11 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
-    args = parse_args(argv)
-    api_key = os.getenv("YOUTUBE_API_KEY")
-    if not api_key:
-        print("missing YOUTUBE_API_KEY; skipping videos update")
-        return 0
-    try:
-        items = fetch_youtube(args.max_results, api_key)
-    except Exception as exc:
-        print(f"failed to fetch from youtube: {exc}")
-        return 2
-    added = update_videos(args.readme, items, dry_run=args.dry_run)
-    print(("dry-run: " if args.dry_run else "") + f"added {added} video(s)")
-    return 0
+    print(
+        "update_videos.py is disabled. Videos are curated by hand "
+        "(see contributing.md). Use scripts/update_papers.py for preprints."
+    )
+    return 1
 
 
 if __name__ == "__main__":

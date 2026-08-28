@@ -1,0 +1,46 @@
+name: Suggest a paper
+description: Propose a method paper, survey, tutorial, or benchmark for the list
+title: "[Paper] "
+labels: ["paper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [contributing.md](https://github.com/richardcsuwandi/awesome-bo/blob/main/contributing.md) first.
+        Method papers only. Application papers that just *use* BO will be closed.
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Proceedings, OpenReview, or arXiv abs page. Prefer a landing page over a raw PDF.
+      placeholder: https://proceedings.mlr.press/...
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Surveys and Tutorials
+        - Foundations
+        - Acquisition Functions
+        - High-Dimensional
+        - Constrained and Safe
+        - Multi-Objective
+        - Multi-Fidelity, Multi-Task, and Transfer
+        - Batch and Parallel
+        - Discrete and Mixed Spaces
+        - Preferential Feedback
+        - Meta-Learning and LLMs
+        - Benchmarks
+        - Applications
+        - Recent Preprints
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs
+      description: One or two sentences. What did this paper introduce that people still use?
+    validations:
+      required: true
