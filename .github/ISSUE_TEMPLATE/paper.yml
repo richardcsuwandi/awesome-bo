@@ -23,6 +23,7 @@ body:
       options:
         - Surveys and Tutorials
         - Foundations
+        - Surrogate Design
         - Acquisition Functions
         - High-Dimensional
         - Constrained and Safe

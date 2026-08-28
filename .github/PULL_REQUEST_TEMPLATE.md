@@ -8,6 +8,7 @@
 
 - [ ] I read [contributing.md](contributing.md)
 - [ ] The entry is in the right section
+- [ ] Paper entries are inserted by year (newest first), not appended. Foundations is oldest first. Surveys starts with Shahriari then Brochu.
 - [ ] Format is `- [Name](url) - Description.`
 - [ ] Description starts with an uppercase letter and ends with a period
 - [ ] This is not an application paper that only *uses* Bayesian optimization

@@ -19,7 +19,7 @@ The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is wha
 ## How to add something
 
 1. Open an issue with the matching template (paper, software, or resource), **or** open a pull request.
-2. Put the entry in the right section. Do not append to a year-sorted dump.
+2. Put the entry in the right section, in year order (see Paper order). Do not append at the bottom of a subsection.
 3. Use this format, and nothing else:
 
    ```markdown
@@ -32,12 +32,25 @@ The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is wha
 6. One pull request per addition, unless you are doing a small batch of clearly related items.
 7. Run `python scripts/sync_docs.py` so the docs site matches the README.
 
+## Paper order
+
+Within each Papers subsection, newest year first. Same year: alphabetical by title.
+
+Exceptions:
+
+- **Foundations** is oldest first. It is a reading order (Mockus, Jones, Srinivas, Snoek), not a recency ranking.
+- **Surveys and Tutorials** starts with Shahriari (2016) then Brochu (2010). Remaining surveys are newest first.
+
+**Recent Preprints** is already newest first.
+
+When you move a preprint into Papers after acceptance, insert it by year. Do not leave it at the end of the subsection.
+
 ## Weekly arXiv pull requests
 
 `scripts/update_papers.py` may open a PR that only adds **Recent Preprints** in `README.md`, then runs `scripts/sync_docs.py`. Review it:
 
 - Drop application papers even if the title contains "Bayesian optimization".
-- Keep method papers. After acceptance, move them into the matching Papers subsection and remove them from Recent Preprints.
+- Keep method papers. After acceptance, insert them into the matching Papers subsection by year and remove them from Recent Preprints.
 - Never merge a PR that writes into the curated Papers sections automatically.
 
 ## Docs site
