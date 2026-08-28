@@ -32,7 +32,8 @@ body:
         - Batch and Parallel
         - Discrete and Mixed Spaces
         - Preferential Feedback
-        - Meta-Learning and LLMs
+        - Meta-Learning
+        - LLMs and BO
         - Benchmarks
         - Applications
         - Recent Preprints

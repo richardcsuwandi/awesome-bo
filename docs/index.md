@@ -15,7 +15,7 @@ learning resources.
 1. [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) (Distill, 2020)
 2. [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) (Frazier, 2018)
 3. [Recent Advances in Bayesian Optimization](https://bayesopt-tutorial.github.io/) (AAAI 2023)
-4. [Garnett's textbook](https://bayesoptbook.com/), then [BoTorch](https://botorch.org/)
+4. [Garnett's textbook](https://bayesoptbook.com/), then [Ax](https://ax.dev/) to run an experiment or [BoTorch](https://botorch.org/) to write the loop
 
 [Bayesian Optimization in Action](https://www.manning.com/books/bayesian-optimization-in-action) is the book if you want a hands-on, practice-first guide with Python/BoTorch examples.
 
@@ -24,7 +24,7 @@ learning resources.
 - [Getting started](getting-started.md)
 - [Books](books.md)
 - [Software](software.md) and [Unmaintained](unmaintained.md)
-- [Papers](papers.md), including [Surrogate Design](papers.md#surrogate-design)
+- [Papers](papers.md), including [Surrogate Design](papers.md#surrogate-design) and [LLMs and BO](papers.md#llms-and-bo)
 - [Benchmarks](benchmarks.md)
 - [Applications](applications.md)
 - [Community](community.md)

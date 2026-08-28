@@ -27,7 +27,8 @@ Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.i
   - [Batch and Parallel](#batch-and-parallel)
   - [Discrete and Mixed Spaces](#discrete-and-mixed-spaces)
   - [Preferential Feedback](#preferential-feedback)
-  - [Meta-Learning and LLMs](#meta-learning-and-llms)
+  - [Meta-Learning](#meta-learning)
+  - [LLMs and BO](#llms-and-bo)
 - [Benchmarks](#benchmarks)
 - [Applications](#applications)
 - [Community](#community)
@@ -41,7 +42,9 @@ Website: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.i
 - [A Tutorial on Bayesian Optimization](https://arxiv.org/abs/1807.02811) - Frazier, 2018. The standard short tutorial, including noisy EI, batch, multi-fidelity, and constraints.
 - [Recent Advances in Bayesian Optimization](https://bayesopt-tutorial.github.io/) - AAAI 2023 tutorial (slides and syllabus) covering high-dimensional, discrete, and causal BO.
 
-Then read Garnett's book or Terenin's draft (under Books) and install Ax or BoTorch (under Software).
+Then read Garnett's book for theory, or Bayesian Optimization in Action for a Python walkthrough (under Books).
+
+Pick a library. Ax is the service: you declare the search space and the metric, and Ax chooses the next experiment, fits the model, and runs the loop. BoTorch is the PyTorch library Ax is built on. You write that loop yourself: fit a GPyTorch model, define an acquisition, optimize it. Use Ax if you want to run an experiment. Use BoTorch if you are implementing a method, or changing the surrogate or the acquisition. Both are listed under Software.
 
 ## Books
 
@@ -207,12 +210,21 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 - [Preference Exploration for Efficient Bayesian Optimization with Multiple Outcomes](https://proceedings.mlr.press/v151/jerry-lin22a.html) - Lin, Astudillo, Frazier, and Bakshy, AISTATS 2022. Learn a utility from pairwise comparisons, then optimize it.
 - [Preferential Bayesian Optimization](https://proceedings.mlr.press/v70/gonzalez17a.html) - González, Dai, Damianou, and Lawrence, ICML 2017. Optimize from pairwise comparisons rather than numeric scores.
 
-### Meta-Learning and LLMs
+### Meta-Learning
 
-- [Large Language Models to Enhance Bayesian Optimization](https://openreview.net/forum?id=OOxotBmGol) - Liu, Astorga, Seedat, and van der Schaar, ICLR 2024. LLAMBO.
 - [Bayesian Optimization with Conformal Prediction Sets](https://proceedings.mlr.press/v206/stanton23a.html) - Stanton, Maddox, and Wilson, AISTATS 2023. Distribution-free uncertainty in the loop.
 - [PFNs4BO: In-Context Learning for Bayesian Optimization](https://proceedings.mlr.press/v202/muller23a.html) - Müller, Feurer, Hollmann, and Hutter, ICML 2023. Prior-fitted networks as BO surrogates.
 - [Initializing Bayesian Hyperparameter Optimization via Meta-Learning](https://ojs.aaai.org/index.php/AAAI/article/view/9354) - Feurer, Springenberg, and Hutter, AAAI 2015. Warm-start the BO prior from related tasks.
+
+### LLMs and BO
+
+The LLM is the optimizer (no GP), or it occupies one slot in a BO loop. CAKE is under Surrogate Design. FunBO is under Acquisition Functions. PlugBO is under Software and Blogs.
+
+- [Agentic Bayesian Optimization through Surrogate-Augmented Autoresearch](https://arxiv.org/abs/2608.00316) - Brunzema et al., 2026. An LLM agent runs the loop; a BoTorch backend holds the posterior.
+- [LLINBO: Trustworthy LLM-in-the-Loop Bayesian Optimization](https://arxiv.org/abs/2505.14756) - Chang, Azvar, Okwudire, and Al Kontar, 2025. Keep a GP in the loop so LLM proposals stay uncertainty-aware.
+- [Reasoning BO: Enhancing Bayesian Optimization with Long-Context Reasoning Power of LLMs](https://arxiv.org/abs/2505.12833) - Yang et al., 2025. Reasoning models and a knowledge graph to guide BO sampling.
+- [Large Language Models as Optimizers](https://proceedings.iclr.cc/paper_files/paper/2024/hash/3339f19c5fcee3ad74502947a32be9e6-Abstract-Conference.html) - Yang et al., ICLR 2024. OPRO: the LLM proposes candidates from a textual history, with no GP posterior.
+- [Large Language Models to Enhance Bayesian Optimization](https://openreview.net/forum?id=OOxotBmGol) - Liu, Astorga, Seedat, and van der Schaar, ICLR 2024. LLAMBO: LLM warm-start, surrogate, and sampler inside a BO loop.
 
 ## Benchmarks
 
