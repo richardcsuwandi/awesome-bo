@@ -6,9 +6,8 @@ After you add or edit an entry in README.md, run:
 
   python scripts/sync_docs.py
 
-Docs-only extras are kept: the software comparison table, and a few
-Getting started / Community sentences. index.md, contributing.md, and
-unmaintained.md are not generated.
+Docs-only extras: a few Getting started / Community sentences.
+index.md, contributing.md, and unmaintained.md are not generated.
 
 Usage:
   python scripts/sync_docs.py [--readme PATH] [--docs-dir PATH] [--check]
@@ -39,7 +38,6 @@ REQUIRED_H2 = (
 )
 
 LIST_ITEM_RE = re.compile(r"^- \[.+\]\(.+\).*$")
-TABLE_SEP_RE = re.compile(r"^\|[\s:|-]+\|$")
 
 
 @dataclass
@@ -130,21 +128,6 @@ def bullets(items: List[str]) -> str:
     return "\n".join(items)
 
 
-def extract_table(text: str) -> str:
-    lines = text.splitlines()
-    start = None
-    for i, line in enumerate(lines):
-        if line.startswith("|") and i + 1 < len(lines) and TABLE_SEP_RE.match(lines[i + 1].strip()):
-            start = i
-            break
-    if start is None:
-        return ""
-    end = start
-    while end < len(lines) and lines[end].startswith("|"):
-        end += 1
-    return "\n".join(lines[start:end])
-
-
 def rewrite_software_intro(intro: str) -> str:
     return intro.replace(
         "listed in [unmaintained.md](unmaintained.md).",
@@ -181,18 +164,12 @@ def render_simple(title: str, block: Block) -> str:
     return page(f"# {title}", block.intro, bullets(block.items) if block.items else "")
 
 
-def render_software(block: Block, existing: str) -> str:
+def render_software(block: Block) -> str:
     parts: List[str] = [
         "# Software",
         rewrite_software_intro(block.intro),
-        "The table covers every actively maintained library listed here, "
-        "not a shortlist.",
     ]
-    table = extract_table(existing)
-    if table:
-        parts.append(table)
     if block.items:
-        parts.append("## Active libraries")
         parts.append(bullets(block.items))
     for sub in block.subsections:
         parts.append(f"## {sub.title}")
@@ -246,12 +223,10 @@ def parse_readme(readme: Path) -> Dict[str, Block]:
 
 def planned_pages(readme: Path, docs_dir: Path) -> Dict[Path, str]:
     blocks = parse_readme(readme)
-    software_path = docs_dir / "software.md"
-    existing_software = software_path.read_text(encoding="utf-8") if software_path.exists() else ""
     return {
         docs_dir / "getting-started.md": render_getting_started(blocks["Getting Started"]),
         docs_dir / "books.md": render_simple("Books", blocks["Books"]),
-        docs_dir / "software.md": render_software(blocks["Software"], existing_software),
+        docs_dir / "software.md": render_software(blocks["Software"]),
         docs_dir / "papers.md": render_papers(blocks["Papers"]),
         docs_dir / "benchmarks.md": render_simple("Benchmarks", blocks["Benchmarks"]),
         docs_dir / "applications.md": render_simple("Applications", blocks["Applications"]),

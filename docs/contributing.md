@@ -10,7 +10,7 @@ The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is wha
 
 **Papers** must introduce a BO *method*, survey, tutorial, or benchmark that the community still uses. Typical yes: a new acquisition function, a high-dimensional algorithm, a constrained-BO formulation, a library paper.
 
-**No:** application papers that run BoTorch / Ax / Optuna on a domain problem (materials, communications, robotics, drugs, and so on) unless the paper's contribution is a BO method. Those belong in a domain list, such as the [materials list](https://github.com/materials-data-facility/awesome-bayesian-optimization).
+**If you have a domain paper that uses BO** (materials, communications, robotics, drugs, and so on) but does not introduce a BO method, it belongs under [Applications](applications.md), not Papers. Applications is pointer papers and domain lists. A single case study that just runs BoTorch, Ax, or Optuna belongs in a domain list such as the [materials list](https://github.com/materials-data-facility/awesome-bayesian-optimization).
 
 **Software** must be maintained (recent commits or releases), documented, and actually used for BO. Unmaintained tools go under [Unmaintained](unmaintained.md). Related HPO tools that are not GP-BO (TPE, Hyperband-only, and similar) go under Related HPO tools, and the description must say so.
 
@@ -19,7 +19,7 @@ The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is wha
 ## How to add something
 
 1. Open an issue with the matching template (paper, software, or resource), **or** open a pull request.
-2. Put the entry in the right section, in year order (see Paper order). Do not append at the bottom of a subsection.
+2. Put the entry in the right section and in the right place (see [Where to put it](#where-to-put-it)). Do not append at the bottom of a subsection unless nothing nearby fits.
 3. Use this format, and nothing else:
 
    ```markdown
@@ -32,18 +32,13 @@ The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is wha
 6. One pull request per addition, unless you are doing a small batch of clearly related items.
 7. Run `python scripts/sync_docs.py` so the docs site matches the README.
 
-## Paper order
+## Where to put it
 
-Within each Papers subsection, newest year first. Same year: alphabetical by title.
+**Papers.** Within each subsection, newest year first. Same year: alphabetical by title. Two exceptions: Foundations is a reading path, so oldest first. Surveys and Tutorials keeps the two canonical intros at the top, then newest first for the rest.
 
-Exceptions:
+**Recent Preprints** is newest first. After acceptance, move the entry into the matching Papers subsection by year. Do not leave it at the end of that subsection.
 
-- **Foundations** is oldest first. It is a reading order (Mockus, Jones, Srinivas, Snoek), not a recency ranking.
-- **Surveys and Tutorials** starts with Shahriari (2016) then Brochu (2010). Remaining surveys are newest first.
-
-**Recent Preprints** is already newest first.
-
-When you move a preprint into Papers after acceptance, insert it by year. Do not leave it at the end of the subsection.
+**Software** is not ordered by year. Place a library next to the closest existing tools: same job, same stack, or the one people already compare it to. Example: BayBE sits next to BoFire because both are industrial DOE/BO libraries. Do not dump new entries at the bottom of the list.
 
 ## Weekly arXiv pull requests
 
@@ -61,7 +56,7 @@ pip install -r requirements-docs.txt
 mkdocs serve
 ```
 
-Do not edit generated list pages (`docs/books.md`, `docs/papers.md`, and similar) by hand. The software comparison table in `docs/software.md` is kept. The site deploys to GitHub Pages on every push that touches `docs/` or `mkdocs.yml`.
+Do not edit generated list pages (`docs/books.md`, `docs/papers.md`, and similar) by hand. The site deploys to GitHub Pages on every push that touches `docs/` or `mkdocs.yml`.
 
 ## Reporting a problem
 

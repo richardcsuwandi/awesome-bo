@@ -1,6 +1,6 @@
 # Papers
 
-Canonical method papers, grouped by problem setting. Each section is a short reading list, not an archive. Newest year first, same year by title. Foundations is oldest first. The Surveys section starts with Shahriari, then Brochu.
+Canonical method papers, grouped by problem setting. Each section is a short reading list, not an archive. Newest year first, same year by title. Foundations is oldest first. Surveys leads with the two standard intros, then newest first.
 
 ## Surveys and Tutorials
 

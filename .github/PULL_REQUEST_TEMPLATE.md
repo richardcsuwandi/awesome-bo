@@ -7,8 +7,8 @@
 ## Checklist
 
 - [ ] I read [contributing.md](contributing.md)
-- [ ] The entry is in the right section
-- [ ] Paper entries are inserted by year (newest first), not appended. Foundations is oldest first. Surveys starts with Shahriari then Brochu.
+- [ ] The entry is in the right section, in the right place
+- [ ] Papers: insert by year (newest first; Foundations is oldest first). Software: group with comparable tools, not by year
 - [ ] Format is `- [Name](url) - Description.`
 - [ ] Description starts with an uppercase letter and ends with a period
 - [ ] This is not an application paper that only *uses* Bayesian optimization

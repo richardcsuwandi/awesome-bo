@@ -71,13 +71,15 @@ Actively maintained libraries. Archived and maintenance-only packages are listed
 - [BoTorch](https://botorch.org/) - Modular Monte Carlo BO library built on PyTorch and GPyTorch.
 - [Trieste](https://github.com/secondmind-labs/trieste) - TensorFlow/GPflow toolbox for batch, constrained, multi-fidelity, and multi-objective BO.
 - [BoFire](https://github.com/experimental-design/bofire) - Experimental design and BO for mixed spaces, used in chemical and pharmaceutical settings.
-- [BayBE](https://github.com/emdgroup/baybe) - Bayesian DoE with chemical encodings and transfer learning.
+- [BayBE](https://github.com/emdgroup/baybe) - Bayesian DoE with chemical encodings and transfer learning ([paper](https://doi.org/10.1039/D5DD00050E)).
 - [HEBO](https://github.com/huawei-noah/HEBO) - Heteroscedastic evolutionary BO from Huawei Noah's Ark Lab.
 - [SMAC3](https://github.com/automl/SMAC3) - Sequential model-based algorithm configuration, using random forests or GPs.
 - [OpenBox](https://github.com/PKU-DAIR/open-box) - Black-box optimization system with transfer, multi-fidelity, and distributed runs.
 - [Dragonfly](https://github.com/dragonfly/dragonfly) - Scalable BO for expensive functions, including parallel and high-dimensional variants.
 - [BayesianOptimization](https://github.com/bayesian-optimization/BayesianOptimization) - Small scikit-learn GP implementation of EI-style BO.
+- [PyBADS](https://github.com/acerbilab/pybads) - GP-assisted mesh adaptive search for mildly expensive, nonsmooth, or noisy black-box fitting.
 - [emukit](https://github.com/EmuKit/emukit) - Multi-fidelity emulation, experimental design, and BO on top of GPy.
+- [SMT](https://smt.readthedocs.io/en/latest/) - Surrogate modeling toolbox with kriging, mixed and hierarchical GPs, and EGO.
 - [NUBO](https://github.com/mikediessner/nubo) - Compact PyTorch BO package aimed at scientists writing their own loop.
 - [Syne Tune](https://github.com/awslabs/syne-tune) - AWS HPO toolkit with BO, multi-fidelity, and transfer methods.
 - [HyperMapper](https://github.com/luinardi/hypermapper) - BO for computer-systems autotuning, including constrained and multi-objective problems.
@@ -98,7 +100,7 @@ Not GP-BO, but often compared with it.
 
 ## Papers
 
-Canonical method papers, grouped by problem setting. Each section is a short reading list, not an archive. Newest year first, same year by title. Foundations is oldest first. The Surveys section starts with Shahriari, then Brochu.
+Canonical method papers, grouped by problem setting. Each section is a short reading list, not an archive. Newest year first, same year by title. Foundations is oldest first. Surveys leads with the two standard intros, then newest first.
 
 ### Surveys and Tutorials
 

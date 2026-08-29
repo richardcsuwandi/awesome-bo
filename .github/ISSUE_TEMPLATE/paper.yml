@@ -7,7 +7,8 @@ body:
     attributes:
       value: |
         Read [contributing.md](https://github.com/richardcsuwandi/awesome-bo/blob/main/contributing.md) first.
-        Method papers only. Application papers that just *use* BO will be closed.
+        Method papers go in Papers. A domain paper that uses BO belongs in Applications or a domain list, not Papers.
+        Insert by year (newest first). Foundations is oldest first.
   - type: input
     id: url
     attributes:

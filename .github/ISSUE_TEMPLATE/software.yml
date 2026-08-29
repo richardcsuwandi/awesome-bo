@@ -8,6 +8,7 @@ body:
       value: |
         Read [contributing.md](https://github.com/richardcsuwandi/awesome-bo/blob/main/contributing.md) first.
         The project should be maintained and documented. Unmaintained tools go in `unmaintained.md`.
+        Place it next to the closest existing library, not at the bottom of the list.
   - type: input
     id: url
     attributes:
@@ -30,6 +31,6 @@ body:
     id: why
     attributes:
       label: Why it belongs
-      description: What is it for, what stack, and who should pick it over Ax/BoTorch/Trieste?
+      description: What is it for, what stack, and who should pick it over Ax/BoTorch/Trieste? Name the listed library it should sit next to.
     validations:
       required: true
