@@ -10,6 +10,8 @@ A curated list of Bayesian optimization resources, maintained by [Richard Cornel
 
 Web version: [richardcsuwandi.github.io/awesome-bo](https://richardcsuwandi.github.io/awesome-bo/).
 
+<!--lint disable double-link-->
+
 ## Contents
 
 - [Getting Started](#getting-started)
