@@ -135,11 +135,13 @@ def rewrite_software_intro(intro: str) -> str:
     )
 
 
-def rewrite_preprints_intro(intro: str) -> str:
-    return intro.replace(
-        "matching Papers section",
-        "matching [Papers](papers.md) section",
-    )
+# Docs page copy. Do not take this from README.md; update_papers.py and
+# sync_docs.py must leave this sentence alone.
+PREPRINTS_DOCS_INTRO = (
+    "Recent preprints found on arXiv, newest first. After peer review, "
+    "please open a PR to move an entry into the matching "
+    "[Papers](papers.md) section."
+)
 
 
 def render_getting_started(block: Block) -> str:
@@ -207,7 +209,7 @@ def render_community(community: Block, videos: Block, blogs: Block) -> str:
 def render_preprints(block: Block) -> str:
     return page(
         "# Recent preprints",
-        rewrite_preprints_intro(block.intro),
+        PREPRINTS_DOCS_INTRO,
         bullets(block.items),
     )
 

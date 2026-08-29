@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Propose new method preprints for Recent Preprints.
 
-This script never writes to the curated Papers sections. It only prepends
-title-matching arXiv entries to README.md, then runs scripts/sync_docs.py
-so docs/preprints.md matches. Humans still review the weekly pull request.
+This script never writes to the curated Papers sections. It merges
+title-matching arXiv entries into README.md, sorts newest first by arXiv
+id, then runs scripts/sync_docs.py so docs/preprints.md matches. Humans
+still review the weekly pull request.
 
 Usage:
   python scripts/update_papers.py [--readme PATH] [--max-results N] [--arxiv-cap N] [--dry-run]
@@ -40,6 +41,7 @@ DEFAULT_ARXIV_CAP = 20
 LIST_ITEM_RE = re.compile(
     r"^- \[(?P<title>[^\]]+)\]\((?P<url>[^)]+)\) - (?P<rest>.+)$"
 )
+ARXIV_ID_RE = re.compile(r"arxiv\.org/abs/(\d+)\.(\d+)")
 
 
 @dataclass
@@ -155,6 +157,53 @@ def make_item(paper: Paper) -> str:
     return f"- [{paper.title}]({paper.url}) - {paper.year}."
 
 
+def arxiv_sort_key(item: str) -> Tuple[int, int]:
+    m = ARXIV_ID_RE.search(item)
+    if not m:
+        return (0, 0)
+    return (int(m.group(1)), int(m.group(2)))
+
+
+def arxiv_id_token(item: str) -> str:
+    m = ARXIV_ID_RE.search(item)
+    return f"{m.group(1)}.{m.group(2)}" if m else item
+
+
+def merge_preprints(old_items: List[str], new_items: List[str], arxiv_cap: int) -> List[str]:
+    merged: List[str] = []
+    seen: set[str] = set()
+    for item in new_items + old_items:
+        token = arxiv_id_token(item)
+        if token in seen:
+            continue
+        seen.add(token)
+        merged.append(item)
+    merged.sort(key=arxiv_sort_key, reverse=True)
+    return merged[:arxiv_cap]
+
+
+def rewrite_preprints_section(
+    lines: List[str], start: int, end: int, items: List[str]
+) -> List[str]:
+    intro: List[str] = []
+    for i in range(start + 1, end):
+        stripped = lines[i].strip()
+        if stripped.startswith("- ["):
+            break
+        intro.append(lines[i])
+
+    rebuilt = [lines[start], *intro]
+    if rebuilt[-1].strip() != "":
+        rebuilt.append("")
+    rebuilt.extend(items)
+    rebuilt.append("")
+
+    tail = lines[end:]
+    if tail and tail[0] != "":
+        rebuilt.append("")
+    return lines[:start] + rebuilt + tail
+
+
 def update_readme(readme_path: Path, papers: List[Paper], arxiv_cap: int, dry_run: bool) -> int:
     lines = read_readme(readme_path)
     start, end = find_preprints_section(lines)
@@ -162,27 +211,10 @@ def update_readme(readme_path: Path, papers: List[Paper], arxiv_cap: int, dry_ru
     new_papers = [p for p in papers if p.title.casefold() not in already]
     old_items = parse_preprint_items(lines, start, end)
     new_items = [make_item(p) for p in new_papers]
-    combined = (new_items + old_items)[:arxiv_cap] if new_items else old_items[:arxiv_cap]
+    combined = merge_preprints(old_items, new_items, arxiv_cap)
 
-    if new_items:
-        intro: List[str] = []
-        for i in range(start + 1, end):
-            stripped = lines[i].strip()
-            if stripped.startswith("- ["):
-                break
-            intro.append(lines[i])
-
-        rebuilt = [lines[start], *intro]
-        if rebuilt[-1].strip() != "":
-            rebuilt.append("")
-        rebuilt.extend(combined)
-        rebuilt.append("")
-
-        # Keep a single blank line before the next heading.
-        tail = lines[end:]
-        if tail and tail[0] != "":
-            rebuilt.append("")
-        updated = lines[:start] + rebuilt + tail
+    if combined != old_items:
+        updated = rewrite_preprints_section(lines, start, end, combined)
         if not dry_run:
             write_readme(readme_path, updated)
     return len(new_items)
