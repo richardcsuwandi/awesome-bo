@@ -8,13 +8,13 @@ The [GitHub README](https://github.com/richardcsuwandi/awesome-bo#readme) is wha
 
 ## What belongs here
 
-**Papers** must introduce a BO *method*, survey, tutorial, or benchmark that the community still uses. Typical yes: a new acquisition function, a high-dimensional algorithm, a constrained-BO formulation, a library paper.
+**Papers** should present a relevant method, survey, tutorial, or benchmark that substantially contributes to the Bayesian optimization field or its community. Examples include new algorithmic advances, methodological developments, broadly-used libraries, or widely-referenced benchmarks.
 
-**If you have a domain paper that uses BO** (materials, communications, robotics, drugs, and so on) but does not introduce a BO method, it belongs under [Applications](applications.md), not Papers. Applications is pointer papers and domain lists. A single case study that just runs BoTorch, Ax, or Optuna belongs in a domain list such as the [materials list](https://github.com/materials-data-facility/awesome-bayesian-optimization).
+**If you are submitting a paper that applies BO in any domain** (such as science, engineering, industry, etc.) but does not introduce new BO methodology, add it under [Applications](applications.md) instead of Papers. Applications is for works that show how BO is being used in practice or in particular fields. Simple case studies that just use off-the-shelf tools (like BoTorch, Ax, Optuna, etc.) should be added to the most relevant domain list (for example, see the [materials list](https://github.com/materials-data-facility/awesome-bayesian-optimization)).
 
-**Software** must be maintained (recent commits or releases), documented, and actually used for BO. Unmaintained tools go under [Unmaintained](unmaintained.md). Related HPO tools that are not GP-BO (TPE, Hyperband-only, and similar) go under Related HPO tools, and the description must say so.
+**Software** should be actively maintained (with recent updates), include documentation, and offer real support for BO. Outdated or unsupported software goes under [Unmaintained](unmaintained.md). If a tool is related to hyperparameter optimization but does not use Gaussian Process-based BO (such as TPE, Hyperband variants, and similar), please list it under Related HPO tools and specify this in the description.
 
-**Preprints** must have Bayesian optimization / BayesOpt *in the title*, and BO must be the contribution. The weekly bot only proposes title matches. Humans still merge.
+**Preprints** must have Bayesian optimization / BayesOpt *in the title*, and BO must be the contribution. The weekly automated bot only proposes additions, but the maintainer has final say and decides whether to merge them.
 
 ## How to add something
 
