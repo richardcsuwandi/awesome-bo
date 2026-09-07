@@ -291,6 +291,11 @@ Pointer papers and domain lists. New application papers that only use BO should 
 
 Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
 
+- [No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels](https://arxiv.org/abs/2609.02993) - 2026.
+- [Scalable Bayesian Optimization of Composite Functions for Image-Based Inverse Problems in Materials Characterization](https://arxiv.org/abs/2609.02126) - 2026.
+- [Weisfeiler-Lehman subtree encoding for Bayesian optimization of atomic configurations](https://arxiv.org/abs/2609.00953) - 2026.
+- [State of Health Estimation using Convolutional and Bidirectional LSTM Neural Networks tuned by Bayesian Optimization](https://arxiv.org/abs/2608.30593) - 2026.
+- [Leveraging Bayesian Optimization for Array Shape Self-Calibration in Underwater DoA Estimation](https://arxiv.org/abs/2608.30488) - 2026.
 - [Tabular Deep Learning for Algorithmic Trading: Cross-Regime Bayesian Optimisation for Equity Signal Generation](https://arxiv.org/abs/2608.27076) - 2026.
 - [Bayesian Optimization for Self-Driving Materials Laboratories: From Algorithms to Physics-Informed Workflows](https://arxiv.org/abs/2608.26016) - 2026.
 - [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2608.25116) - 2026.
@@ -306,11 +311,6 @@ Unreviewed method papers (Bayesian optimization is the contribution). Capped at 
 - [High-dimensional Multi-objective Bayesian Optimization with Learned Variable Interactions](https://arxiv.org/abs/2608.11713) - 2026.
 - [Can Bayesian Optimization Efficiently Find a Strong Single Expert in Neural Thickets?](https://arxiv.org/abs/2608.10867) - 2026.
 - [Personalized Lower-limb Exoskeleton Assistance via Preference-based Bayesian Optimization](https://arxiv.org/abs/2608.09015) - 2026.
-- [Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization](https://arxiv.org/abs/2608.07859) - 2026.
-- [Active Learning Guided Design Space Refinement for Scalable Multi-Objective Bayesian Optimization in Materials Discovery](https://arxiv.org/abs/2608.04651) - 2026.
-- [Out-Of-The-Loop Multi-Fidelity Bayesian Optimization](https://arxiv.org/abs/2608.04113) - 2026.
-- [Exploiting Separability in Multi-Scale Grey-Box Bayesian Optimization](https://arxiv.org/abs/2608.03045) - 2026.
-- [Adaptive Sampling for Automated Post-Disaster Rapid Damage Assessment via Level-Set Cost-Aware Bayesian Optimization](https://arxiv.org/abs/2608.02868) - 2026.
 
 
 ## Contributing
