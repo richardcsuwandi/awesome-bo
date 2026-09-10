@@ -1,0 +1,1277 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bayesian optimization of expensive black-box functions.">
+      
+      
+      
+        <link rel="canonical" href="https://richardcsuwandi.github.io/awesome-bo/papers/">
+      
+      
+        <link rel="prev" href="../unmaintained/">
+      
+      
+        <link rel="next" href="../benchmarks/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Papers - Awesome BO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#papers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Awesome BO" class="md-header__button md-logo" aria-label="Awesome BO" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Awesome BO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Papers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/richardcsuwandi/awesome-bo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    richardcsuwandi/awesome-bo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Awesome BO" class="md-nav__button md-logo" aria-label="Awesome BO" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Awesome BO
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/richardcsuwandi/awesome-bo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    richardcsuwandi/awesome-bo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../books/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Books
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Active libraries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unmaintained/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unmaintained
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#surveys-and-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surveys and Tutorials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surrogate-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surrogate Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquisition-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acquisition Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Dimensional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constrained-and-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constrained and Safe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-fidelity-multi-task-and-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Fidelity, Multi-Task, and Transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-and-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch and Parallel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discrete-and-mixed-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete and Mixed Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preferential-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferential Feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta-Learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llms-and-bo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLMs and BO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recent preprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#surveys-and-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surveys and Tutorials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surrogate-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surrogate Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquisition-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acquisition Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Dimensional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constrained-and-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constrained and Safe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-fidelity-multi-task-and-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Fidelity, Multi-Task, and Transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-and-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch and Parallel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discrete-and-mixed-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete and Mixed Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preferential-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferential Feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta-Learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llms-and-bo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLMs and BO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/richardcsuwandi/awesome-bo/edit/main/docs/papers.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="papers">Papers<a class="headerlink" href="#papers" title="Permanent link">&para;</a></h1>
+<p>Canonical method papers, grouped by problem setting. Each section is a short reading list, not an archive. Newest year first, same year by title. Foundations is oldest first. Surveys leads with the two standard intros, then newest first.</p>
+<h2 id="surveys-and-tutorials">Surveys and Tutorials<a class="headerlink" href="#surveys-and-tutorials" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/7352306/">Taking the Human Out of the Loop: A Review of Bayesian Optimization</a> - Shahriari, Swersky, Wang, Adams, and de Freitas, Proceedings of the IEEE, 2016. The standard survey of methods and applications.</li>
+<li><a href="https://arxiv.org/abs/1012.2599">A Tutorial on Bayesian Optimization of Expensive Cost Functions, with Application to Active User Modeling and Hierarchical Reinforcement Learning</a> - Brochu, Cora, and de Freitas, 2010. Early tutorial that still reads well.</li>
+<li><a href="https://link.springer.com/article/10.1007/s11831-024-10064-z">Active Learning and Bayesian Optimization: A Unified Perspective to Learn with a Goal</a> - Di Fiore, Nardelli, and Mainini, Archives of Computational Methods in Engineering, 2024. Survey connecting BO and active learning.</li>
+<li><a href="https://dl.acm.org/doi/10.1145/3582078">Recent Advances in Bayesian Optimization</a> - Wang, Jin, Schmitt, and Olhofer, ACM Computing Surveys, 2023. Broad survey of methods through about 2022.</li>
+<li><a href="https://bayesopt-tutorial.github.io/syllabus/fullslides.pdf">Recent Advances in Bayesian Optimization (slides)</a> - AAAI 2023 tutorial slides (Deshwal, Belakaria, and Doppa).</li>
+</ul>
+<h2 id="foundations">Foundations<a class="headerlink" href="#foundations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-662-38527-2_55">On Bayesian Methods for Seeking the Extremum</a> - Mockus, 1975. The original expected-improvement argument.</li>
+<li><a href="https://link.springer.com/article/10.1023/A:1008306431147">Efficient Global Optimization of Expensive Black-Box Functions</a> - Jones, Schonlau, and Welch, 1998. EGO and expected improvement.</li>
+<li><a href="https://ora.ox.ac.uk/objects/uuid:7d2b38d0-43be-4bb4-852c-50001a28ead9">Gaussian Processes for Global Optimization</a> - Osborne, Garnett, and Roberts, LION 2009. GP surrogates for global optimization.</li>
+<li><a href="https://arxiv.org/abs/0912.3995">Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design</a> - Srinivas, Krause, Kakade, and Seeger, ICML 2010. GP-UCB and no-regret bounds.</li>
+<li><a href="https://www.jmlr.org/papers/v12/bull11a.html">Convergence Rates of Efficient Global Optimization Algorithms</a> - Bull, JMLR 2011. When EGO converges, and at what rate.</li>
+<li><a href="https://papers.nips.cc/paper/2012/hash/05311655a15b75fab86956663e1819cd-Abstract.html">Practical Bayesian Optimization of Machine Learning Algorithms</a> - Snoek, Larochelle, and Adams, NeurIPS 2012. MCMC GPs and EI for hyperparameter tuning.</li>
+<li><a href="https://proceedings.mlr.press/v37/snoek15.html">Scalable Bayesian Optimization Using Deep Neural Networks</a> - Snoek et al., ICML 2015. DNGO: neural-net surrogates when GPs get expensive.</li>
+<li><a href="https://papers.nips.cc/paper/2018/hash/27e8e17134dd7083b050476733207ea1-Abstract.html">GPyTorch: Blackbox Matrix-Matrix Gaussian Process Inference with GPU Acceleration</a> - Gardner, Pleiss, Bindel, Weinberger, and Wilson, NeurIPS 2018. The GP engine under BoTorch.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2020/hash/f5b1b89d98b7286673128a5fb112cb9a-Abstract.html">BoTorch: A Framework for Efficient Monte-Carlo Bayesian Optimization</a> - Balandat et al., NeurIPS 2020. The library paper behind most current PyTorch BO.</li>
+</ul>
+<h2 id="surrogate-design">Surrogate Design<a class="headerlink" href="#surrogate-design" title="Permanent link">&para;</a></h2>
+<p>Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.</p>
+<ul>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/c03a2610bca2712b984b331fd4f7bb6f-Abstract-Conference.html">Adaptive Kernel Design for Bayesian Optimization Is a Piece of CAKE with LLMs</a> - Suwandi et al., NeurIPS 2025. LLM-driven evolution of GP kernels during BO.</li>
+<li><a href="https://openreview.net/forum?id=SA19ijj44B">A Study of Bayesian Neural Network Surrogates for Bayesian Optimization</a> - Li, Rudner, and Wilson, ICLR 2024. When BNNs help as BO surrogates, and when they do not.</li>
+<li><a href="https://proceedings.mlr.press/v206/stanton23a.html">Bayesian Optimization with Conformal Prediction Sets</a> - Stanton, Maddox, and Wilson, AISTATS 2023. Distribution-free uncertainty in the loop.</li>
+<li><a href="https://openreview.net/forum?id=JwgVBv18RG">Bayesian Optimization with Informative Covariance</a> - Eduardo and Gutmann, TMLR 2023. Encode known structure in the kernel.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2021/hash/56c3b2c6ea3a83aaeeff35eeb45d700d-Abstract.html">Kernel Identification Through Transformers</a> - Simpson et al., NeurIPS 2021. KITT: recommend a kernel from data in one forward pass.</li>
+<li><a href="https://proceedings.mlr.press/v80/sun18e.html">Differentiable Compositional Kernel Learning for Gaussian Processes</a> - Sun, Zhang, Wang, Zeng, Li, and Grosse, ICML 2018. Neural kernel networks.</li>
+<li><a href="https://papers.nips.cc/paper/2016/hash/a96d3afec184766bfeca7a9f989fc7e7-Abstract.html">Bayesian Optimization with Robust Bayesian Neural Networks</a> - Springenberg, Klein, Falkner, and Hutter, NeurIPS 2016. BOHAMIANN: MCMC Bayesian neural nets as surrogates.</li>
+<li><a href="https://proceedings.mlr.press/v51/wilson16.html">Deep Kernel Learning</a> - Wilson, Hu, Salakhutdinov, and Xing, AISTATS 2016. A deep net as the feature map of a GP kernel.</li>
+<li><a href="https://proceedings.mlr.press/v32/snoek14.html">Input Warping for Bayesian Optimization of Non-Stationary Functions</a> - Snoek, Swersky, Zemel, and Adams, ICML 2014. Learn a warping so a stationary kernel fits better.</li>
+<li><a href="https://proceedings.mlr.press/v28/wilson13.html">Gaussian Process Kernels for Pattern Discovery and Extrapolation</a> - Wilson and Adams, ICML 2013. Spectral mixture kernels.</li>
+<li><a href="https://proceedings.mlr.press/v28/duvenaud13.html">Structure Discovery in Nonparametric Regression through Compositional Kernel Search</a> - Duvenaud, Lloyd, Grosse, Tenenbaum, and Ghahramani, ICML 2013. Grammar over sums and products of kernels.</li>
+</ul>
+<h2 id="acquisition-functions">Acquisition Functions<a class="headerlink" href="#acquisition-functions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://proceedings.mlr.press/v337/kanayama26a.html">Information-Theoretic Bayesian Optimization for Bilevel Optimization Problems</a> - Kanayama, Ito, Tamura, and Karasuyama, UAI 2026. Information gain on both levels of a nested black-box problem.</li>
+<li><a href="https://proceedings.mlr.press/v267/aglietti25a.html">FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch</a> - Aglietti et al., ICML 2025. LLM search over acquisition functions written as code.</li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/419f72cbd568ad62183f8132a3605a2a-Abstract-Conference.html">Unexpected Improvements to Expected Improvement for Bayesian Optimization</a> - Ament, Daulton, Eriksson, Balandat, and Bakshy, NeurIPS 2023. LogEI, a numerically stable EI.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2022/hash/4b03821747e89ce803b2dac590f6a39b-Abstract-Conference.html">Joint Entropy Search for Maximally-Informed Bayesian Optimization</a> - Hvarfner, Hutter, and Nardi, NeurIPS 2022. Information gain on the joint optimum and optimal value.</li>
+<li><a href="https://openreview.net/forum?id=FegbkY6WDg">πBO: Augmenting Acquisition Functions with User Beliefs for Bayesian Optimization</a> - Hvarfner, Stoll, Souza, Lindauer, Hutter, and Nardi, ICLR 2022. Weight the acquisition by a user prior over the optimum.</li>
+<li><a href="https://proceedings.mlr.press/v108/yue20b.html">Why Non-myopic Bayesian Optimization is Promising and How Far Should We Look-ahead? A Study via Rollout</a> - Yue and AL Kontar, AISTATS 2020. How much lookahead actually helps.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2018/hash/498f2c21688f6451d9f5fd09d53edda7-Abstract.html">Maximizing Acquisition Functions for Bayesian Optimization</a> - Wilson, Hutter, and Deisenroth, NeurIPS 2018. Monte Carlo acquisition via autodiff.</li>
+<li><a href="https://proceedings.mlr.press/v84/kandasamy18a.html">Parallelised Bayesian Optimisation via Thompson Sampling</a> - Kandasamy et al., AISTATS 2018. TS as a simple batch acquisition.</li>
+<li><a href="https://proceedings.mlr.press/v70/wang17e.html">Max-value Entropy Search for Efficient Bayesian Optimization</a> - Wang and Jegelka, ICML 2017. Information about the maximum value rather than its location.</li>
+<li><a href="https://proceedings.mlr.press/v51/gonzalez16b.html">GLASSES: Relieving The Myopia Of Bayesian Optimisation</a> - González, Osborne, and Lawrence, AISTATS 2016. Non-myopic planning.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2014/hash/6488484c982e9af5c35689523ba1abfe-Abstract.html">Predictive Entropy Search for Efficient Global Optimization of Black-box Functions</a> - Hernández-Lobato, Hoffman, and Ghahramani, NeurIPS 2014. Tractable information-theoretic acquisition.</li>
+<li><a href="https://jmlr.org/papers/v13/hennig12a.html">Entropy Search for Information-Efficient Global Optimization</a> - Hennig and Schuler, JMLR 2012. Select queries that reduce entropy of the argmax.</li>
+<li><a href="https://pubsonline.informs.org/doi/10.1287/ijoc.1080.0314">The Knowledge-Gradient Policy for Correlated Normal Beliefs</a> - Frazier, Powell, and Dayanik, INFORMS JOC 2009. Value of information when beliefs are correlated.</li>
+</ul>
+<h2 id="high-dimensional">High-Dimensional<a class="headerlink" href="#high-dimensional" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://openreview.net/forum?id=1MHLQM0MKM">NeST-BO: Fast Local Bayesian Optimization via Newton-Step Targeting of Gradient and Hessian Information</a> - Tang, Kudva, and Paulson, AISTATS 2026. Local BO that targets a Newton step.</li>
+<li><a href="https://openreview.net/forum?id=kX8h23UG6v">Standard Gaussian Process is All You Need for High-Dimensional Bayesian Optimization</a> - Xu, Wang, Phillips, and Zhe, ICLR 2025. Lengthscale init, not a fancy surrogate, is often the failure mode.</li>
+<li><a href="https://proceedings.mlr.press/v267/papenmeier25a.html">Understanding High-Dimensional Bayesian Optimization</a> - Papenmeier, Poloczek, and Nardi, ICML 2025. Why vanilla GP-BO fails in high-d, and a simple MLE fix.</li>
+<li><a href="https://proceedings.mlr.press/v235/hvarfner24a.html">Vanilla Bayesian Optimization Performs Great in High Dimensions</a> - Hvarfner, Hellsten, and Nardi, ICML 2024. Careful GP priors often beat specialized high-d methods.</li>
+<li><a href="https://proceedings.mlr.press/v206/liu23b.html">Sparse Bayesian Optimization</a> - Liu et al., AISTATS 2023. Sparsity in the input for high-d problems.</li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/e8f4eae0a41cab67fdead3aa6b77f083-Abstract-Conference.html">The Behavior and Convergence of Local Bayesian Optimization</a> - Wu, Kim, Garnett, and Gardner, NeurIPS 2023. When local BO converges, and when it does not.</li>
+<li><a href="https://papers.nips.cc/paper_files/paper/2022/hash/4b7439a4ab0b8e4bcb4e2412c6a10a58-Abstract-Conference.html">Increasing the Scope as You Learn: Adaptive Bayesian Optimization in Nested Subspaces</a> - Papenmeier, Nardi, and Poloczek, NeurIPS 2022. BAxUS: grow the embedding as budget grows.</li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/555479a201da27c97aaeed842d16ca49-Abstract-Conference.html">Local Bayesian Optimization via Maximizing Probability of Descent</a> - Nguyen, Wu, Gardner, and Garnett, NeurIPS 2022. Local BO by following estimated descent.</li>
+<li><a href="https://proceedings.mlr.press/v161/eriksson21a.html">High-dimensional Bayesian Optimization with Sparse Axis-Aligned Subspaces</a> - Eriksson and Jankowiak, UAI 2021. SAASBO: sparsity-inducing priors on lengthscales.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2020/hash/10fb6cfa4c990d2bad5ddef4f70e8ba2-Abstract.html">Re-Examining Linear Embeddings for High-Dimensional Bayesian Optimization</a> - Letham, Calandra, Rai, and Bakshy, NeurIPS 2020. ALEBO.</li>
+<li><a href="https://proceedings.mlr.press/v97/nayebi19a.html">A Framework for Bayesian Optimization in Embedded Subspaces</a> - Nayebi, Munteanu, and Poloczek, ICML 2019. HeSBO, hashing into a low-d embedding.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2019/hash/6c990b7aca7bc7058f5e98ea909e924b-Abstract.html">Scalable Global Optimization via Local Bayesian Optimization</a> - Eriksson, Pearce, Gardner, Turner, and Poloczek, NeurIPS 2019. TuRBO: trust-region local BO.</li>
+<li><a href="https://proceedings.mlr.press/v80/mcleod18a.html">Optimization, Fast and Slow: Optimally Switching between Local and Bayesian Optimization</a> - McLeod, Roberts, and Osborne, ICML 2018. Switch between local search and BO.</li>
+<li><a href="https://proceedings.mlr.press/v54/gardner17a.html">Discovering and Exploiting Additive Structure for Bayesian Optimization</a> - Gardner, Guo, Weinberger, Garnett, and Grosse, AISTATS 2017. Learn which additive decomposition to use.</li>
+<li><a href="https://www.jair.org/index.php/jair/article/view/10983">Bayesian Optimization in a Billion Dimensions via Random Embeddings</a> - Wang, Hutter, Zoghi, Matheson, and de Freitas, JAIR 2016. REMBO: optimize in a random low-dimensional subspace.</li>
+<li><a href="https://proceedings.mlr.press/v37/kandasamy15.html">High Dimensional Bayesian Optimisation and Bandits via Additive Models</a> - Kandasamy, Schneider, and Póczos, ICML 2015. Additive GP structure.</li>
+</ul>
+<h2 id="constrained-and-safe">Constrained and Safe<a class="headerlink" href="#constrained-and-safe" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://proceedings.mlr.press/v337/kinnunen26a.html">Maximally Robust Satisficing Bayesian Optimization</a> - Kinnunen, Mikkola, Niskanen, and Klami, UAI 2026. Satisficing solutions that stay good under large input perturbations.</li>
+<li><a href="https://proceedings.mlr.press/v130/eriksson21a.html">Scalable Constrained Bayesian Optimization</a> - Eriksson and Poloczek, AISTATS 2021. SCBO: TuRBO with constraints.</li>
+<li><a href="https://jmlr.org/papers/v17/15-616.html">A General Framework for Constrained Bayesian Optimization using Information-based Search</a> - Hernández-Lobato et al., JMLR 2016. PESC.</li>
+<li><a href="https://proceedings.mlr.press/v37/sui15.html">Safe Exploration for Optimization with Gaussian Processes</a> - Sui, Gotovos, Burdick, and Krause, ICML 2015. SafeOpt.</li>
+<li><a href="https://proceedings.mlr.press/v32/gardner14.html">Bayesian Optimization with Inequality Constraints</a> - Gardner, Kusner, Xu, Weinberger, and Cunningham, ICML 2014. Constrained EI.</li>
+<li><a href="https://arxiv.org/abs/1403.5607">Bayesian Optimization with Unknown Constraints</a> - Gelbart, Snoek, and Adams, UAI 2014. Constraints that are themselves expensive black boxes.</li>
+</ul>
+<h2 id="multi-objective">Multi-Objective<a class="headerlink" href="#multi-objective" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://proceedings.mlr.press/v180/daulton22a.html">Multi-Objective Bayesian Optimization over High-Dimensional Search Spaces</a> - Daulton, Eriksson, Balandat, and Bakshy, UAI 2022. MORBO: local trust regions for high-d multi-objective BO.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2021/hash/11704817e347269b7254e744b5e22dac-Abstract.html">Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement</a> - Daulton, Balandat, and Bakshy, NeurIPS 2021. NEHVI under noise.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2020/hash/6fec24eac8f18ed793f5eaad3dd7977c-Abstract.html">Differentiable Expected Hypervolume Improvement for Parallel Multi-Objective Bayesian Optimization</a> - Daulton, Balandat, and Bakshy, NeurIPS 2020. qEHVI for parallel MOBO.</li>
+<li><a href="https://link.springer.com/article/10.1007/s10898-019-00798-7">Efficient Computation of Expected Hypervolume Improvement Using Box Decomposition Algorithms</a> - Yang, Emmerich, Deutz, and Bäck, JOGO 2019. Fast EHVI.</li>
+<li><a href="https://proceedings.mlr.press/v48/hernandez-lobatoa16.html">Predictive Entropy Search for Multi-objective Bayesian Optimization</a> - Hernández-Lobato, Hernández-Lobato, Shah, and Adams, ICML 2016. PESMO: information gain on the Pareto set.</li>
+<li><a href="https://ieeexplore.ieee.org/document/1583627">ParEGO: A Hybrid Algorithm with On-line Landscape Approximation for Expensive Multiobjective Optimization Problems</a> - Knowles, IEEE TEVC 2006. Scalarization plus EGO.</li>
+</ul>
+<h2 id="multi-fidelity-multi-task-and-transfer">Multi-Fidelity, Multi-Task, and Transfer<a class="headerlink" href="#multi-fidelity-multi-task-and-transfer" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.jmlr.org/papers/v25/23-0269.html">Pre-trained Gaussian Processes for Bayesian Optimization</a> - Wang et al., JMLR 2024. HyperBO: transfer a GP prior from related tasks.</li>
+<li><a href="https://openreview.net/forum?id=bJxgv5C3sYc">Few-Shot Bayesian Optimization with Deep Kernel Surrogates</a> - Wistuba and Grabocka, ICLR 2021. Deep kernels for few-shot HPO.</li>
+<li><a href="https://proceedings.mlr.press/v119/takeno20a.html">Multi-fidelity Bayesian Optimization with Max-value Entropy Search and its Parallelization</a> - Takeno, Fukuoka, Tsukada, Koyama, Shiga, Takeuchi, and Karasuyama, ICML 2020. Information-theoretic multi-fidelity acquisition.</li>
+<li><a href="https://proceedings.mlr.press/v80/falkner18a.html">BOHB: Robust and Efficient Hyperparameter Optimization at Scale</a> - Falkner, Klein, and Hutter, ICML 2018. TPE plus Hyperband.</li>
+<li><a href="https://proceedings.mlr.press/v54/klein17a.html">Fast Bayesian Optimization of Machine Learning Hyperparameters on Large Datasets</a> - Klein, Falkner, Bartels, Hennig, and Hutter, AISTATS 2017. FABOLAS.</li>
+<li><a href="https://proceedings.mlr.press/v70/kandasamy17a.html">Multi-fidelity Bayesian Optimisation with Continuous Approximations</a> - Kandasamy, Dasarathy, Schneider, and Póczos, ICML 2017. Continuous fidelity rather than a discrete ladder.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2016/hash/605ff764c617d3cd28dbbdd72be8f9a2-Abstract.html">Gaussian Process Bandit Optimisation with Multi-fidelity Evaluations</a> - Kandasamy, Dasarathy, Oliva, Schneider, and Póczos, NeurIPS 2016. MF-GP-UCB.</li>
+<li><a href="https://arxiv.org/abs/1406.3896">Freeze-Thaw Bayesian Optimization</a> - Swersky, Snoek, and Adams, 2014. Pause and resume training runs using a GP over learning curves.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2013/hash/f33ba15effa5c10e873bf3842afb46a6-Abstract.html">Multi-Task Bayesian Optimization</a> - Swersky, Snoek, and Adams, NeurIPS 2013. Share data across related tasks.</li>
+<li><a href="https://link.springer.com/article/10.1007/s10898-005-2454-3">Global Optimization of Stochastic Black-Box Systems via Sequential Kriging Meta-Models</a> - Huang, Allen, Notz, and Zeng, JOGO 2006. Early multi-fidelity EGO.</li>
+</ul>
+<h2 id="batch-and-parallel">Batch and Parallel<a class="headerlink" href="#batch-and-parallel" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.jmlr.org/papers/v22/21-0120.html">GIBBON: General-purpose Information-Based Bayesian Optimisation</a> - Moss, Leslie, Gonzalez, and Rayson, JMLR 2021. Cheap batch information-theoretic acquisition.</li>
+<li><a href="https://proceedings.mlr.press/v84/wang18c.html">Batched Large-scale Bayesian Optimization in High-dimensional Spaces</a> - Wang, Gehring, Kohli, and Jegelka, AISTATS 2018. Ensemble batch BO in high-d.</li>
+<li><a href="https://proceedings.mlr.press/v51/gonzalez16a.html">Batch Bayesian Optimization via Local Penalization</a> - González, Dai, Hennig, and Lawrence, AISTATS 2016. Penalize around pending points.</li>
+<li><a href="https://papers.nips.cc/paper/2016/hash/a1d7311f2a312426d710e1c617fcbc8c-Abstract.html">Batched Gaussian Process Bandit Optimization via Determinantal Point Processes</a> - Kathuria, Deshpande, and Kohli, NeurIPS 2016. Diverse batches via DPPs.</li>
+<li><a href="https://proceedings.neurips.cc/paper/2016/hash/18d10dc6e666eab6de9215ae5b3d54df-Abstract.html">The Parallel Knowledge Gradient Method for Batch Bayesian Optimization</a> - Wu and Frazier, NeurIPS 2016. Parallel KG.</li>
+<li><a href="https://jmlr.org/papers/v15/desautels14a.html">Parallelizing Exploration-Exploitation Tradeoffs in Gaussian Process Bandit Optimization</a> - Desautels, Krause, and Burdick, JMLR 2014. GP-BUCB.</li>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-642-40988-2_15">Parallel Gaussian Process Optimization with Upper Confidence Bound and Pure Exploration</a> - Contal, Buffoni, Robicquet, and Vayatis, ECML 2013. GP-UCB-PE.</li>
+</ul>
+<h2 id="discrete-and-mixed-spaces">Discrete and Mixed Spaces<a class="headerlink" href="#discrete-and-mixed-spaces" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/05d2175de7ee637588d1b5ced8b15b32-Abstract-Conference.html">Bounce: Reliable High-Dimensional Bayesian Optimization for Combinatorial and Mixed Spaces</a> - Papenmeier, Nardi, and Poloczek, NeurIPS 2023. Nested embeddings plus trust regions.</li>
+<li><a href="https://proceedings.mlr.press/v139/wan21b.html">Think Global and Act Local: Bayesian Optimisation over High-Dimensional Categorical and Mixed Search Spaces</a> - Wan, Nguyen, Ha, Ru, Lu, and Osborne, ICML 2021. High-dimensional categorical and mixed spaces.</li>
+<li><a href="https://proceedings.mlr.press/v119/ru20a.html">Bayesian Optimisation over Multiple Continuous and Categorical Inputs</a> - Ru, Alvi, Nguyen, Osborne, and Roberts, ICML 2020. CoCaBO.</li>
+<li><a href="https://papers.nips.cc/paper/2019/hash/2cb6b10338a7fc4117a80da24b582060-Abstract.html">Combinatorial Bayesian Optimization using the Graph Cartesian Product</a> - Oh, Tomczak, Gavves, and Welling, NeurIPS 2019. COMBO.</li>
+<li><a href="https://proceedings.mlr.press/v80/baptista18a.html">Bayesian Optimization of Combinatorial Structures</a> - Baptista and Poloczek, ICML 2018. BOCS.</li>
+</ul>
+<h2 id="preferential-feedback">Preferential Feedback<a class="headerlink" href="#preferential-feedback" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://proceedings.mlr.press/v206/astudillo23a.html">qEUBO: A Decision-Theoretic Acquisition Function for Preferential Bayesian Optimization</a> - Astudillo, Lin, Bakshy, and Frazier, AISTATS 2023. Expected utility of the best option.</li>
+<li><a href="https://proceedings.mlr.press/v151/jerry-lin22a.html">Preference Exploration for Efficient Bayesian Optimization with Multiple Outcomes</a> - Lin, Astudillo, Frazier, and Bakshy, AISTATS 2022. Learn a utility from pairwise comparisons, then optimize it.</li>
+<li><a href="https://proceedings.mlr.press/v70/gonzalez17a.html">Preferential Bayesian Optimization</a> - González, Dai, Damianou, and Lawrence, ICML 2017. Optimize from pairwise comparisons rather than numeric scores.</li>
+</ul>
+<h2 id="meta-learning">Meta-Learning<a class="headerlink" href="#meta-learning" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://proceedings.mlr.press/v202/muller23a.html">PFNs4BO: In-Context Learning for Bayesian Optimization</a> - Müller, Feurer, Hollmann, and Hutter, ICML 2023. Prior-fitted networks as BO surrogates.</li>
+<li><a href="https://ojs.aaai.org/index.php/AAAI/article/view/9354">Initializing Bayesian Hyperparameter Optimization via Meta-Learning</a> - Feurer, Springenberg, and Hutter, AAAI 2015. Warm-start the BO prior from related tasks.</li>
+</ul>
+<h2 id="llms-and-bo">LLMs and BO<a class="headerlink" href="#llms-and-bo" title="Permanent link">&para;</a></h2>
+<p>The LLM is the optimizer (no GP), or it occupies one slot in a BO loop. CAKE is under Surrogate Design. FunBO is under Acquisition Functions. PlugBO is under Software and Blogs.</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2608.00316">Agentic Bayesian Optimization through Surrogate-Augmented Autoresearch</a> - Brunzema et al., 2026. An LLM agent runs the loop; a BoTorch backend holds the posterior.</li>
+<li><a href="https://arxiv.org/abs/2505.14756">LLINBO: Trustworthy LLM-in-the-Loop Bayesian Optimization</a> - Chang, Azvar, Okwudire, and Al Kontar, 2025. Keep a GP in the loop so LLM proposals stay uncertainty-aware.</li>
+<li><a href="https://arxiv.org/abs/2505.12833">Reasoning BO: Enhancing Bayesian Optimization with Long-Context Reasoning Power of LLMs</a> - Yang et al., 2025. Reasoning models and a knowledge graph to guide BO sampling.</li>
+<li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/3339f19c5fcee3ad74502947a32be9e6-Abstract-Conference.html">Large Language Models as Optimizers</a> - Yang et al., ICLR 2024. OPRO: the LLM proposes candidates from a textual history, with no GP posterior.</li>
+<li><a href="https://openreview.net/forum?id=OOxotBmGol">Large Language Models to Enhance Bayesian Optimization</a> - Liu, Astorga, Seedat, and van der Schaar, ICLR 2024. LLAMBO: LLM warm-start, surrogate, and sampler inside a BO loop.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../unmaintained/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unmaintained">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Unmaintained
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../benchmarks/" class="md-footer__link md-footer__link--next" aria-label="Next: Benchmarks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Benchmarks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Richard Cornelius Suwandi
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/richardcsuwandi/awesome-bo" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://richardcsuwandi.github.io" target="_blank" rel="noopener" title="richardcsuwandi.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.action.edit", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
