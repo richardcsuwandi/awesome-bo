@@ -80,6 +80,7 @@ Actively maintained libraries. Archived and maintenance-only packages are listed
 - [PyBADS](https://github.com/acerbilab/pybads) - GP-assisted mesh adaptive search for mildly expensive, nonsmooth, or noisy black-box fitting ([paper](https://joss.theoj.org/papers/10.21105/joss.05694)).
 - [emukit](https://github.com/EmuKit/emukit) - Multi-fidelity emulation, experimental design, and BO on top of GPy ([paper](https://doi.org/10.25080/gerudo-f2bc6f59-009)).
 - [SMT](https://smt.readthedocs.io/en/latest/) - Surrogate modeling toolbox with kriging, mixed and hierarchical GPs, and EGO ([paper](https://doi.org/10.1016/j.advengsoft.2023.103571)).
+- [SBArchOpt](https://github.com/jbussemaker/SBArchOpt) - Mixed-discrete hierarchical architecture optimization, with ArchSBO and connectors to other SBO libraries ([paper](https://joss.theoj.org/papers/10.21105/joss.05564)).
 - [NUBO](https://github.com/mikediessner/nubo) - Compact PyTorch BO package aimed at scientists writing their own loop ([paper](https://www.jstatsoft.org/article/view/v114i01)).
 - [Syne Tune](https://github.com/awslabs/syne-tune) - AWS HPO toolkit with BO, multi-fidelity, and transfer methods ([paper](https://proceedings.mlr.press/v188/salinas22a.html)).
 - [HyperMapper](https://github.com/luinardi/hypermapper) - BO for computer-systems autotuning, including constrained and multi-objective problems ([paper](https://arxiv.org/abs/1810.05236)).
@@ -216,6 +217,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ### Discrete and Mixed Spaces
 
+- [System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems](https://link.springer.com/article/10.1007/s10898-024-01443-8) - Bussemaker, Saves, Bartoli, Lefebvre, and Lafage, Journal of Global Optimization, 2025. Hierarchical mixed-discrete GP kernels and sampling, compared as BO strategies.
 - [Bounce: Reliable High-Dimensional Bayesian Optimization for Combinatorial and Mixed Spaces](https://proceedings.neurips.cc/paper_files/paper/2023/hash/05d2175de7ee637588d1b5ced8b15b32-Abstract-Conference.html) - Papenmeier, Nardi, and Poloczek, NeurIPS 2023. Nested embeddings plus trust regions.
 - [Think Global and Act Local: Bayesian Optimisation over High-Dimensional Categorical and Mixed Search Spaces](https://proceedings.mlr.press/v139/wan21b.html) - Wan, Nguyen, Ha, Ru, Lu, and Osborne, ICML 2021. High-dimensional categorical and mixed spaces.
 - [Bayesian Optimisation over Multiple Continuous and Categorical Inputs](https://proceedings.mlr.press/v119/ru20a.html) - Ru, Alvi, Nguyen, Osborne, and Roberts, ICML 2020. CoCaBO.
