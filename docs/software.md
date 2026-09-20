@@ -16,6 +16,7 @@ Actively maintained libraries. Archived and maintenance-only packages are listed
 - [PyBADS](https://github.com/acerbilab/pybads) - GP-assisted mesh adaptive search for mildly expensive, nonsmooth, or noisy black-box fitting ([paper](https://joss.theoj.org/papers/10.21105/joss.05694)).
 - [emukit](https://github.com/EmuKit/emukit) - Multi-fidelity emulation, experimental design, and BO on top of GPy ([paper](https://doi.org/10.25080/gerudo-f2bc6f59-009)).
 - [SMT](https://smt.readthedocs.io/en/latest/) - Surrogate modeling toolbox with kriging, mixed and hierarchical GPs, and EGO ([paper](https://doi.org/10.1016/j.advengsoft.2023.103571)).
+- [SBArchOpt](https://github.com/jbussemaker/SBArchOpt) - Mixed-discrete hierarchical architecture optimization, with ArchSBO and connectors to other SBO libraries ([paper](https://joss.theoj.org/papers/10.21105/joss.05564)).
 - [NUBO](https://github.com/mikediessner/nubo) - Compact PyTorch BO package aimed at scientists writing their own loop ([paper](https://www.jstatsoft.org/article/view/v114i01)).
 - [Syne Tune](https://github.com/awslabs/syne-tune) - AWS HPO toolkit with BO, multi-fidelity, and transfer methods ([paper](https://proceedings.mlr.press/v188/salinas22a.html)).
 - [HyperMapper](https://github.com/luinardi/hypermapper) - BO for computer-systems autotuning, including constrained and multi-objective problems ([paper](https://arxiv.org/abs/1810.05236)).

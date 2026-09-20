@@ -116,6 +116,7 @@ Kernels, input transforms, and non-GP surrogates. DNGO is under Foundations.
 
 ## Discrete and Mixed Spaces
 
+- [System Architecture Optimization Strategies: Dealing with Expensive Hierarchical Problems](https://link.springer.com/article/10.1007/s10898-024-01443-8) - Bussemaker, Saves, Bartoli, Lefebvre, and Lafage, Journal of Global Optimization, 2025. Hierarchical mixed-discrete GP kernels and sampling, compared as BO strategies.
 - [Bounce: Reliable High-Dimensional Bayesian Optimization for Combinatorial and Mixed Spaces](https://proceedings.neurips.cc/paper_files/paper/2023/hash/05d2175de7ee637588d1b5ced8b15b32-Abstract-Conference.html) - Papenmeier, Nardi, and Poloczek, NeurIPS 2023. Nested embeddings plus trust regions.
 - [Think Global and Act Local: Bayesian Optimisation over High-Dimensional Categorical and Mixed Search Spaces](https://proceedings.mlr.press/v139/wan21b.html) - Wan, Nguyen, Ha, Ru, Lu, and Osborne, ICML 2021. High-dimensional categorical and mixed spaces.
 - [Bayesian Optimisation over Multiple Continuous and Categorical Inputs](https://proceedings.mlr.press/v119/ru20a.html) - Ru, Alvi, Nguyen, Osborne, and Roberts, ICML 2020. CoCaBO.
