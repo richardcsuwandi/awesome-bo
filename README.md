@@ -293,26 +293,22 @@ Pointer papers and domain lists. New application papers that only use BO should 
 
 Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
 
-- [No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels](https://arxiv.org/abs/2609.02993) - 2026.
-- [Scalable Bayesian Optimization of Composite Functions for Image-Based Inverse Problems in Materials Characterization](https://arxiv.org/abs/2609.02126) - 2026.
-- [Weisfeiler-Lehman subtree encoding for Bayesian optimization of atomic configurations](https://arxiv.org/abs/2609.00953) - 2026.
-- [State of Health Estimation using Convolutional and Bidirectional LSTM Neural Networks tuned by Bayesian Optimization](https://arxiv.org/abs/2608.30593) - 2026.
-- [Leveraging Bayesian Optimization for Array Shape Self-Calibration in Underwater DoA Estimation](https://arxiv.org/abs/2608.30488) - 2026.
-- [Tabular Deep Learning for Algorithmic Trading: Cross-Regime Bayesian Optimisation for Equity Signal Generation](https://arxiv.org/abs/2608.27076) - 2026.
-- [Bayesian Optimization for Self-Driving Materials Laboratories: From Algorithms to Physics-Informed Workflows](https://arxiv.org/abs/2608.26016) - 2026.
-- [GRAPE: Gradient Refinement and Progress-Aware Exploitation for Query-Efficient High-Dimensional Bayesian Optimization](https://arxiv.org/abs/2608.25116) - 2026.
-- [Enhancing Bayesian Optimization and Active Learning Through Kernel Diversity](https://arxiv.org/abs/2608.24721) - 2026.
-- [Physics-Informed Bayesian Optimization Warm-Starts for Sequential Convex Programming in Asteroid Surface Hopping](https://arxiv.org/abs/2608.20662) - 2026.
-- [Bayesian Optimization for Practical H2 Sensors: Inverse Design of Pd-based Plasmonic Metasurfaces](https://arxiv.org/abs/2608.18333) - 2026.
-- [Optimize Your Sampling: Tuned Diffusion Sampling with Bayesian Optimization](https://arxiv.org/abs/2608.18040) - 2026.
-- [Bayesian Optimization of Molybdenum-99 Production by Laser Wakefield Acceleration Using Coupled PIC and Monte Carlo Simulations](https://arxiv.org/abs/2608.17119) - 2026.
-- [BOCoDe: Engineering-Centered Benchmarking for Bayesian Optimization](https://arxiv.org/abs/2608.15073) - 2026.
-- [Multi-Objective Bayesian Optimization for Model Merging](https://arxiv.org/abs/2608.14264) - 2026.
-- [Bayesian optimization and topographic exploration of drag-reducing dimples for aerodynamic surfaces](https://arxiv.org/abs/2608.12826) - 2026.
-- [Finding the Needle in a Haystack: Test-Time Analog Circuit Representation Adaptation for Bayesian Optimization](https://arxiv.org/abs/2608.12687) - 2026.
-- [High-dimensional Multi-objective Bayesian Optimization with Learned Variable Interactions](https://arxiv.org/abs/2608.11713) - 2026.
-- [Can Bayesian Optimization Efficiently Find a Strong Single Expert in Neural Thickets?](https://arxiv.org/abs/2608.10867) - 2026.
-- [Personalized Lower-limb Exoskeleton Assistance via Preference-based Bayesian Optimization](https://arxiv.org/abs/2608.09015) - 2026.
+- [ISBO: Scalable Spatio-Temporal Bayesian Optimization with Log Gaussian Cox Process Models via the INLA-SPDE Approach](https://arxiv.org/abs/2610.12213) - 2026.
+- [Bayesian Optimisation under State-Preservation Constraints](https://arxiv.org/abs/2610.12150) - 2026.
+- [Pre-training of Bayesian Optimization Algorithm through Bayesian Optimization](https://arxiv.org/abs/2610.10186) - 2026.
+- [A Unified Information-Theoretic Approach to Constrained Multi-Fidelity Multi-Objective Bayesian Optimization](https://arxiv.org/abs/2610.10174) - 2026.
+- [Work While They Sleep: Exploiting Evaluation Latency for Fully Bayesian Optimization](https://arxiv.org/abs/2610.08969) - 2026.
+- [Bayesian Optimization on Function Spaces via Sparse RKHS Manifolds](https://arxiv.org/abs/2610.07417) - 2026.
+- [Bayesian Optimization in Sequence-to-Architecture Latent Space for Zero-Shot NAS](https://arxiv.org/abs/2610.06167) - 2026.
+- [Isotropic Gaussian Processes Improve Vanilla Bayesian Optimization in High Dimensions](https://arxiv.org/abs/2610.05780) - 2026.
+- [IQS-BO: In-Context Query Selection for Bayesian Optimisation](https://arxiv.org/abs/2610.01269) - 2026.
+- [Harnessing Large Language Models to Compile Task-Relevant Context into Bayesian Optimisation](https://arxiv.org/abs/2609.36788) - 2026.
+- [GUIDE-FBO: Guidance via Uncertainty Intervention and Distributional Exchange for Federated Bayesian Optimization](https://arxiv.org/abs/2609.35038) - 2026.
+- [Agentic High-Dimensional Bayesian Optimization with Hypothesis- and Evidence-Guided Search](https://arxiv.org/abs/2609.34281) - 2026.
+- [Robust Bayesian Optimization with Q-Exponential Surrogates](https://arxiv.org/abs/2609.32775) - 2026.
+- [Learning What to Evaluate: Correlation-Aware Decoupling for Multiobjective Bayesian Optimization](https://arxiv.org/abs/2609.32632) - 2026.
+- [Adapting Nonstationary Multi-output Gaussian Processes to Bayesian Optimization](https://arxiv.org/abs/2609.32464) - 2026.
+- [Simple Extensions of Single-Objective Acquisition Functions and Hedge Strategies for Multi-Objective Bayesian Optimization](https://arxiv.org/abs/2609.31940) - 2026.
 
 
 ## Contributing
