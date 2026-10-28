@@ -293,6 +293,8 @@ Pointer papers and domain lists. New application papers that only use BO should 
 
 Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
 
+- [Acquisition for Spherical-Linear Bayesian Optimization on the Cube](https://arxiv.org/abs/2610.32628) - 2026.
+- [Fast Bayesian Optimization Through Linear Models](https://arxiv.org/abs/2610.29580) - 2026.
 - [Acquisition Function-Guided Generation for Bayesian Optimization over Discrete Spaces](https://arxiv.org/abs/2610.22763) - 2026.
 - [FGSS-BO: Feedback-Guided Hypothesis Management for LLM-Based Bayesian Optimization](https://arxiv.org/abs/2610.21246) - 2026.
 - [How Low Can You Go: Fine-Tuning LLMs with Bayesian Optimization (LlMBO)](https://arxiv.org/abs/2610.18504) - 2026.
