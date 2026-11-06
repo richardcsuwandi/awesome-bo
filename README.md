@@ -293,6 +293,8 @@ Pointer papers and domain lists. New application papers that only use BO should 
 
 Unreviewed method papers (Bayesian optimization is the contribution). Capped at 20, newest first. After peer review, open a PR to move an entry into the matching Papers section. Application papers are dropped on sight.
 
+- [Cost-Aware Stopping for Freeze-Thaw Bayesian Optimization: When Does One-Step Lookahead Suffice?](https://arxiv.org/abs/2610.42085) - 2026.
+- [Anisotropic Trust Region Warping for Prior-Data Fitted Networks in Bayesian Optimisation](https://arxiv.org/abs/2610.37737) - 2026.
 - [Acquisition for Spherical-Linear Bayesian Optimization on the Cube](https://arxiv.org/abs/2610.32628) - 2026.
 - [Fast Bayesian Optimization Through Linear Models](https://arxiv.org/abs/2610.29580) - 2026.
 - [Acquisition Function-Guided Generation for Bayesian Optimization over Discrete Spaces](https://arxiv.org/abs/2610.22763) - 2026.
