@@ -1,0 +1,5 @@
+.hero-logo {
+  display: block;
+  margin: 0 auto 1rem;
+  width: min(220px, 70vw);
+}
